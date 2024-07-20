@@ -1,6 +1,45 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 function Blogdetails() {
+  const { id } = useParams();
+  const [blogs, setblogs] = useState({});
+  const [comments, setComments] = useState([]);
+  const [commentForm, setCommentForm] = useState({
+    comment: "",
+  });
+  useEffect(() => {
+    fetch(`https://cthbackend.onrender.com/api/v1/blog/singleblogs?id=${id}`)
+      .then((responce) => responce.json())
+      .then((data) => setblogs(data.data));
+  }, [id]);
+  const handleCommentChange = (e) => {
+    const { name, value } = e.target;
+    setCommentForm({ ...commentForm, [name]: value });
+  };
+
+  const handleCommentSubmit = (e) => {
+    const accessToken = localStorage.getItem("accessToken");
+
+    e.preventDefault();
+    fetch(`https://cthbackend.onrender.com/api/v1/blog/coments?id=${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify(commentForm),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          setComments([...comments, data.comment]);
+          setCommentForm({ comment: "" });
+        } else {
+          console.error("Failed to add comment");
+        }
+      });
+  };
   return (
     <>
       <section id="h1-breadcrumb">
@@ -13,8 +52,7 @@ function Blogdetails() {
                 Blogs
               </h1>
               <h2 className=" w-full text-center max-w-[624px] poppins-font">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Temporibus, recusandae. Deleniti dolorem architecto nostrum?
+                {blogs.title}
               </h2>
               <div className="flex flex-col sm:flex-row mt-5 gap-2 md:gap-[30px] w-full justify-center items-center">
                 <div className="flex items-center gap-2.5">
@@ -34,110 +72,50 @@ function Blogdetails() {
         <div className="theme-container w-full mx-auto grid grid-cols-8 lg:grid-cols-12 gap-y-16 lg:gap-y-0 lg:gap-x-[70px]">
           <div className="col-span-8">
             <div className="w-full">
-              <img
-                src="https://quomodothemes.website/html/quland-html/assets/images/blogs/detail-1.webp"
-                alt=""
-                className="w-full object-cover"
-              />
+              <img src={blogs.image} alt="" className="w-full object-cover" />
               <h1 className="text-24 sm:text-[30px] leading-[40px] tracking-tight text-main-black font-semibold mt-[30px] poppins-font">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores iure aliquam similique!
+                {blogs.title}
               </h1>
               <div className="flex mt-[22px] mb-2 gap-4 items-center">
-                <svg
-                  className="hidden md:block"
-                  width="33"
-                  height="39"
-                  viewBox="0 0 33 39"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.4489 24.2727H20.1761L23.5682 28.6705L25.9886 31.5341L31.8011 39H25.6648L21.7102 33.9886L20.0227 31.6023L14.4489 24.2727ZM32.6364 18.5455C32.6364 22.3068 31.9318 25.5284 30.5227 28.2102C29.125 30.8807 27.2159 32.9261 24.7955 34.3466C22.3864 35.767 19.6534 36.4773 16.5966 36.4773C13.5398 36.4773 10.8011 35.767 8.38068 34.3466C5.97159 32.9148 4.0625 30.8636 2.65341 28.1932C1.25568 25.5114 0.556818 22.2955 0.556818 18.5455C0.556818 14.7841 1.25568 11.5682 2.65341 8.89773C4.0625 6.21591 5.97159 4.16477 8.38068 2.74432C10.8011 1.32386 13.5398 0.613635 16.5966 0.613635C19.6534 0.613635 22.3864 1.32386 24.7955 2.74432C27.2159 4.16477 29.125 6.21591 30.5227 8.89773C31.9318 11.5682 32.6364 14.7841 32.6364 18.5455ZM26.2784 18.5455C26.2784 15.8977 25.8636 13.6648 25.0341 11.8466C24.2159 10.017 23.0795 8.63636 21.625 7.70455C20.1705 6.76136 18.4943 6.28977 16.5966 6.28977C14.6989 6.28977 13.0227 6.76136 11.5682 7.70455C10.1136 8.63636 8.97159 10.017 8.14205 11.8466C7.32386 13.6648 6.91477 15.8977 6.91477 18.5455C6.91477 21.1932 7.32386 23.4318 8.14205 25.2614C8.97159 27.0795 10.1136 28.4602 11.5682 29.4034C13.0227 30.3352 14.6989 30.8011 16.5966 30.8011C18.4943 30.8011 20.1705 30.3352 21.625 29.4034C23.0795 28.4602 24.2159 27.0795 25.0341 25.2614C25.8636 23.4318 26.2784 21.1932 26.2784 18.5455Z"
-                    fill="#D2A98E"
-                  ></path>
-                </svg>
                 <p className="text-paragraph flex-1 poppins-font">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Omnis voluptatem ullam ipsam numquam praesentium harum
-                  laudantium ratione dolorem esse temporibus, cupiditate porro,
-                  rem error!
+                  {blogs.description}
                 </p>
               </div>
-              <p className="text-paragraph mb-[25px] poppins-font">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-                minus beatae nemo quibusdam repellendus maxime quae
-                exercitationem. Quidem commodi architecto rerum illum, veniam
-                officiis atque impedit ipsa iste minima corrupti quasi eos,
-                magnam dignissimos cum ea necessitatibus quibusdam ipsam.
-                Ratione accusamus, laborum modi impedit hic molestias ducimus
-                ipsam fuga perferendis.
-              </p>
-              <h1 className="text-24 sm:text-[30px] leading-[40px] tracking-tight text-main-black font-semibold mt-[30px] poppins-font">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatem odit animi sequi distinctio maiores accusantium
-              </h1>
-              <p className="text-paragraph mt-5 mb-[25px] poppins-font">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Perferendis corrupti officiis deleniti cumque aperiam recusandae
-                amet porro optio animi autem placeat debitis, est nemo minima
-                beatae facilis. Ullam suscipit eligendi vitae aut. Debitis quas
-                totam ratione sint magni labore nemo assumenda, aliquid deleniti
-                provident nihil! Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Incidunt aut, molestias soluta porro aliquid
-                ducimus dolorum impedit debitis nobis iure voluptatibus nesciunt
-                nostrum eaque.
-              </p>
+              <div
+                dangerouslySetInnerHTML={{ __html: blogs.content }}
+                className="text-paragraph mb-[25px] poppins-font"
+              />
+
               <div className="flex flex-col xl:flex-row gap-[30px] pt-6">
-                <img
-                  src="https://quomodothemes.website/html/quland-html/assets/images/blogs/detail-2.webp"
-                  alt=""
-                  className=""
-                />
-                <img
-                  src="https://quomodothemes.website/html/quland-html/assets/images/blogs/detail-3.webp"
-                  alt=""
-                  className=""
-                />
+                {blogs.thumbnail &&
+                  blogs.thumbnail.map((thumb, index) => (
+                    <img
+                      key={index}
+                      src={thumb}
+                      alt={`Thumbnail ${index + 1}`}
+                      className="w-[410px] h-[300px]"
+                    />
+                  ))}
               </div>
-              <h1 className="text-24 sm:text-[30px] leading-[40px] tracking-tight text-main-black font-semibold mt-[50px] poppins-font">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h1>
-              <p className="text-paragraph mt-5 mb-[25px] poppins-font">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos
-                voluptates aliquid tempora deleniti officiis nisi ea, odit
-                sapiente voluptatibus porro? Libero quasi dolorem deserunt.
-              </p>
-              <div className="flex flex-col sm:flex-row justify-between">
+
+              <div className="flex mt-5 flex-col sm:flex-row justify-between">
                 <div className="">
                   <h1 className="text-18 text-main-black font-semibold poppins-font">
                     Popular Tags
                   </h1>
                   <div className="mt-3 flex gap-2.5 flex-wrap">
-                    <Link
-                      to=""
-                      className="group overflow-hidden flex justify-center items-center relative text-sm border border-purple/10 rounded-md py-1.5 before:inline-block before:absolute before:z-0 before:w-full before:h-full  before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
-                    >
-                      <span className="px-[18px] relative z-20 transition-colors ease-in-out duration-300 poppins-font ">
-                        Travel
-                      </span>
-                    </Link>
-                    <Link
-                      to=""
-                      className="group overflow-hidden flex justify-center items-center relative text-sm border border-purple/10 rounded-md py-1.5 before:inline-block before:absolute before:z-0 before:w-full before:h-full  before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
-                    >
-                      <span className="px-[18px] relative z-20 transition-colors ease-in-out duration-300  poppins-font">
-                        Fashion and Beauty
-                      </span>
-                    </Link>
-                    <Link
-                      to=""
-                      className="group overflow-hidden flex justify-center items-center relative text-sm border border-purple/10 rounded-md py-1.5 before:inline-block before:absolute before:z-0 before:w-full before:h-full  before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
-                    >
-                      <span className="px-[18px] relative z-20 transition-colors ease-in-out duration-300  poppins-font">
-                        Personal Finance
-                      </span>
-                    </Link>
+                    {blogs.tags &&
+                      blogs.tags.map((item, index) => (
+                        <Link
+                          key={index}
+                          to=""
+                          className="group overflow-hidden flex justify-center items-center relative text-sm border border-purple/10 rounded-md py-1.5 before:inline-block before:absolute before:z-0 before:w-full before:h-full  before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
+                        >
+                          <span className="px-[18px] relative z-20 transition-colors ease-in-out duration-300 poppins-font ">
+                            Travel{item}
+                          </span>
+                        </Link>
+                      ))}
                   </div>
                 </div>
               </div>
@@ -270,6 +248,7 @@ function Blogdetails() {
                   marked *
                 </p>
                 <form
+                  onSubmit={handleCommentSubmit}
                   action=""
                   className="grid grid-cols-6 md:grid-cols-12 gap-[30px]"
                 >
@@ -284,7 +263,9 @@ function Blogdetails() {
                     className="col-span-6 h-14 px-5 outline-purple focus:outline-1 rounded-md"
                   />
                   <textarea
-                    name=""
+                    name="comment"
+                    value={commentForm.comment}
+                    onChange={handleCommentChange}
                     placeholder="Comments"
                     className="col-span-6 md:col-span-12 px-5 outline-purple focus:outline-1 h-[100px] rounded-md"
                   ></textarea>

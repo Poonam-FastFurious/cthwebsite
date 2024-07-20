@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Baseurl } from "../../Confige";
 function BlogList() {
   const [banner, setBanner] = useState([]);
   const [blogs, setBlogs] = useState([]);
+  const navigate = useNavigate();
   useEffect(() => {
     fetch(Baseurl + "/api/v1/Banner/allabnner")
       .then((Response) => Response.json())
@@ -22,6 +23,30 @@ function BlogList() {
   const formatDate = (dateString) => {
     const options = { day: "2-digit", month: "long", year: "numeric" };
     return new Date(dateString).toLocaleDateString(undefined, options);
+  };
+  const handleReadMoreClick = (blogId) => {
+    fetch(`${Baseurl}/api/v1/blog/read`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id: blogId }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          navigate(`/blog/${blogId}`);
+        } else {
+          console.error("Failed to mark the blog as read");
+        }
+      })
+      .catch((error) => console.error("Error:", error));
+  };
+  const truncateDescription = (description, charLimit) => {
+    if (description.length > charLimit) {
+      return description.slice(0, charLimit) + "...";
+    }
+    return description;
   };
   return (
     <>
@@ -112,14 +137,14 @@ function BlogList() {
                       </div>
                     </Link>
                     <p className="font-normal text-white mb-3">
-                      {blog.description}
+                      {truncateDescription(blog.description, 100)}
                     </p>
-                    <Link
+                    <button
                       className="text-white   bg-[#89580A]   font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
-                      to="/blog"
+                      onClick={() => handleReadMoreClick(blog._id)}
                     >
                       Read more
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>

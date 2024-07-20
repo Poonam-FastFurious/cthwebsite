@@ -38,6 +38,7 @@ function Login() {
       const result = await response.json();
       if (response.ok) {
         // Handle successful login, e.g., navigate to a different page
+        localStorage.setItem("accessToken", result.data.accessToken);
         navigate("/");
       } else {
         // Handle error response
