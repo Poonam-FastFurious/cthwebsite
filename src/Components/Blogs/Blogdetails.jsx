@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { Baseurl } from "../../Confige";
 
 function Blogdetails() {
   const { id } = useParams();
@@ -9,7 +10,7 @@ function Blogdetails() {
     comment: "",
   });
   useEffect(() => {
-    fetch(`https://cthbackend.onrender.com/api/v1/blog/singleblogs?id=${id}`)
+    fetch(`${Baseurl}/api/v1/blog/singleblogs?id=${id}`)
       .then((responce) => responce.json())
       .then((data) => setblogs(data.data));
   }, [id]);
@@ -22,7 +23,7 @@ function Blogdetails() {
     const accessToken = localStorage.getItem("accessToken");
 
     e.preventDefault();
-    fetch(`https://cthbackend.onrender.com/api/v1/blog/coments?id=${id}`, {
+    fetch(`${Baseurl}/api/v1/blog/coments?id=${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
