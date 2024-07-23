@@ -5,6 +5,12 @@ function BlogList() {
   const [banner, setBanner] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const navigate = useNavigate();
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   useEffect(() => {
     fetch(Baseurl + "/api/v1/Banner/allabnner")
       .then((Response) => Response.json())
@@ -36,6 +42,7 @@ function BlogList() {
       .then((data) => {
         if (data.success) {
           navigate(`/blog/${blogId}`);
+          scrollToTop();
         } else {
           console.error("Failed to mark the blog as read");
         }
@@ -115,7 +122,6 @@ function BlogList() {
           </section>
         </section>
         <div className="max-w-5xl max-lg:max-w-2xl mx-auto xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
-          <div className="flex flex-col justify-center  w-full"></div>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-md:justify-center  ">
             {blogs.map((blog, index) => (
               <div className="max-w-lg mx-auto " key={index}>

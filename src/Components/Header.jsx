@@ -2,9 +2,10 @@
 import { useEffect, useState } from "react";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
-import { Link } from "react-router-dom";
+
 import logo from "../assets/logo-no-background.png";
 import { jwtDecode } from "jwt-decode";
+import { Link } from "react-router-dom";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [token, setToken] = useState(localStorage.getItem("accessToken"));
@@ -60,13 +61,13 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link className=" relative " to="AboutUs">
+                <Link className=" relative " to="/AboutUs">
                   About us
                 </Link>
               </li>
               <li>
                 <Link to="associatedMembers" className=" relative ">
-                  Associated Members
+                  Associates
                 </Link>
               </li>
               <li>
@@ -143,7 +144,7 @@ function Header() {
                   </div>
                 </Link>
               )}
-              <Link to="blog">
+              <Link to="#">
                 <div className="home-two-btn-white-rev  rounded-md  home-two-btn-white-rev-sm    border-[#101828]/10 bg-[#89580A] ">
                   <span className="text-base  text-main-black text-white  hover:text-[#B08D57]  transition-all duration-300 font-semibold font-inter relative z-10">
                     Get Started
@@ -175,7 +176,7 @@ function Header() {
       <header className="flex xl:hidden flex-col relative">
         <div className="h-16 bg-white flex items-center justify-between fixed top-0 left-0 z-50 w-full px-2.5">
           <Link to="#" aria-label="logo">
-            <img src={logo} alt="logo" className=" w-10 h-auto" />
+            <img src={logo} alt="logo" className=" w-36 h-auto" />
           </Link>
           <button
             onClick={toggleDrawer}
@@ -199,16 +200,11 @@ function Header() {
             </svg>
           </button>
         </div>
-        <Drawer
-          open={isOpen}
-          onClose={toggleDrawer}
-          direction="left"
-          className="bla bla bla"
-        >
+        <Drawer open={isOpen} onClose={toggleDrawer} direction="left">
           <header className="flex xl:hidden flex-col relative">
             <div className="h-16 bg-white  text-black flex items-center justify-between fixed top-0 left-0 z-50 w-full px-2.5">
-              <Link to="#" aria-label="logo">
-                <img src={logo} alt="logo" className=" w-10 h-auto" />
+              <Link to="/" aria-label="logo">
+                <img src={logo} alt="logo" className=" w-36 h-auto" />
               </Link>
             </div>
             <div className="transition-all duration-300">
@@ -221,28 +217,27 @@ function Header() {
                 className={`fixed h-screen overflow-y-scroll w-full top-16 transition-all duration-300 ${
                   isOpen ? "left-0" : "-left-full"
                 }`}
-                id="mobile-nav-div"
               >
                 <div className="flex gap-28 flex-col pl-5 pt-5">
                   <ul className="flex gap-5 flex-col text-paragraph text-base leading-5 font-medium font-inter">
-                    <li className="group relative">
-                      <Link className=" leading-5 relative before:content-['Home'] w-fit m-nav-dropdown">
-                        Home
-                      </Link>
+                    <li>
+                      <div>
+                        <Link to="/" target="_parent">
+                          {" "}
+                          Home
+                        </Link>
+                      </div>
                     </li>
                     <li>
                       <Link
-                        className=" relative before:content-['Company'] w-fit"
-                        to="about"
+                        to="/associatedMembers"
+                        className=" relative  w-fit"
                       >
                         Associated Members
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className=" relative before:content-['Services'] w-fit"
-                        to="service"
-                      >
+                      <Link className=" relative  w-fit" to="/">
                         Blogs
                       </Link>
                     </li>
@@ -258,7 +253,7 @@ function Header() {
                       </Link>
                     </li>
                     <li>
-                      <Link className=" relative  w-fit" to="contact">
+                      <Link className=" relative  w-fit" to="/AboutUs">
                         About us
                       </Link>
                     </li>

@@ -58,7 +58,7 @@ function TestiMonial() {
                       alt=""
                       className="w-full max-w-[380px]"
                     />
-                    <div className="group  border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%] z-10 bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
+                    <div className="group  border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%]  bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
                       <img
                         src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about-card-shape.webp"
                         alt=""
@@ -113,7 +113,7 @@ function TestiMonial() {
                       alt=""
                       className="w-full max-w-[380px]"
                     />
-                    <div className="group border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%] z-10 bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
+                    <div className="group border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%]  bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
                       <img
                         src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about-card-shape.webp"
                         alt=""
@@ -143,7 +143,7 @@ function TestiMonial() {
                       alt=""
                       className="w-full max-w-[380px]"
                     />
-                    <div className="group border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%] z-10 bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
+                    <div className="group border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%]  bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
                       <img
                         src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about-card-shape.webp"
                         alt=""
@@ -173,7 +173,7 @@ function TestiMonial() {
                       alt=""
                       className="w-full max-w-[380px]"
                     />
-                    <div className="group border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%] z-10 bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
+                    <div className="group border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%]  bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
                       <img
                         src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about-card-shape.webp"
                         alt=""
@@ -203,7 +203,7 @@ function TestiMonial() {
                       alt=""
                       className="w-full max-w-[380px]"
                     />
-                    <div className="group border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%] z-10 bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
+                    <div className="group border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%]  bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
                       <img
                         src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about-card-shape.webp"
                         alt=""
@@ -231,11 +231,11 @@ function TestiMonial() {
             <div className="relative w-fit mx-auto flex items-center">
               <div className="flex justify-between absolute w-full">
                 <button
-                  className="group h5-story-prev w-[30px] h-[30px] rounded-full flex items-center justify-center bg-buisness-red border-buisness-red overflow-hidden before:inline-block before:w-11 before:h-11 before:border-[1.5px] before:border-buisness-red before:bg-buisness-red relative before:absolute before:z-0 before:-right-12 hover:before:right-0 before:transition-all before:duration-300"
+                  className="group h5-story-prev w-[30px] h-[30px] rounded-full flex items-center justify-center bg-buisness-red border-buisness-red overflow-hidden before:inline-block before:w-11 before:h-11 before:border-[1.5px] before:border-buisness-red before:bg-buisness-red relative before:absolute  before:-right-12 hover:before:right-0 before:transition-all before:duration-300"
                   ref={prevRef}
                 >
                   <svg
-                    className="relative z-10 pointer-events-none"
+                    className="relative  pointer-events-none"
                     width="12"
                     height="10"
                     viewBox="0 0 12 10"
@@ -253,11 +253,11 @@ function TestiMonial() {
                   </svg>
                 </button>
                 <button
-                  className="group rotate-180 h5-story-next w-[30px] h-[30px] rounded-full flex items-center justify-center bg-buisness-red border-buisness-red overflow-hidden before:inline-block before:w-11 before:h-11 before:border-[1.5px] before:border-buisness-red before:bg-buisness-red relative before:absolute before:z-0 before:-right-12 hover:before:right-0 before:transition-all before:duration-300"
+                  className="group rotate-180 h5-story-next w-[30px] h-[30px] rounded-full flex items-center justify-center bg-buisness-red border-buisness-red overflow-hidden before:inline-block before:w-11 before:h-11 before:border-[1.5px] before:border-buisness-red before:bg-buisness-red relative before:absolute before:-right-12 hover:before:right-0 before:transition-all before:duration-300"
                   ref={nextRef}
                 >
                   <svg
-                    className="relative z-10 pointer-events-none"
+                    className="relative  pointer-events-none"
                     width="12"
                     height="10"
                     viewBox="0 0 12 10"

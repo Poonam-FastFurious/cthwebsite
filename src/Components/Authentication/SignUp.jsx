@@ -102,13 +102,13 @@ function SignUp() {
       navigate("/");
     } catch (error) {
       console.error("Error registering user:", error);
-      toast.warning("user aleready exist with this nu,ber :");
+      toast.warning("user aleready exist with this number ");
     }
   };
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center py-24 bg-white md:h-auto  ">
+      <div className="flex flex-col justify-center items-center pt-20 bg-white md:h-auto  ">
         <div className="grid md:grid-cols-2 items-center gap-y-8 max-w-7xl w-full shadow-[0_2px_13px_-6px_rgba(0,0,0,0.4)] m-6 rounded-xl relative overflow-hidden">
           <div className="max-md:order-1 p-4 bg-[#FFFFE7] h-full hidden  sm:flex  ">
             <img
@@ -119,9 +119,9 @@ function SignUp() {
           </div>
 
           <div className="flex flex-col justify-center  sm:h-auto p-4">
-            <div className="max-w-md w-full mx-auto border border-gray-300 rounded-2xl p-8 shadow-xl">
+            <div className="max-w-md w-full mx-auto border border-gray-300 rounded-2xl p-6 shadow-xl">
               <form
-                className="max-w-xl w-full p-6 mx-auto"
+                className="max-w-xl w-full p-4 mx-auto"
                 onSubmit={handleSubmit}
               >
                 <div className="mb-12  container w-[80%] mx-auto flex justify-between">
@@ -212,7 +212,7 @@ function SignUp() {
                       <button
                         type="button"
                         onClick={nextStep}
-                        className="w-full py-3 px-4 text-sm  font-semibold rounded-md text-white bg-buisness-red hover:bg-buisness-red focus:outline-none tracking-wide poppins-font"
+                        className="w-full py-3 px-4 text-sm  font-semibold rounded-md text-white bg-[#B08D57]  focus:outline-none tracking-wide poppins-font"
                       >
                         Next
                       </button>
@@ -220,10 +220,10 @@ function SignUp() {
                     <p className="text-gray-800 text-sm mt-6 text-center tracking-wide poppins-font">
                       Already have an account?
                       <Link
-                        to="#"
+                        to="/Login"
                         className="text-[#B08D57] font-semibold hover:underline ml-1 tracking-wide poppins-font"
                       >
-                        Login here
+                        SignIn here
                       </Link>
                     </p>
                   </div>
@@ -316,7 +316,7 @@ function SignUp() {
                       </button>
                       <button
                         type="submit"
-                        className="py-3 px-4 text-sm font-semibold rounded-md text-white bg-buisness-red hover:bg-buisness-red focus:outline-none tracking-wide poppins-font"
+                        className="py-3 px-4 text-sm font-semibold rounded-md text-white bg-[#B08D57] focus:outline-none tracking-wide poppins-font"
                       >
                         Create an account
                       </button>

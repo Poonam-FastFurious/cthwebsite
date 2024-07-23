@@ -67,8 +67,8 @@ function Ourreatch() {
               >
                 200K
               </h1>
-              <h2 className="text-18 pt-5 font-medium text-white text-paragraph tracking-wide poppins-font">
-                Associated Members
+              <h2 className="text-18 pt-5 font-medium text-white text-paragraph tracking-wide poppins-font ">
+                Our Associates
               </h2>
             </div>
             <div className="col-span-3 bg-[#A3896B] rounded-md  border place-items-center  border-buisness-dark-black/10 p-5 md:p-[50px] lg:p-5 xl:p-[50px] flex flex-col items-center">

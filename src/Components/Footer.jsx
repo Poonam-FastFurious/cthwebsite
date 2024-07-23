@@ -16,7 +16,7 @@ function Footer() {
             </a>
           </div>
 
-          <ul className="flex flex-wrap justify-center gap-x-8 gap-4">
+          <ul className="flex flex-wrap justify-center gap-x-4 gap-3">
             <li>
               <svg
                 width="25"
@@ -78,9 +78,9 @@ function Footer() {
             </li>
             <li>
               <svg
-                width="24"
-                height="17"
-                viewBox="0 0 24 17"
+                width="30"
+                height="30"
+                viewBox="0 0 25 23"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -195,7 +195,7 @@ function Footer() {
           </ul>
         </p>
       </div>
-      <div className="w-full  relative z-10">
+      <div className="w-full  relative z-50">
         <div className="theme-container mx-auto h-full">
           <div className="w-full h-full flex flex-col sm:flex-row  justify-center items-center ">
             <div className="relative">

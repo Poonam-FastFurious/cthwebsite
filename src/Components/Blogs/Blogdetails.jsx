@@ -112,7 +112,7 @@ function Blogdetails() {
                           to=""
                           className="group overflow-hidden flex justify-center items-center relative text-sm border border-purple/10 rounded-md py-1.5 before:inline-block before:absolute before:z-0 before:w-full before:h-full  before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
                         >
-                          <span className="px-[18px] relative z-20 transition-colors ease-in-out duration-300 poppins-font ">
+                          <span className="px-[18px] relative  transition-colors ease-in-out duration-300 poppins-font ">
                             Travel{item}
                           </span>
                         </Link>
@@ -314,153 +314,7 @@ function Blogdetails() {
           </div>
 
           <div className="col-span-8 lg:col-span-4">
-            <div className="mt-[60px]">
-              <h1 className="text-22 text-main-black font-semibold">
-                Category
-              </h1>
-              <ul className="mt-6">
-                <li className="my-1.5">
-                  <Link
-                    to=""
-                    className="text-paragraph  transition-all duration-300 flex gap-3 items-center"
-                  >
-                    <svg
-                      width="6"
-                      height="13"
-                      viewBox="0 0 6 13"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 1.92285L4.59655 6.63592L1 11.349"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                    <span>Personal Development</span>
-                  </Link>
-                </li>
-                <li className="my-1.5">
-                  <Link
-                    to=""
-                    className="text-paragraph  transition-all duration-300 flex gap-3 items-center"
-                  >
-                    <svg
-                      width="6"
-                      height="13"
-                      viewBox="0 0 6 13"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 1.92285L4.59655 6.63592L1 11.349"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                    <span>Technology</span>
-                  </Link>
-                </li>
-                <li className="my-1.5">
-                  <Link
-                    to=""
-                    className="text-paragraph  transition-all duration-300 flex gap-3 items-center"
-                  >
-                    <svg
-                      width="6"
-                      height="13"
-                      viewBox="0 0 6 13"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 1.92285L4.59655 6.63592L1 11.349"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                    <span>Health and Fitness</span>
-                  </Link>
-                </li>
-                <li className="my-1.5">
-                  <Link
-                    to=""
-                    className="text-paragraph  transition-all duration-300 flex gap-3 items-center"
-                  >
-                    <svg
-                      width="6"
-                      height="13"
-                      viewBox="0 0 6 13"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 1.92285L4.59655 6.63592L1 11.349"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                    <span>Lifestyle</span>
-                  </Link>
-                </li>
-                <li className="my-1.5">
-                  <Link
-                    to=""
-                    className="text-paragraph  transition-all duration-300 flex gap-3 items-center"
-                  >
-                    <svg
-                      width="6"
-                      height="13"
-                      viewBox="0 0 6 13"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 1.92285L4.59655 6.63592L1 11.349"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                    <span>Finance</span>
-                  </Link>
-                </li>
-                <li className="my-1.5">
-                  <Link
-                    to=""
-                    className="text-paragraph  transition-all duration-300 flex gap-3 items-center"
-                  >
-                    <svg
-                      width="6"
-                      height="13"
-                      viewBox="0 0 6 13"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 1.92285L4.59655 6.63592L1 11.349"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                    <span>Business</span>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="mt-[54px]">
+            <div className="mt-[10px]">
               <h1 className="text-22 text-main-black font-semibold">
                 Most view Stories
               </h1>
@@ -532,7 +386,7 @@ function Blogdetails() {
                     to=""
                     className="group overflow-hidden flex justify-center items-center relative text-sm border border-purple/10 rounded-md py-1.5 before:inline-block before:absolute before:z-0 before:w-full before:h-full  before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
                   >
-                    <span className="px-[18px] relative z-20 transition-colors ease-in-out duration-300 ">
+                    <span className="px-[18px] relative  transition-colors ease-in-out duration-300 ">
                       Recipes
                     </span>
                   </Link>
@@ -540,7 +394,7 @@ function Blogdetails() {
                     to=""
                     className="group overflow-hidden flex justify-center items-center relative text-sm border border-purple/10 rounded-md py-1.5 before:inline-block before:absolute before:z-0 before:w-full before:h-full  before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
                   >
-                    <span className="px-[18px] relative z-20 transition-colors ease-in-out duration-300 ">
+                    <span className="px-[18px] relative  transition-colors ease-in-out duration-300 ">
                       Cooking Tips
                     </span>
                   </Link>
@@ -548,7 +402,7 @@ function Blogdetails() {
                     to=""
                     className="group overflow-hidden flex justify-center items-center relative text-sm border border-purple/10 rounded-md py-1.5 before:inline-block before:absolute before:z-0 before:w-full before:h-full  before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
                   >
-                    <span className="px-[18px] relative z-20 transition-colors ease-in-out duration-300 ">
+                    <span className="px-[18px] relative  transition-colors ease-in-out duration-300 ">
                       Study Tips
                     </span>
                   </Link>
@@ -556,7 +410,7 @@ function Blogdetails() {
                     to=""
                     className="group overflow-hidden flex justify-center items-center relative text-sm border border-purple/10 rounded-md py-1.5 before:inline-block before:absolute before:z-0 before:w-full before:h-full  before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
                   >
-                    <span className="px-[18px] relative z-20 transition-colors ease-in-out duration-300 ">
+                    <span className="px-[18px] relative  transition-colors ease-in-out duration-300 ">
                       Music
                     </span>
                   </Link>
@@ -564,7 +418,7 @@ function Blogdetails() {
                     to=""
                     className="group overflow-hidden flex justify-center items-center relative text-sm border border-purple/10 rounded-md py-1.5 before:inline-block before:absolute before:z-0 before:w-full before:h-full  before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
                   >
-                    <span className="px-[18px] relative z-20 transition-colors ease-in-out duration-300 ">
+                    <span className="px-[18px] relative  transition-colors ease-in-out duration-300 ">
                       Destinations
                     </span>
                   </Link>
@@ -572,7 +426,7 @@ function Blogdetails() {
                     to=""
                     className="group overflow-hidden flex justify-center items-center relative text-sm border border-purple/10 rounded-md py-1.5 before:inline-block before:absolute before:z-0 before:w-full before:h-full  before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
                   >
-                    <span className="px-[18px] relative z-20 transition-colors ease-in-out duration-300 ">
+                    <span className="px-[18px] relative  transition-colors ease-in-out duration-300 ">
                       Pet Care
                     </span>
                   </Link>

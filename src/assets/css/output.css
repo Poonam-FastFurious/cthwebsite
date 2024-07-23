@@ -3834,11 +3834,10 @@ video {
   color: rgb(121 74 255 / var(--tw-text-opacity));
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  content: var(--tw-content);
+
   transition-duration: 300ms;
 }
 .home-two-nav-item:hover::before {
-  content: var(--tw-content);
   width: 100%;
 }
 .home-two-btn-bg {

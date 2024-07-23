@@ -34,11 +34,11 @@ function AboutUs() {
                 </ul>
                 <Link to="/AboutUs">
                   <div className="home-two-btn-bg group bg-buisness-red border-buisness-red py-[15px] w-fit">
-                    <span className="text-base group-hover:text-buisness-dark-black text-white transition-all duration-300 font-semibold font-inter relative z-10 tracking-wide poppins-font">
+                    <span className="text-base group-hover:text-buisness-dark-black text-white transition-all duration-300 font-semibold font-inter relative  tracking-wide poppins-font">
                       Explore Service
                     </span>
                     <svg
-                      className="relative z-10"
+                      className="relative "
                       width="7"
                       height="12"
                       viewBox="0 0 7 12"
@@ -80,16 +80,16 @@ function AboutUs() {
                 data-aos="fade-left"
                 src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about1.webp"
                 alt=""
-                className="relative z-10 hidden sm:block"
+                className="relative  hidden sm:block"
               />
               <img
                 data-aos="fade-left"
                 data-aos-delay="100"
                 src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about2.webp"
                 alt=""
-                className="relative z-10"
+                className="relative "
               />
-              <div className="bg-buisness-red p-[30px] rounded-2xl absolute z-10 bottom-8 w-[295px]">
+              <div className="bg-buisness-red p-[30px] rounded-2xl absolute  bottom-8 w-[295px]">
                 <img
                   src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about-card-shape.webp"
                   alt=""

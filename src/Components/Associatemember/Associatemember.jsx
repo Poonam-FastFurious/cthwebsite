@@ -51,7 +51,7 @@ function Associatemember() {
                 <div className="flex gap-5 items-center justify-center mt-4">
                   <Link
                     to="/"
-                    className="home-two-nav-item text-main-black leading-5 relative text-18 font-inter  font-bold transition-all duration-300 hover:text-purple"
+                    className="home-two-nav-item text-main-black leading-5 relative text-18 font-inter  font-bold transition-all duration-300 hover:text-buisness-red"
                   >
                     Home
                   </Link>

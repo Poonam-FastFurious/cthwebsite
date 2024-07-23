@@ -1,15 +1,34 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import { Baseurl } from "../../Confige";
 
 function HomeBlogs() {
   const [blogs, setBlogs] = useState([]);
+  const navigate = useNavigate();
   useEffect(() => {
     fetch(Baseurl + "/api/v1/blog/allblogs")
       .then((Response) => Response.json())
       .then((data) => setBlogs(data.data));
   }, []);
+  const handleReadMoreClick = (blogId) => {
+    fetch(`${Baseurl}/api/v1/blog/read`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id: blogId }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          navigate(`/blog/${blogId}`);
+        } else {
+          console.error("Failed to mark the blog as read");
+        }
+      })
+      .catch((error) => console.error("Error:", error));
+  };
   return (
     <>
       <section className="xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
@@ -59,12 +78,12 @@ function HomeBlogs() {
                             </div>
                           </div>
                         </div>
-                        <Link
-                          to="#"
+                        <button
+                          onClick={() => handleReadMoreClick(blog._id)}
                           className="btn btn-primary px-4 tracking-wide poppins-font"
                         >
                           know more
-                        </Link>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -72,7 +91,7 @@ function HomeBlogs() {
               </div>
 
               <div className="font-semibold text-[27px] items-center flex w-full leading-[35px] tracking-tight text-main-black mt-10">
-                <Link to="blog">
+                <Link to="/bloglist">
                   <div className="home-two-btn-bg group bg-buisness-red border-buisness-red py-[15px] w-fit">
                     <span className="text-base   group-hover:text-buisness-red text-white transition-all duration-300 font-semibold font-inter relative z-10">
                       Read more
