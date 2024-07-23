@@ -34,7 +34,7 @@ function Gallery() {
   }, []);
   return (
     <>
-      <section className="bg-white   md:pb-[120px] relative">
+      <section className="bg-white    relative">
         <section id="h1-breadcrumb">
           <div className="h1-breadcrumb w-full h-fit overflow-hidden relative bg-main-gray pb-16 md:pb-24">
             <div
@@ -91,8 +91,8 @@ function Gallery() {
             </div>
           </div>
         </section>
-        <div className="theme-container w-full mx-auto">
-          <div className="grid gap-[30px] grid-cols-3 md:grid-cols-6 lg:grid-cols-12 mt-10 md:mt-[70px] bg-[#E7DDCD] p-12">
+        <div className=" w-full mx-auto bg-[#E7DDCD]">
+          <div className="grid gap-[30px] grid-cols-3 md:grid-cols-6 lg:grid-cols-12  bg-[#E7DDCD] p-12 theme-container  mx-auto">
             {gallery.map((items, index) => (
               <div key={index} className="col-span-4">
                 <div className="flex justify-center items-center relative group/main overflow-hidden ">

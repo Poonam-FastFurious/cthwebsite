@@ -24,7 +24,7 @@ function Associatemember() {
   }, []);
   return (
     <>
-      <section className="bg-whitept-16 pb-14  md:pb-[120px] relative">
+      <section className="bg-white pt-16  relative">
         <section id="h1-breadcrumb">
           <div className="h1-breadcrumb w-full h-fit overflow-hidden relative bg-main-gray pb-16 md:pb-24">
             <div
@@ -81,7 +81,7 @@ function Associatemember() {
             </div>
           </div>
         </section>
-        <div className="theme-container w-full mx-auto pt-8">
+        <div className="theme-container w-full mx-auto xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
           <div className="flex flex-col justify-center items-center w-full">
             <h1 className="font-medium text-white border border-buisness-red bg-buisness-red px-5 rounded-[30px] py-1 w-fit tracking-wider poppins-font ">
               Associated Members
@@ -130,7 +130,7 @@ function Associatemember() {
           </div>
         </div>
       </section>
-      <section className="py-[70px] sm:py-[130px] w-full bg-[#E7DDCD]">
+      <section className=" w-full bg-[#E7DDCD] xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px] ">
         <div className="theme-container w-full mx-auto">
           <h1 className="px-5 bg-buisness-red border border-orange/20 py-1  text-white font-medium rounded-[30px] w-fit mx-auto poppins-font tracking-wider">
             Video Testimonials

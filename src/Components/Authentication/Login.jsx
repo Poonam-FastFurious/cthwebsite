@@ -60,7 +60,7 @@ function Login() {
   };
   return (
     <>
-      <div className="flex flex-col justify-center items-center py-24 bg-white md:h-auto  ">
+      <div className="flex flex-col justify-center items-center  pt-20 bg-white md:h-auto   ">
         <div className="grid md:grid-cols-2 items-center gap-y-8 max-w-7xl w-full shadow-[0_2px_13px_-6px_rgba(0,0,0,0.4)] m-6 rounded-xl relative overflow-hidden">
           <div className="max-md:order-1 p-4 bg-[#FFFFE7] h-full">
             <img
@@ -73,7 +73,7 @@ function Login() {
           <div className="flex flex-col justify-center  sm:h-auto p-4">
             <div className="max-w-md w-full mx-auto border border-gray-300 rounded-2xl p-8 shadow-xl">
               <form
-                className="max-w-xl w-full p-6 mx-auto"
+                className="max-w-xl w-full  mx-auto"
                 onSubmit={handleSubmit}
               >
                 <div className="mb-12  container w-[80%] mx-auto flex justify-between">

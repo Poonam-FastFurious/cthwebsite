@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 function InquiryForm() {
   return (
     <>
-      <section
-        className="py-16 md:py-[130px] "
-        style={{ backgroundColor: "#FFFBF0" }}
-      >
+      <section className="xl:py-[90px] " style={{ backgroundColor: "#FFFBF0" }}>
         <div className=" w-full mx-auto container ">
           <div className=" font-[sans-serif]  h-auto">
             <div className="grid lg:grid-cols-4 items-center max-lg:justify-center gap-6 h-full sm:p-12 p-8 max-sm:p-4">
@@ -268,16 +265,17 @@ function InquiryForm() {
                 </svg>
               </div>
               <div className="border lg:col-span-2 border-purple/10  rounded-[10px] p-4 md:p-[50px]">
-                <h1 className="text-[40px] tracking-tight font-bold text-main-black pb-6 poppins-font">
+                <h1 className="text-[30px] tracking-normal font-bold text-main-black pb-6 poppins-font">
                   Query Form
                 </h1>
 
                 <form className="mt-8 grid sm:grid-cols-2 gap-6">
                   <div>
                     <label className="text-gray-800 text-sm block mb-2 poppins-font">
-                      Your Name
+                      First Name
                     </label>
                     <input
+                      required
                       type="text"
                       placeholder="Enter Name"
                       className="w-full rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-[#007bff]"
@@ -285,10 +283,11 @@ function InquiryForm() {
                   </div>
                   <div>
                     <label className="text-gray-800 text-sm block mb-2 poppins-font">
-                      Your Email
+                      Last Name
                     </label>
                     <input
-                      type="email"
+                      required
+                      type="text"
                       placeholder="Email"
                       className="w-full rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-[#007bff]"
                     />
@@ -298,6 +297,7 @@ function InquiryForm() {
                       Mobile Number
                     </label>
                     <input
+                      required
                       type="number"
                       placeholder="Phone No."
                       className="w-full rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-[#007bff]"
@@ -308,6 +308,7 @@ function InquiryForm() {
                       Email
                     </label>
                     <input
+                      required
                       type="email"
                       placeholder="Email"
                       className="w-full rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-[#007bff]"
@@ -319,6 +320,7 @@ function InquiryForm() {
                       Enquiry*
                     </label>
                     <textarea
+                      required
                       placeholder="Message"
                       rows="6"
                       className="w-full rounded-md px-4 border border-gray-300 text-sm pt-3 outline-[#007bff]"

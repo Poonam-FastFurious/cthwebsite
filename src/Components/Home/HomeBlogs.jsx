@@ -12,11 +12,11 @@ function HomeBlogs() {
   }, []);
   return (
     <>
-      <section className="pt-16 md:pt-[130px]">
-        <div className="theme-container w-full mx-auto">
+      <section className="xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
+        <div className="theme-container w-full mx-auto ">
           <div className="grid grid-cols-8 lg:grid-cols-12 gap-[30px]">
             <div data-aos="fade-up" className="col-span-8">
-              <h1 className="font-semibold text-[40px] leading-[42px] text-main-black tracking-wide poppins-font">
+              <h1 className="font-semibold text-[30px] leading-[42px] text-main-black tracking-wide poppins-font">
                 Blogs
               </h1>
               <p className="text-paragraph mt-[30px] mb-10 max-w-[786px] tracking-wide poppins-font">
@@ -103,7 +103,7 @@ function HomeBlogs() {
               data-aos-delay="100"
               className="col-span-8 lg:col-span-4"
             >
-              <div className="border border-purple/10 rounded-2xl py-[30px] bg-main-gray">
+              <div className="border border-purple/10 rounded-2xl py-[30px] my-4 bg-main-gray">
                 <div className="flex gap-5 items-center px-10 pb-[30px]">
                   <h1 className="text-22 font-semibold text-main-black tracking-wide poppins-font">
                     Add section
@@ -121,46 +121,8 @@ function HomeBlogs() {
                 <hr className=" bg-gray-50" />
                 <div className="pt-10 flex flex-col px-10 gap-[30px]  h-80"></div>
               </div>
-              <div className="mt-[30px] flex justify-center items-end relative w-full rounded-2xl overflow-hidden">
-                <img
-                  src="https://quomodothemes.website/html/quland-html/assets/images/service/detail-3.webp"
-                  alt=""
-                  className="w-full object-cover"
-                />
-                <div className="w-full h-full absolute black_overlay"></div>
-                <div className="w-full max-w-[277px] absolute bottom-[30px]">
-                  <h1 className="text-24 font-semibold text-white text-center mb-5 tracking-wide poppins-font">
-                    Lorem ipsum dolor
-                  </h1>
-                  <Link to="#">
-                    <div className="home-two-btn-bg py-3  bg-buisness-red border-buisness-red inline-flex w-full">
-                      <svg
-                        className="relative z-10"
-                        width="25"
-                        height="25"
-                        viewBox="0 0 25 25"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          className=" transition-all duration-300"
-                          d="M24.1094 2.17188C24.625 2.3125 25 2.73438 25 3.25C25 15.2969 15.25 25 3.25 25C2.6875 25 2.26562 24.6719 2.125 24.1562L1 19.2812C0.90625 18.7656 1.14062 18.2031 1.65625 17.9688L6.90625 15.7188C7.375 15.5312 7.89062 15.6719 8.21875 16.0469L10.5625 18.9062C14.2188 17.1719 17.1719 14.1719 18.8594 10.6094L16 8.26562C15.625 7.9375 15.4844 7.42188 15.6719 6.95312L17.9219 1.70312C18.1562 1.1875 18.7188 0.90625 19.2344 1.04688L24.1094 2.17188Z"
-                          fill="black"
-                        ></path>
-                      </svg>
-                      <span className="  transition-all duration-300  relative z-10 tracking-wide poppins-font">
-                        +236 (456) 896 22
-                      </span>
-                    </div>
-                  </Link>
-                </div>
-              </div>
             </div>
           </div>
-          <hr
-            className="bg-purple/10 mt-[120px] "
-            style={{ visibility: "hidden" }}
-          />
         </div>
       </section>
     </>

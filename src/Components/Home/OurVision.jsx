@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 function OurVision() {
   return (
     <>
-      <section id="service" className="w-full  bg-[#FFFBF0]">
-        <div className="mx-auto max-w-[1600px] w-full xl:py-[90px]  xl:px-[80px] md:px-10 px-0 bg-main-gray bg-[#FFFBF0]  ">
+      <section id="service" className="w-full  bg-[#FFFBF0] ">
+        <div className="mx-auto max-w-[1600px] w-full xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]   xl:px-[80px] md:px-10 px-0 bg-main-gray bg-[#FFFBF0]  ">
           <div className="w-full service-section-wrapper relative">
             <div className="theme-container mx-auto relative z-10">
               <div className="flex flex-col ">
-                <span className="text-black font-bold text-4xl  py-2 border-[#e7e3fa] leading-none rounded-full inline-block mb-5 tracking-wide poppins-font ">
+                <span className="text-black font-bold text-[30px]  py-2 border-[#e7e3fa] leading-none rounded-full inline-block mb-5 tracking-wide poppins-font ">
                   Our Visions
                 </span>
               </div>
-              <div className="w-full grid xl:grid-cols-12 md:grid-cols-6 grid-cols-3 xl:gap-[30px] gap-5">
+              <div className="w-full grid xl:grid-cols-12 md:grid-cols-6 grid-cols-3 xl:gap-[30px] gap-5 ">
                 <div
                   data-aos="zoom-out"
                   data-aos-delay="1000"
@@ -22,8 +22,8 @@ function OurVision() {
                     <div className="w-[60px] h-[60px] flex justify-center items-center rounded-full common-transition text-purple">
                       <span>
                         <svg
-                          style={{ width: "200px" }}
-                          height="304"
+                          style={{ width: "200" }}
+                          height="auto"
                           viewBox="0 0 441 304"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -734,11 +734,12 @@ function OurVision() {
                         Collaboration
                       </p>
                       <p className="text-center text-paragraph tracking-wide poppins-font">
-                        This involve optimizes website headers content internal
+                        Facilitate collaboration by defining legal frameworks
+                        for partnerships and joint ventures
                       </p>
                     </div>
-                    <Link to="#">
-                      <div className="flex items-center gap-2 group text-paragraph hover:text-purple tracking-wide poppins-font">
+                    <Link to="/AboutUs">
+                      <div className="flex items-center gap-2 group text-paragraph hover:text-buisness-red tracking-wide poppins-font">
                         <span className="font-medium leading-5 font-inter border-b border-transparent before:inline-block before:border-purple before:border-b before:absolute before:bottom-0 before:transition-all before:duration-100 before:w-0 hover:before:w-full before:overflow-hidden before:h-5 relative">
                           Read More
                         </span>
@@ -765,7 +766,7 @@ function OurVision() {
                 </div>
                 <div
                   data-aos="zoom-out"
-                  data-aos-delay="1800"
+                  data-aos-delay="1000"
                   className="col-span-3 relative group border border-transparent common-transition before:inline-block before:w-full before:h-full before:border before:rounded-[10px] before:border-purple before:absolute before:bottom-0 before:right-0 before:shadow-common before:origin-bottom-right before:scale-0 hover:before:scale-100 before:transition-all before:duration-100 before:z-0 after:inline-block after:w-full after:h-full after:border after:rounded-[10px] after:border-purple after:absolute after:top-0 after:left-0 after:shadow-common after:origin-top-left after:scale-0 hover:after:scale-100 after:transition-all after:duration-100 after:z-0 before:ease-linear after:ease-linear"
                 >
                   <div className="flex flex-col relative px-4 md:px-8 py-5 md:py-10 justify-between items-center rounded-[10px] bg-white m-[1px] z-10">
@@ -1301,11 +1302,12 @@ function OurVision() {
                         Information
                       </p>
                       <p className="text-center text-paragraph tracking-wide poppins-font">
-                        This involve optimizes website headers content internal
+                        Ensure transparency and accountability through stringent
+                        information disclosure requirements
                       </p>
                     </div>
-                    <Link to="#">
-                      <div className="flex items-center gap-2 group text-paragraph hover:text-purple tracking-wide poppins-font">
+                    <Link to="/AboutUs">
+                      <div className="flex items-center gap-2 group text-paragraph hover:text-buisness-red tracking-wide poppins-font">
                         <span className="font-medium leading-5 font-inter border-b border-transparent before:inline-block before:border-purple before:border-b before:absolute before:bottom-0 before:transition-all before:duration-100 before:w-0 hover:before:w-full before:overflow-hidden before:h-5 relative">
                           Read More
                         </span>
@@ -1332,7 +1334,7 @@ function OurVision() {
                 </div>
                 <div
                   data-aos="zoom-out"
-                  data-aos-delay="2000"
+                  data-aos-delay="1000"
                   className="col-span-3 relative group border border-transparent common-transition before:inline-block before:w-full before:h-full before:border before:rounded-[10px] before:border-purple before:absolute before:bottom-0 before:right-0 before:shadow-common before:origin-bottom-right before:scale-0 hover:before:scale-100 before:transition-all before:duration-100 before:z-0 after:inline-block after:w-full after:h-full after:border after:rounded-[10px] after:border-purple after:absolute after:top-0 after:left-0 after:shadow-common after:origin-top-left after:scale-0 hover:after:scale-100 after:transition-all after:duration-100 after:z-0 before:ease-linear after:ease-linear"
                 >
                   <div className="flex flex-col relative px-4 md:px-8 py-5 md:py-10 justify-between items-center rounded-[10px] bg-white m-[1px] z-10">
@@ -2390,11 +2392,12 @@ function OurVision() {
                         Integration
                       </p>
                       <p className="text-center text-paragraph tracking-wide poppins-font">
-                        This involve optimizes website headers content internal
+                        Govern mergers and acquisitions, ensuring seamless
+                        integration of businesses
                       </p>
                     </div>
-                    <Link to="#">
-                      <div className="flex items-center gap-2 group text-paragraph hover:text-purple tracking-wide poppins-font">
+                    <Link to="/AboutUs">
+                      <div className="flex items-center gap-2 group text-paragraph hover:text-buisness-red tracking-wide poppins-font">
                         <span className="font-medium leading-5 font-inter border-b border-transparent before:inline-block before:border-purple before:border-b before:absolute before:bottom-0 before:transition-all before:duration-100 before:w-0 hover:before:w-full before:overflow-hidden before:h-5 relative">
                           Read More
                         </span>
@@ -2421,7 +2424,7 @@ function OurVision() {
                 </div>
                 <div
                   data-aos="zoom-out"
-                  data-aos-delay="2000"
+                  data-aos-delay="1000"
                   className="col-span-3 relative group border border-transparent common-transition before:inline-block before:w-full before:h-full before:border before:rounded-[10px] before:border-purple before:absolute before:bottom-0 before:right-0 before:shadow-common before:origin-bottom-right before:scale-0 hover:before:scale-100 before:transition-all before:duration-100 before:z-0 after:inline-block after:w-full after:h-full after:border after:rounded-[10px] after:border-purple after:absolute after:top-0 after:left-0 after:shadow-common after:origin-top-left after:scale-0 hover:after:scale-100 after:transition-all after:duration-100 after:z-0 before:ease-linear after:ease-linear"
                 >
                   <div className="flex flex-col relative px-4 md:px-8 py-5 md:py-10 justify-between items-center rounded-[10px] bg-white m-[1px] z-10">
@@ -3476,14 +3479,15 @@ function OurVision() {
                     </div>
                     <div className="mt-12 mb-4">
                       <p className="text-20 font-semibold text-center text-main-black mb-4 tracking-wide poppins-font">
-                        Integration
+                        Interaction
                       </p>
                       <p className="text-center text-paragraph poppins-font">
-                        This involve optimizes website headers content internal
+                        Regulate interactions between companies and
+                        stakeholders, promoting fair practices and compliance
                       </p>
                     </div>
-                    <Link to="#">
-                      <div className="flex items-center gap-2 group text-paragraph hover:text-purple tracking-wide poppins-font">
+                    <Link to="/AboutUs">
+                      <div className="flex items-center gap-2 group text-paragraph hover:text-buisness-red tracking-wide poppins-font">
                         <span className="font-medium leading-5 font-inter border-b border-transparent before:inline-block before:border-purple before:border-b before:absolute before:bottom-0 before:transition-all before:duration-100 before:w-0 hover:before:w-full before:overflow-hidden before:h-5 relative">
                           Read More
                         </span>

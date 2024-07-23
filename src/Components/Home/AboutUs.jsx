@@ -4,41 +4,32 @@ function AboutUs() {
   return (
     <>
       <>
-        <div className="theme-container w-full mx-auto  py-[100px] sm:py-[180px]">
+        <div className="theme-container w-full mx-auto xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
           <div className="grid grid-cols-6 xl:grid-cols-12 gap-y-10">
             <div className="col-span-6">
               <div className="max-w-[476px]">
                 <h1 className="border text-white border-buisness-red/10 py-0.5 px-5 rounded-[30px] w-fit bg-buisness-red/5 font-medium tracking-wide poppins-font">
                   About us
                 </h1>
-                <h2 className="text-24 sm:text-48 font-semibold text-main-black pt-5 ">
-                  Platform for all matters on Corporate Compliance
+                <h2 className="text-[30px] sm:text-44 font-semibold text-main-black pt-5 ">
+                  Discover Your Path to Seamless Compliance Management
                 </h2>
                 <p className="text-paragraph pt-5 sm:pt-10 tracking-wide poppins-font">
-                  As per the Companies Act, 2013, the Board of Directors of a
-                  company are supposed to act in good faith in order to promote
-                  the objects of the company for the benefit of its
-                  stakeholders. Directors also have a certain degree of
-                  responsibility for the operations of the company.
+                  At Compliance Townhall, we specialise in empowering businesses
+                  with robust corporate compliance solutions. With a deep
+                  understanding of regulatory landscapes across industries, we
+                  offer tailored strategies to ensure your company meets all
+                  necessary standards efficiently
                 </p>
                 <ul className="flex flex-col gap-0.5 mt-6 mb-11">
                   <li className="flex items-center gap-2.5 before:h-[18px] before:w-[18px] before:rounded-full before:bg-buisness-red tick-before before:flex before:justify-center before:items-center text-main-black tracking-wide poppins-font">
-                    Meeting for a common purpose
+                    Navigate Regulatory Requirements with Confidence
                   </li>
                   <li className="flex items-center gap-2.5 before:h-[18px] before:w-[18px] before:rounded-full before:bg-buisness-red tick-before before:flex before:justify-center before:items-center text-main-black tracking-wide poppins-font">
-                    Discussion various issue of respective domains
+                    Stay Informed with Industry-Leading Insights
                   </li>
                   <li className="flex items-center gap-2.5 before:h-[18px] before:w-[18px] before:rounded-full before:bg-buisness-red tick-before before:flex before:justify-center before:items-center text-main-black tracking-wide poppins-font">
-                    Interaction and exchange of ideas
-                  </li>
-                  <li className="flex items-center gap-2.5 before:h-[18px] before:w-[18px] before:rounded-full before:bg-buisness-red tick-before before:flex before:justify-center before:items-center text-main-black tracking-wide poppins-font">
-                    Sharing of thoughts and knowledge
-                  </li>
-                  <li className="flex items-center gap-2.5 before:h-[18px] before:w-[18px] before:rounded-full before:bg-buisness-red tick-before before:flex before:justify-center before:items-center text-main-black tracking-wide poppins-font">
-                    Collaborating and Associating
-                  </li>
-                  <li className="flex items-center gap-2.5 before:h-[18px] before:w-[18px] before:rounded-full before:bg-buisness-red tick-before before:flex before:justify-center before:items-center text-main-black tracking-wide poppins-font">
-                    with freedom and independence ...
+                    Dedicated Support to Safeguard Your Business
                   </li>
                 </ul>
                 <Link to="/AboutUs">

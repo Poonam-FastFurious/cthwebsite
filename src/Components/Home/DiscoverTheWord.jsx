@@ -13,16 +13,16 @@ function DiscoverTheWord() {
   }, []);
   return (
     <>
-      <section className=" py-16 md:py-[130px] relative bg-[#E7DDCD]">
+      <section className=" xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px] relative bg-[#E7DDCD]">
         <div className="theme-container w-full mx-auto">
           <div className="flex flex-col xl:flex-row justify-between w-full">
             <div className="">
-              <h2 className="text-black font-semibold text-[40px] sm:text-48 pt-5  tracking-normal poppins-font">
-                Discover the World
+              <h2 className="text-black font-semibold text-[30px] text-center sm:text-48 pt-5  tracking-normal poppins-font">
+                Connect with our associated members
               </h2>
             </div>
             <div className="flex flex-col sm:flex-row gap-10 items-center">
-              <Link to="#">
+              <Link to="/Signup">
                 <div className="home-two-btn-bg group bg-buisness-light-black border-white/10 py-[15px]">
                   <span className="text-base group-hover:text-buisness-light-black text-white transition-all duration-300 font-semibold  relative z-10 tracking-normel poppins-font">
                     Join Our Team

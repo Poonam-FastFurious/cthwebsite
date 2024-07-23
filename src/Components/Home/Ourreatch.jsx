@@ -2,11 +2,11 @@ function Ourreatch() {
   return (
     <>
       <section
-        className="pb-16 md:p-[130px]  "
+        className="xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px] "
         style={{ backgroundColor: "#FFFBF0" }}
       >
         <div className="flex flex-col items-center">
-          <span className=" font-bold px-5  text-[40px]   leading-none rounded-full inline-block pb-5 tracking-wide poppins-font">
+          <span className=" font-bold px-5  text-[30px]   leading-none rounded-full inline-block pb-5 tracking-wide poppins-font">
             Our Reach
           </span>
         </div>

@@ -114,12 +114,12 @@ function BlogList() {
             </div>
           </section>
         </section>
-        <div className="max-w-5xl max-lg:max-w-2xl mx-auto">
+        <div className="max-w-5xl max-lg:max-w-2xl mx-auto xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
           <div className="flex flex-col justify-center  w-full"></div>
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-md:justify-center mt-12 ">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-md:justify-center  ">
             {blogs.map((blog, index) => (
               <div className="max-w-lg mx-auto " key={index}>
-                <div className="bg-[#A3896B]  shadow-md border border-gray-200 rounded-lg max-w-sm mb-5 p-4">
+                <div className="bg-[#A3896B]  shadow-md border border-gray-200 rounded-lg max-w-sm  p-4">
                   <Link to="#">
                     <img className="rounded-t-lg" src={blog.image} alt="" />
                   </Link>

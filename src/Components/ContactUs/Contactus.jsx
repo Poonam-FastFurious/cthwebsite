@@ -81,7 +81,7 @@ function Contactus() {
           </div>
         </div>
       </section>
-      <section className="py-24">
+      <section className="xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center gap-x-4 gap-y-2 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row ">
             <div className="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4 border p-8 bg-[#A3896B]">
@@ -135,13 +135,16 @@ function Contactus() {
         </p>
       </div>
       <InquiryForm />
-      <section className="relative md:mt-12">
-        <div className="w-full pb-16 md:pb-[30px] relative z-10">
+      <section className="relative    ">
+        <div className="w-full  relative z-10 bg-[#F6F4F1] ">
           <div className="theme-container mx-auto">
-            <div className="flex justify-center items-center px-4 md:px-0 py-10 md:py-20 relative rounded-3xl overflow-hidden bg-[#F6F4F1]">
+            <div className="flex justify-center items-center px-4 md:px-0   relative rounded-3xl overflow-hidden  xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
               <div className="max-w-[850px] w-full flex justify-center items-center flex-col relative z-10">
-                <h2 className="text-[40px] sm:text-48 font-bold text-main-black mt-5 poppins-font">
-                  Frequently Asked Questions
+                <h1 className="py-0.5 px-5 bg-buisness-red border-buisness-red border rounded-[30px] font-medium text-white poppins-font tracking-normal">
+                  FAQs
+                </h1>
+                <h2 className="text-24 sm:text-48 font-semibold text-main-black mt-5 poppins-font tracking-normal">
+                  Asked Questions & Answer
                 </h2>
                 <div className="flex flex-col gap-2.5 w-full mt-5 md:mt-10 p-0 sm:p-5">
                   {faqData.map((faq, index) => (

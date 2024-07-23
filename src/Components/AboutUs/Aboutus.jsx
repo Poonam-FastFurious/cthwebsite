@@ -81,7 +81,7 @@ function Aboutus() {
           </div>
         </div>
       </section>
-      <section className="w-full py-16 md:py-[130px]">
+      <section className="w-full py-12 md:py-[110px]">
         <div className="theme-container mx-auto w-full">
           <div className="grid grid-cols-6 lg:grid-cols-12 gap-10 lg:gap-0 h-fit">
             <div className="col-span-6 lg:pr-[87px] flex h-full items-center">
@@ -94,18 +94,22 @@ function Aboutus() {
                 <h1 className="text-24 md:text-48 font-semibold text-main-black mt-2.5 md:mt-5   poppins-font tracking-normal">
                   Who We Are?
                 </h1>
-                <p className="mt-5 md:mt-10 text-paragraph   poppins-font tracking-wide text-black">
-                  In addition to internal controls, the Companies Act, 2013
-                  prescribes an annual audit of companies. The audit reports –
-                  which provide an overview of operational, financial and
-                  governance matters – must be filed with the registrar of
-                  companies as part of companies' routine filings. Certain
-                  companies that exceed certain turnover, paid-up share capital
-                  or indebtedness thresholds must also carry out an internal
-                  audit and/or a secretarial audit. Further, companies engaged
-                  in production or manufacturing may be required to do a cost
-                  audit. All audits are typically conducted by suitably
-                  qualified external consultants.
+                <p className="mt-5 md:mt-10 text-paragraph   poppins-font tracking-normal text-black text-justify">
+                  At Compliance Townhall, we help businesses stay on top of
+                  corporate compliance. We understand the rules and regulations
+                  across different industries and provide customized strategies
+                  to ensure your company meets all necessary standards smoothly.
+                  <br />
+                  <br />
+                  Our platform allows professionals to gather with a shared
+                  goal: achieving compliance excellence. Here, industry leaders
+                  and experts discuss various issues in their fields, exchange
+                  ideas, share knowledge, and collaborate freely and
+                  independently.
+                  <br /> <br />
+                  Join us at Compliance Townhall, where we believe in the power
+                  of working together to navigate the complexities of corporate
+                  compliance and achieve lasting success.
                 </p>
                 <hr className="mt-10 border-purple/10" />
               </div>
@@ -183,7 +187,7 @@ function Aboutus() {
           </div>
         </div>
       </section>
-      <section className="w-full py-16 md:pt-[94px] md:pb-[130px] items-center">
+      <section className="w-full  md:pb-[130px] items-center">
         <div className="theme-container mx-auto w-full">
           <div className="grid grid-cols-6 lg:grid-cols-12 box-border">
             <div className="col-span-5 relative flex flex-col sm:flex-row justify-end w-full overflow-hidden">
@@ -194,30 +198,68 @@ function Aboutus() {
               />
             </div>
             <div className="col-span-6 ml-16 flex justify-center flex-col">
-              <h1 className="text-24 md:text-[40px] font-semibold text-main-black mt-2.5 md:mt-5 tracking-normal   poppins-font ">
-                Compliance Townhall
+              <h1 className="text-24 md:text-[30px] font-semibold text-main-black mt-2.5 md:mt-5 tracking-normal   poppins-font ">
+                Why was it needed?
               </h1>
-              <p className="mt-5 md:mt-10 text-paragraph pb-10   poppins-font tracking-wide text-black">
-                The board of directors of a company has certain fiduciary duties
-                towards the company under the Companies Act, 2013. The directors
-                must act in good faith to promote the objectives of the company
-                for the benefit of its stakeholders. Further, Schedule IV of the
-                Companies Act, 2013, which sets out the code for independent
-                directors, emphasises that the interests of all stakeholders of
-                the company must be balanced. The board has an overall
-                supervisory role over the company and its operations and
-                policies. The Companies Act, 2013 requires qualifying entities
-                to establish committees to effectively administer various
-                aspects of the company and ensure that its operations have a
-                positive impact on ESG matters, such as:
+              <p
+                className="mt-5 md:mt-10 text-paragraph pb-10   poppins-font tracking-normal text-black text-justify
+              "
+              >
+                We created Compliance Townhall because we saw a need for a
+                dedicated space where professionals could easily navigate the
+                complex world of corporate compliance. Many businesses need help
+                to keep up with constantly changing regulations, leading to
+                confusion and potential legal issues.
+                <br />
+                <br />
+                We wanted to provide a solution that not only helps businesses
+                meet these standards but also fosters a community of learning
+                and collaboration. By bringing together industry leaders and
+                experts, we aim to create a platform where people can discuss
+                challenges, share insights, and work together to achieve
+                compliance excellence.
+                <br />
+                <br />
+                Our goal is to make compliance simpler and more accessible,
+                empowering businesses to operate smoothly and successfully in an
+                ever-evolving regulatory environment.
               </p>
               <Link to="#"></Link>
-              <hr className="mt-10 border-purple/10" />
+              <hr className=" border-purple/10" />
             </div>
           </div>
         </div>
       </section>
-      <section className="py-[70px] sm:py-[130px] w-full bg-[#A3896B]">
+      <section className="w-full  md:pb-[130px] items-center">
+        <div className="theme-container mx-auto w-full">
+          <div className="grid grid-cols-6 lg:grid-cols-12 gap-10 lg:gap-0 h-fit">
+            <div className="col-span-6 lg:pr-[87px] flex h-full items-center">
+              <div className="">
+                <h1 className="text-24 md:text-[30px] font-semibold text-main-black mt-2.5 md:mt-5   poppins-font tracking-normal">
+                  Compliance Townhall Chatroom
+                </h1>
+                <p className="mt-5 md:mt-10 text-paragraph   poppins-font tracking-normal text-black text-justify">
+                  To solve the challenges of navigating complex corporate
+                  compliance, we created the Compliance Townhall Chatroom—a
+                  dedicated community for professionals to discuss, solve, and
+                  engage with compliance-related matters
+                </p>
+                <hr className="mt-10 border-purple/10" />
+              </div>
+            </div>
+            <div className="col-span-6 relative flex flex-col sm:flex-row justify-end items-center">
+              <div className="col-span-5 relative flex flex-col sm:flex-row justify-end w-full overflow-hidden">
+                <img
+                  src={image}
+                  alt="img"
+                  className="mt-9 w-full max-w-[630px]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px] w-full bg-[#A3896B]">
         <div className="theme-container w-full mx-auto">
           <h2 className="max-w-[623px] font-semibold text-[40px] sm:text-24 text-white text-center mx-auto mt-5  tracking-normal   poppins-font ">
             Our Founder Stories
@@ -225,12 +267,16 @@ function Aboutus() {
 
           <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-[30px] my-[70px]">
             <div className="col-span-4 p-2.5 rounded-[20px] bg-white group">
-              <div className="rounded-[10px] overflow-hidden relative w-fit h-fit">
-                <img
-                  src="https://www.techsmith.com/blog/wp-content/uploads/2021/02/video-thumbnails-hero-1.png"
-                  alt=""
+              <div className="rounded-[10px] overflow-hidden relative w-100 h-fit">
+                <iframe
+                  width="100"
+                  height="315"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
                   className="w-full object-cover rounded-[10px] group-hover:scale-110 transition-all duration-300 relative z-0"
-                />
+                ></iframe>
               </div>
 
               <h3 className="case_card_title text-black text-20 font-semibold pt-1 pb-5 mx-5 border-b border-green-dark/10   poppins-font tracking-normal">
@@ -238,7 +284,7 @@ function Aboutus() {
                   Lorem ipsum dolor sit amet consectetur.
                 </Link>
               </h3>
-              <div className="mx-5 mt-6 mb-3 flex items-center justify-between   poppins-font tracking-wide">
+              <div className="mx-5 mt-6 mb-3 flex items-center justify-between   poppins-font tracking-normal ">
                 <div>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -250,12 +296,16 @@ function Aboutus() {
               </div>
             </div>
             <div className="col-span-4 p-2.5 rounded-[20px] bg-white group">
-              <div className="rounded-[10px] overflow-hidden relative w-fit h-fit">
-                <img
-                  src="https://www.techsmith.com/blog/wp-content/uploads/2021/02/video-thumbnails-hero-1.png"
-                  alt=""
+              <div className="rounded-[10px] overflow-hidden relative w-100 h-fit">
+                <iframe
+                  width="100"
+                  height="315"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
                   className="w-full object-cover rounded-[10px] group-hover:scale-110 transition-all duration-300 relative z-0"
-                />
+                ></iframe>
               </div>
 
               <h3 className="case_card_title text-black text-20 font-semibold pt-1 pb-5 mx-5 border-b border-green-dark/10 poppins-font tracking-normal">
@@ -275,12 +325,16 @@ function Aboutus() {
               </div>
             </div>
             <div className="col-span-4 p-2.5 rounded-[20px] bg-white group">
-              <div className="rounded-[10px] overflow-hidden relative w-fit h-fit">
-                <img
-                  src="https://www.techsmith.com/blog/wp-content/uploads/2021/02/video-thumbnails-hero-1.png"
-                  alt=""
+              <div className="rounded-[10px] overflow-hidden relative w-100 h-fit">
+                <iframe
+                  width="100"
+                  height="315"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
                   className="w-full object-cover rounded-[10px] group-hover:scale-110 transition-all duration-300 relative z-0"
-                />
+                ></iframe>
               </div>
 
               <h3 className="case_card_title text-black text-20 font-semibold pt-1 pb-5 mx-5 border-b border-green-dark/10 poppins-font tracking-normal">
@@ -302,10 +356,10 @@ function Aboutus() {
           </div>
         </div>
       </section>
-      <section className="relative md:mt-12 ">
-        <div className="w-full pb-16 md:pb-[30px] relative z-10 ">
+      <section className="relative    ">
+        <div className="w-full  relative z-10 bg-[#F6F4F1] ">
           <div className="theme-container mx-auto">
-            <div className="flex justify-center items-center px-4 md:px-0 py-10 md:py-20 relative rounded-3xl overflow-hidden bg-[#F6F4F1]">
+            <div className="flex justify-center items-center px-4 md:px-0   relative rounded-3xl overflow-hidden  xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
               <div className="max-w-[850px] w-full flex justify-center items-center flex-col relative z-10">
                 <h1 className="py-0.5 px-5 bg-buisness-red border-buisness-red border rounded-[30px] font-medium text-white poppins-font tracking-normal">
                   FAQs
