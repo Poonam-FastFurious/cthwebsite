@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Baseurl } from "../../Confige";
 import image from "../../assets/galleryimgswsl.jpeg";
+import backimage from "../../assets/banner.png";
 function Aboutus() {
   const [banner, setBanner] = useState([]);
   const [openIndex, setOpenIndex] = useState(null);
@@ -111,7 +112,6 @@ function Aboutus() {
                   of working together to navigate the complexities of corporate
                   compliance and achieve lasting success.
                 </p>
-                <hr className="mt-10 border-purple/10" />
               </div>
             </div>
             <div className="col-span-6 relative flex flex-col sm:flex-row justify-end items-center">
@@ -190,14 +190,14 @@ function Aboutus() {
       <section className="w-full  md:pb-[130px] items-center">
         <div className="theme-container mx-auto w-full">
           <div className="grid grid-cols-6 lg:grid-cols-12 box-border">
-            <div className="col-span-5 relative flex flex-col sm:flex-row justify-end w-full overflow-hidden">
+            <div className="col-span-6 lg:pr-[87px] flex h-full items-center">
               <img
                 src={image}
                 alt="img"
                 className="mt-9 w-full max-w-[630px]"
               />
             </div>
-            <div className="col-span-6 ml-16 flex justify-center flex-col">
+            <div className="col-span-6 relative  justify-end items-center">
               <h1 className="text-24 md:text-[30px] font-semibold text-main-black mt-2.5 md:mt-5 tracking-normal   poppins-font ">
                 Why was it needed?
               </h1>
@@ -224,36 +224,120 @@ function Aboutus() {
                 empowering businesses to operate smoothly and successfully in an
                 ever-evolving regulatory environment.
               </p>
-              <Link to="#"></Link>
-              <hr className=" border-purple/10" />
             </div>
           </div>
         </div>
       </section>
-      <section className="w-full  md:pb-[130px] items-center">
+
+      <section
+        className="  md:pb-[130px] items-center xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px] w-full"
+        style={{
+          backgroundImage: `url(${backimage})`,
+          backgroundSize: "cover", // Ensures the image covers the entire div
+          backgroundPosition: "center", // Centers the image
+          backgroundRepeat: "no-repeat", // Prevents the image from repeating
+          minHeight: "100vh", // Ensures the div has enough height to display the image
+        }}
+      >
+        <div className="flex flex-col justify-center items-center w-full">
+          <h2 className="text-main-black font-semibold text-center text-3xl pt-5 poppins-font">
+            Compliance Townhall Chatroom
+          </h2>
+          <p className=" max-w-4xl text-center mt-4 tracking-normal">
+            To solve the challenges of navigating complex corporate compliance,
+            we created the Compliance Townhall Chatroom—a dedicated community
+            for professionals to discuss, solve, and engage with
+            compliance-related matters
+          </p>
+        </div>
         <div className="theme-container mx-auto w-full">
-          <div className="grid grid-cols-6 lg:grid-cols-12 gap-10 lg:gap-0 h-fit">
-            <div className="col-span-6 lg:pr-[87px] flex h-full items-center">
-              <div className="">
-                <h1 className="text-24 md:text-[30px] font-semibold text-main-black mt-2.5 md:mt-5   poppins-font tracking-normal">
-                  Compliance Townhall Chatroom
-                </h1>
-                <p className="mt-5 md:mt-10 text-paragraph   poppins-font tracking-normal text-black text-justify">
-                  To solve the challenges of navigating complex corporate
-                  compliance, we created the Compliance Townhall Chatroom—a
-                  dedicated community for professionals to discuss, solve, and
-                  engage with compliance-related matters
-                </p>
-                <hr className="mt-10 border-purple/10" />
+          <div className="max-w-7xl mx-auto py-8 ">
+            <h2 className="text-24 md:text-[20px] font-semibold text-main-black my-8   poppins-font tracking-normal text-center ">
+              Features and Functionalities
+            </h2>
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+              <div className="bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl  overflow-hidden mx-auto  border border-buisness-red">
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold">Discussion Forums</h3>
+                  <p className="mt-2 text-md  text-gray-500 leading-normal">
+                    Separate channels for various compliance topics, allowing
+                    focused discussions and easy access to relevant information
+                    <br />
+                    <br /> <br />
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="col-span-6 relative flex flex-col sm:flex-row justify-end items-center">
-              <div className="col-span-5 relative flex flex-col sm:flex-row justify-end w-full overflow-hidden">
-                <img
-                  src={image}
-                  alt="img"
-                  className="mt-9 w-full max-w-[630px]"
-                />
+
+              <div className="bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl  overflow-hidden mx-auto  border border-buisness-red">
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold">
+                    Case Studies and Solutions
+                  </h3>
+                  <p className="mt-2 text-md  text-gray-500 leading-normal">
+                    Members can share and discuss real-world compliance cases,
+                    learning from each other’s experiences. Work together to
+                    find solutions to complex compliance issues.
+                    <br />
+                    <br /> <br />
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl  overflow-hidden mx-auto  border border-buisness-red">
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold">Knowledge Sharing</h3>
+                  <p className="mt-2 text-md  text-gray-500 leading-normal">
+                    Access to a library of compliance resources, including
+                    articles, whitepapers, and legal documents. Share and
+                    discover best practices for compliance management across
+                    different industries.
+                    <br />
+                    <br /> <br />
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl  overflow-hidden mx-auto  border border-buisness-red">
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold">
+                    Networking Opportunities
+                  </h3>
+                  <p className="mt-2 text-md  text-gray-500 leading-normal">
+                    Connect with compliance professionals from various
+                    industries and backgrounds. Participate in virtual events
+                    and webinars to stay updated on the latest trends and
+                    developments in corporate compliance.
+                    <br />
+                    <br /> <br />
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl  overflow-hidden mx-auto  border border-buisness-red">
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold">
+                    Collaboration and Independence
+                  </h3>
+                  <p className="mt-2 text-md  text-gray-500 leading-normal">
+                    Form project groups to collaborate on specific compliance
+                    initiatives. Encourage open and independent discussions,
+                    allowing members to freely express their thoughts and ideas.
+                    <br />
+                    <br /> <br />
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl  overflow-hidden mx-auto  border border-buisness-red">
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold">Discussion Forums</h3>
+                  <p className="mt-2 text-md  text-gray-500 leading-normal">
+                    Separate channels for various compliance topics, allowing
+                    focused discussions and easy access to relevant information
+                    <br />
+                    <br /> <br />
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -357,10 +441,10 @@ function Aboutus() {
         </div>
       </section>
       <section className="relative    ">
-        <div className="w-full  relative z-10 bg-[#F6F4F1] ">
+        <div className="w-full  relative  bg-[#F6F4F1] ">
           <div className="theme-container mx-auto">
             <div className="flex justify-center items-center px-4 md:px-0   relative rounded-3xl overflow-hidden  xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
-              <div className="max-w-[850px] w-full flex justify-center items-center flex-col relative z-10">
+              <div className="max-w-[850px] w-full flex justify-center items-center flex-col relative ">
                 <h1 className="py-0.5 px-5 bg-buisness-red border-buisness-red border rounded-[30px] font-medium text-white poppins-font tracking-normal">
                   FAQs
                 </h1>

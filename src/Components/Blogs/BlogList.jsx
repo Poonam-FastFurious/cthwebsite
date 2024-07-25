@@ -5,6 +5,11 @@ function BlogList() {
   const [banner, setBanner] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -55,6 +60,11 @@ function BlogList() {
     }
     return description;
   };
+  const filteredBlogs =
+    selectedCategory === "All"
+      ? blogs
+      : blogs.filter((blog) => blog.category === selectedCategory);
+
   return (
     <>
       <div>
@@ -122,10 +132,39 @@ function BlogList() {
           </section>
         </section>
         <div className="max-w-5xl max-lg:max-w-2xl mx-auto xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-md:justify-center  ">
-            {blogs.map((blog, index) => (
-              <div className="max-w-lg mx-auto " key={index}>
-                <div className="bg-[#A3896B]  shadow-md border border-gray-200 rounded-lg max-w-sm  p-4">
+          <div className="flex flex-col w-full justify-center items-center mx-auto">
+            <h2 className="text-main-black font-semibold text-3xl pt-5 poppins-font">
+              Our Latest Blogs
+            </h2>
+            <div className="flex gap-2.5 flex-wrap mt-8 justify-center items-center mx-auto">
+              {[
+                "All",
+                "CSR",
+                "BRSR",
+                "Corporate Governance",
+                "Miscellaneous",
+                "Corporate Mentoring, Learning & Development",
+              ].map((category) => (
+                <button
+                  key={category}
+                  className={`group overflow-hidden flex  items-center relative text-sm border border-purple/10 rounded-md py-1.5 ${
+                    selectedCategory === category
+                      ? "bg-buisness-red text-white"
+                      : ""
+                  }`}
+                  onClick={() => handleCategoryClick(category)}
+                >
+                  <span className="px-[18px] relative transition-colors ease-in-out duration-300 poppins-font">
+                    {category}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-md:justify-center xl:py-[40px] sm:py-[40px] md:py-[40px] lg:py-[40px] py-[40px]">
+            {filteredBlogs.map((blog, index) => (
+              <div className="max-w-lg mx-auto" key={index}>
+                <div className="bg-[#A3896B] shadow-md border border-gray-200 rounded-lg max-w-sm p-4">
                   <Link to="#">
                     <img className="rounded-t-lg" src={blog.image} alt="" />
                   </Link>
@@ -146,7 +185,7 @@ function BlogList() {
                       {truncateDescription(blog.description, 100)}
                     </p>
                     <button
-                      className="text-white   bg-[#89580A]   font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
+                      className="text-white bg-[#89580A] font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
                       onClick={() => handleReadMoreClick(blog._id)}
                     >
                       Read more

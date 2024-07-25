@@ -31,7 +31,7 @@ function HomeBlogs() {
   };
   return (
     <>
-      <section className="xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
+      <section className="mx-auto max-w-[1600px] w-full xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]   xl:px-[80px] md:px-10 px-0 ">
         <div className="theme-container w-full mx-auto ">
           <div className="grid grid-cols-8 lg:grid-cols-12 gap-[30px]">
             <div data-aos="fade-up" className="col-span-8">

@@ -1,8 +1,8 @@
 function Ourreatch() {
   return (
-    <>
+    <div className="bg-[#FFFBF0]">
       <section
-        className="xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px] "
+        className="mx-auto max-w-[1600px] w-full xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]   xl:px-[80px] md:px-10 px-0 bg-main-gray "
         style={{ backgroundColor: "#FFFBF0" }}
       >
         <div className="flex flex-col items-center">
@@ -12,7 +12,7 @@ function Ourreatch() {
         </div>
         <div className="theme-container w-full mx-auto pt-4 ">
           <div className="  border-buisness-dark-black/10 grid grid-cols-3  gap-6 md:grid-cols-6 lg:grid-cols-12 rounded-[15px]">
-            <div className="col-span-3 bg-[#A3896B] rounded-md  border place-items-center  border-buisness-dark-black/10 p-5 md:p-[50px] lg:p-5 xl:p-[50px] flex flex-col items-center">
+            <div className="col-span-3 bg-[#A3896B] rounded-md  border place-items-center  border-buisness-dark-black/10 p-5 md:p-[50px] lg:p-5 xl:p-[50px] flex flex-col items-center text-wrap">
               <svg
                 width="65"
                 height="56"
@@ -25,7 +25,7 @@ function Ourreatch() {
                   fill="white"
                 />
               </svg>
-              <h2 className="text-18 font-medium text-white text-paragraph pt-2.5 tracking-wide poppins-font">
+              <h2 className="text-18 font-medium text-white text-center text-paragraph pt-2.5 tracking-wide poppins-font">
                 Cases Completed
               </h2>
               <h1
@@ -37,7 +37,7 @@ function Ourreatch() {
               >
                 28k+
               </h1>
-              <h2 className="text-18 pt-5 font-medium text-white text-paragraph tracking-wide poppins-font ">
+              <h2 className="text-18 pt-5 font-medium text-white text-center text-paragraph tracking-wide poppins-font ">
                 Happy Members
               </h2>
             </div>
@@ -87,7 +87,7 @@ function Ourreatch() {
                 </g>
               </svg>
 
-              <h2 className="text-18 font-medium text-white text-paragraph pt-2.5 tracking-wide poppins-font">
+              <h2 className="text-18 font-medium text-white text-center text-paragraph pt-2.5 tracking-wide poppins-font">
                 Global community
               </h2>
               <h1
@@ -117,7 +117,7 @@ function Ourreatch() {
                 />
               </svg>
 
-              <h2 className="text-18 font-medium text-white text-paragraph pt-2.5 tracking-wide poppins-font">
+              <h2 className="text-18 font-medium text-white text-paragraph pt-2.5 tracking-wide poppins-font text-center">
                 We have built Our
               </h2>
               <h1
@@ -136,7 +136,7 @@ function Ourreatch() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

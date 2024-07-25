@@ -12,8 +12,8 @@ function DiscoverTheWord() {
       .then((data) => setMembers(data.data));
   }, []);
   return (
-    <>
-      <section className=" xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px] relative bg-[#E7DDCD]">
+    <div className="bg-[#E7DDCD]">
+      <section className=" mx-auto max-w-[1600px] w-full xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]   xl:px-[80px] md:px-10 px-0 bg-main-gray  bg-[#E7DDCD]">
         <div className="theme-container w-full mx-auto">
           <div className="flex flex-col xl:flex-row justify-between w-full">
             <div className="">
@@ -88,7 +88,7 @@ function DiscoverTheWord() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

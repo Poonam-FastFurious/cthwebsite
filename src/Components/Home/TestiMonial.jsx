@@ -7,8 +7,8 @@ function TestiMonial() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
-    <>
-      <section className="xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px] bg-[#ECE4D7] ">
+    <div className="bg-[#ECE4D7]">
+      <section className="mx-auto max-w-[1600px] w-full xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]   xl:px-[80px] md:px-10 px-0 bg-main-gray bg-[#ECE4D7] ">
         <div className="theme-container mx-auto flex flex-col ">
           <h1 className="border text-main-black border-buisness-red/10 py-0.5 px-5 rounded-[30px] w-fit bg-buisness-red/5 font-medium tracking-wide poppins-font">
             Loved by Our Testimonials
@@ -280,7 +280,7 @@ function TestiMonial() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

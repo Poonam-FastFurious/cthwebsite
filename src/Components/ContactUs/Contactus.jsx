@@ -136,10 +136,10 @@ function Contactus() {
       </div>
       <InquiryForm />
       <section className="relative    ">
-        <div className="w-full  relative z-10 bg-[#F6F4F1] ">
+        <div className="w-full  relative  bg-[#F6F4F1] ">
           <div className="theme-container mx-auto">
             <div className="flex justify-center items-center px-4 md:px-0   relative rounded-3xl overflow-hidden  xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
-              <div className="max-w-[850px] w-full flex justify-center items-center flex-col relative z-10">
+              <div className="max-w-[850px] w-full flex justify-center items-center flex-col relative ">
                 <h1 className="py-0.5 px-5 bg-buisness-red border-buisness-red border rounded-[30px] font-medium text-white poppins-font tracking-normal">
                   FAQs
                 </h1>

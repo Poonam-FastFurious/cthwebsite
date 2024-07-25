@@ -195,45 +195,7 @@ function Footer() {
           </ul>
         </p>
       </div>
-      <div className="w-full  relative z-50">
-        <div className="theme-container mx-auto h-full">
-          <div className="w-full h-full flex flex-col sm:flex-row  justify-center items-center ">
-            <div className="relative">
-              <a
-                href="#"
-                aria-label="go top"
-                className="w-[45px] h-[45px] rounded-full border-[3px] border-[#B08D57] flex justify-center items-center bg-buisness-red absolute -top-[10px] md:-top-[165px]"
-              >
-                <span>
-                  <svg
-                    width="45"
-                    height="45"
-                    viewBox="0 0 45 45"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="22.5"
-                      cy="22.5"
-                      r="21"
-                      fill="#B08D57"
-                      stroke="#B08D57"
-                      strokeWidth="3"
-                    ></circle>
-                    <path
-                      d="M19 21L23 17M23 17L27 21M23 17V29"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <button
         className="fixed bottom-4 right-4 inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-buisness-red hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900"
         type="button"

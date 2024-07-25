@@ -1,16 +1,25 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 
 import logo from "../assets/logo-no-background.png";
 import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [token, setToken] = useState(localStorage.getItem("accessToken"));
   const [isTokenExpired, setIsTokenExpired] = useState(false);
-
+  const location = useLocation();
+  useEffect(() => {
+    // Scroll to top on route change
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [location]);
   useEffect(() => {
     if (token) {
       try {
@@ -40,6 +49,17 @@ function Header() {
     localStorage.removeItem("accessToken");
     setToken(null);
     window.location.href = "/Login"; // Redirect to login page
+  };
+  const handleGetStartedClick = () => {
+    const userId = localStorage.getItem("userId");
+    const token = localStorage.getItem("accessToken");
+
+    if (token && !isTokenExpired) {
+      const url = `http://localhost:5174/?userId=${userId}&token=${token}`;
+      window.open(url, "_blank");
+    } else {
+      toast.warn("Please log in first to start Townhall.");
+    }
   };
   return (
     <div>
@@ -144,30 +164,15 @@ function Header() {
                   </div>
                 </Link>
               )}
-              <Link to="#">
-                <div className="home-two-btn-white-rev  rounded-md  home-two-btn-white-rev-sm    border-[#101828]/10 bg-[#89580A] ">
-                  <span className="text-base  text-main-black text-white  hover:text-[#B08D57]  transition-all duration-300 font-semibold font-inter relative z-10">
-                    Get Started
-                  </span>
-                  <svg
-                    className="relative z-10"
-                    width="7"
-                    height="12"
-                    viewBox="0 0 7 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      className="  stroke-white transition-all duration-300 hover:stroke-[#D3B88D]"
-                      d="M1.10254 10.5L4.89543 6.70711C5.22877 6.37377 5.39543 6.20711 5.39543 6C5.39543 5.79289 5.22877 5.62623 4.89543 5.29289L1.10254 1.5"
-                      stroke="white"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </svg>
-                </div>
-              </Link>
+
+              <div
+                onClick={handleGetStartedClick}
+                className="home-two-btn-white-rev rounded-md home-two-btn-white-rev-sm border-[#101828]/10 bg-[#89580A] cursor-pointer"
+              >
+                <span className="text-base text-main-black text-white hover:text-[#B08D57] transition-all duration-300 font-semibold font-inter relative z-10">
+                  Get Started
+                </span>
+              </div>
             </div>
           </header>
         </div>
@@ -222,8 +227,11 @@ function Header() {
                   <ul className="flex gap-5 flex-col text-paragraph text-base leading-5 font-medium font-inter">
                     <li>
                       <div>
-                        <Link to="/" target="_parent">
-                          {" "}
+                        <Link
+                          to="/"
+                          className="text-main-black"
+                          onClick={toggleDrawer}
+                        >
                           Home
                         </Link>
                       </div>
