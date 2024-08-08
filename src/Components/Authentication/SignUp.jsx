@@ -124,15 +124,9 @@ function SignUp() {
                 className="max-w-xl w-full p-4 mx-auto"
                 onSubmit={handleSubmit}
               >
-                <div className="mb-12  container w-[80%] mx-auto flex justify-between">
+                <div className="mb-12  container w-[100%] mx-auto flex justify-between">
                   <button className="text-gray-800 text-[20px] font-bold tracking-wide poppins-font">
-                    <Link to="/Login"> Sign in</Link>
-                  </button>
-                  <button className="text-gray-800 text-[20px] font-bold tracking-wide poppins-font">
-                    <Link to="/Signup">
-                      Sign up
-                      <hr className=" h-1 w-[100%] bg-[#B08D57]" />
-                    </Link>
+                    <Link to="/Signup">Sign up</Link>
                   </button>
                 </div>
 

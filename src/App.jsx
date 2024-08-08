@@ -16,7 +16,7 @@ import BlogList from "./Components/Blogs/BlogList";
 import Contactus from "./Components/ContactUs/Contactus";
 import Associatemember from "./Components/Associatemember/Associatemember";
 import Aboutus from "./Components/AboutUs/Aboutus";
-import Login from "./Components/Authentication/Login";
+// import Login from "./Components/Authentication/Login";
 import Footer from "./Components/Footer";
 import Gallery from "./Components/Gallery/Gallery";
 import SignUp from "./Components/Authentication/SignUp";
@@ -43,7 +43,7 @@ function App() {
             <Route path="/contact" element={<Contactus />} />
             <Route path="/associatedMembers" element={<Associatemember />} />
             <Route path="/AboutUs" element={<Aboutus />} />
-            <Route path="/Login" element={<Login />} />
+            {/* <Route path="/Login" element={<Login />} /> */}
             <Route path="/Signup" element={<SignUp />} />
             <Route path="/gallery" element={<Gallery />} />
           </Routes>

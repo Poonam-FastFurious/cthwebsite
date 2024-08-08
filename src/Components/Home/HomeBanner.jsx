@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import { Baseurl } from "../../Confige";
 
 const BannerItem = ({ backgroundImage, title, subtitle, description }) => (
   <div className="w-full">
@@ -121,9 +122,7 @@ function HomeBanner() {
   useEffect(() => {
     const fetchBanners = async () => {
       try {
-        const response = await fetch(
-          "https://cthbackend.onrender.com/api/v1/Banner/allabnner"
-        );
+        const response = await fetch(Baseurl + "/api/v1/Banner/allabnner");
         const data = await response.json();
         const homeBanners = data.data.filter(
           (banner) => banner.type === "Home"
@@ -136,6 +135,8 @@ function HomeBanner() {
 
     fetchBanners();
   }, []);
+  console.log(banners);
+
   const responsive = {
     0: { items: 1 },
     568: { items: 1 },

@@ -7,7 +7,7 @@ import "react-modern-drawer/dist/index.css";
 import logo from "../assets/logo-no-background.png";
 import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
+
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [token, setToken] = useState(localStorage.getItem("accessToken"));
@@ -50,17 +50,7 @@ function Header() {
     setToken(null);
     window.location.href = "/Login"; // Redirect to login page
   };
-  const handleGetStartedClick = () => {
-    const userId = localStorage.getItem("userId");
-    const token = localStorage.getItem("accessToken");
 
-    if (token && !isTokenExpired) {
-      const url = `http://localhost:5174/?userId=${userId}&token=${token}`;
-      window.open(url, "_blank");
-    } else {
-      toast.warn("Please log in first to start Townhall.");
-    }
-  };
   return (
     <div>
       <div className="xl:flex w-full justify-center h-24 bg-white fixed top-0 z-20 hidden  shadow-md poppins-font">
@@ -139,10 +129,10 @@ function Header() {
                   </div>
                 </Link>
               ) : (
-                <Link to="/Login">
+                <Link to="/Signup">
                   <div className="home-two-btn-white-rev   rounded-md home-two-btn-white-rev-sm group bg-[#B08D57] hover:bg-buisness-red border-[#101828]/10">
                     <span className="text-base -p-[20px] text-white hover:text-[#B08D57]  transition-all duration-300 font-semibold font-inter relative z-10">
-                      Sign in
+                      Sign Up
                     </span>
                     <svg
                       className="relative z-10"
@@ -165,12 +155,11 @@ function Header() {
                 </Link>
               )}
 
-              <div
-                onClick={handleGetStartedClick}
-                className="home-two-btn-white-rev rounded-md home-two-btn-white-rev-sm border-[#101828]/10 bg-[#89580A] cursor-pointer"
-              >
+              <div className="home-two-btn-white-rev rounded-md home-two-btn-white-rev-sm border-[#101828]/10 bg-[#89580A] cursor-pointer">
                 <span className="text-base text-main-black text-white hover:text-[#B08D57] transition-all duration-300 font-semibold font-inter relative z-10">
-                  Get Started
+                  <Link to={`http://localhost:5174`} target="_blank">
+                    Get Started
+                  </Link>
                 </span>
               </div>
             </div>
