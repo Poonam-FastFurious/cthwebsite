@@ -157,7 +157,7 @@ function Header() {
 
               <div className="home-two-btn-white-rev rounded-md home-two-btn-white-rev-sm border-[#101828]/10 bg-[#89580A] cursor-pointer">
                 <span className="text-base text-main-black text-white hover:text-[#B08D57] transition-all duration-300 font-semibold font-inter relative z-10">
-                  <Link to={`http://localhost:5174`} target="_blank">
+                  <Link to={`https://townhall.brandbell.in`} target="_blank">
                     Get Started
                   </Link>
                 </span>
