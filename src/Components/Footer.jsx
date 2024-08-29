@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/logo-no-background.png";
+import { Link } from "react-router-dom";
 function Footer() {
   const [isChatOpen, setIsChatOpen] = useState(false);
 
@@ -11,9 +12,9 @@ function Footer() {
       <footer className=" py-6 px-28  tracking-wide container  mx-auto">
         <div className="flex items-center justify-between max-sm:flex-col gap-5">
           <div>
-            <a href="">
+            <Link to="">
               <img src={logo} alt="logo" className="w-40 h-auto " />
-            </a>
+            </Link>
           </div>
 
           <ul className="flex flex-wrap justify-center gap-x-4 gap-3">
@@ -97,103 +98,73 @@ function Footer() {
       <div className="flex max-md:flex-col gap-4 px-24 container mx-auto ">
         <ul className="flex flex-wrap gap-4">
           <li className="text-sm">
-            <a
-              href="javascript:void(0)"
-              className=" font-semibold hover:underline"
-            >
+            <Link to="#" className=" font-semibold hover:underline">
               Find member
-            </a>
+            </Link>
           </li>
           <li className="text-sm">
-            <a
-              href="javascript:void(0)"
-              className=" font-semibold hover:underline"
-            >
+            <Link to="#" className=" font-semibold hover:underline">
               Become a Member
-            </a>
+            </Link>
           </li>
           <li className="text-sm">
-            <a
-              href="javascript:void(0)"
-              className=" font-semibold hover:underline"
-            >
+            <Link to="#" className=" font-semibold hover:underline">
               Community
-            </a>
+            </Link>
           </li>
           <li className="text-sm">
-            <a
-              href="javascript:void(0)"
-              className=" font-semibold hover:underline"
-            >
+            <Link to="#" className=" font-semibold hover:underline">
               Blog
-            </a>
+            </Link>
           </li>
         </ul>
-        <p className="text-sm  md:ml-auto">
+        <div className="text-sm  md:ml-auto">
           <ul className="flex flex-wrap gap-4">
             <li className="text-sm">
-              <a
-                href="javascript:void(0)"
-                className=" font-semibold hover:underline"
-              >
+              <Link to="#" className=" font-semibold hover:underline">
                 Join CTH
-              </a>
+              </Link>
             </li>
             <li className="text-sm">
-              <a
-                href="javascript:void(0)"
-                className=" font-semibold hover:underline"
-              >
+              <Link to="#" className=" font-semibold hover:underline">
                 Help Center
-              </a>
+              </Link>
             </li>
             <li className="text-sm">
-              <a
-                href="javascript:void(0)"
-                className=" font-semibold hover:underline"
-              >
+              <Link to="#" className=" font-semibold hover:underline">
                 Partnerships
-              </a>
+              </Link>
             </li>
           </ul>
-        </p>
+        </div>
       </div>
       <div className="flex max-md:flex-col gap-4 container mx-auto px-24 py-8">
         <p className=" text-sm ">
           Copyright © 2024
-          <a href="#" target="_blank" className="hover:underline mx-1">
+          <Link to="#" target="_blank" className="hover:underline mx-1">
             CTH
-          </a>
+          </Link>
           All Rights Reserved.
         </p>
-        <p className="text-sm  md:ml-auto">
+        <div className="text-sm  md:ml-auto">
           <ul className="flex flex-wrap gap-4">
             <li className="text-sm">
-              <a
-                href="javascript:void(0)"
-                className=" font-semibold hover:underline"
-              >
+              <Link to="#" className=" font-semibold hover:underline">
                 Contact us
-              </a>
+              </Link>
             </li>
             <li className="text-sm">
-              <a
-                href="javascript:void(0)"
-                className=" font-semibold hover:underline"
-              >
+              <Link to="#" className=" font-semibold hover:underline">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
             <li className="text-sm">
-              <a
-                href="javascript:void(0)"
-                className=" font-semibold hover:underline"
-              >
+              <Link to="#" className=" font-semibold hover:underline">
                 Term of use
-              </a>
+              </Link>
             </li>
           </ul>
-        </p>
+        </div>
       </div>
 
       <button

@@ -20,9 +20,31 @@ function SignUp() {
     agreeTerms: false,
   });
   const [formErrors, setFormErrors] = useState({});
+  const validateStepOne = () => {
+    let errors = {};
 
+    if (!formData.firstName.trim()) {
+      errors.firstName = "First Name is required";
+    }
+    if (!formData.lastName.trim()) {
+      errors.lastName = "Last Name is required";
+    }
+    if (!formData.contactNumber.trim()) {
+      errors.contactNumber = "Contact Number is required";
+    } else if (formData.contactNumber.length !== 10) {
+      errors.contactNumber = "Contact Number must be exactly 10 digits";
+    }
+    if (!formData.emailAddress.trim()) {
+      errors.emailAddress = "Email Address is required";
+    }
+
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
   const nextStep = () => {
-    setStep(step + 1);
+    if (step === 1 && validateStepOne()) {
+      setStep(step + 1);
+    }
   };
 
   const prevStep = () => {
@@ -33,19 +55,17 @@ function SignUp() {
 
     if (name === "contactNumber") {
       const onlyNums = value.replace(/[^0-9]/g, "");
-      if (onlyNums.length > 10) {
-        setFormErrors({
-          ...formErrors,
-          contactNumber: "Contact Number cannot exceed 10 digits",
-        });
-        return;
-      }
+      if (onlyNums.length > 10) return; // Prevent entering more than 10 digits
+      setFormData({
+        ...formData,
+        [name]: onlyNums,
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: type === "checkbox" ? checked : value,
+      });
     }
-
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
 
     // Clear the error for the current field when it's updated
     setFormErrors({
@@ -102,7 +122,7 @@ function SignUp() {
       navigate("/");
     } catch (error) {
       console.error("Error registering user:", error);
-      toast.warning("user aleready exist with this number ");
+      toast.warning(error.message, "user aleready exist with this number ");
     }
   };
 
@@ -135,7 +155,7 @@ function SignUp() {
                     <div className="grid sm:grid-cols-2 gap-8">
                       <div>
                         <label className="text-gray-800 text-sm mb-2 block tracking-wide poppins-font ">
-                          First Name
+                          First Name *
                         </label>
                         <input
                           name="firstName"
@@ -146,11 +166,16 @@ function SignUp() {
                           value={formData.firstName}
                           onChange={handleChange}
                         />
+                        {formErrors.firstName && (
+                          <p className="text-red-600 text-sm">
+                            {formErrors.firstName}
+                          </p>
+                        )}
                       </div>
 
                       <div>
                         <label className="text-gray-800 text-sm mb-2 block tracking-wide poppins-font">
-                          Last Name
+                          Last Name *
                         </label>
                         <input
                           name="lastName"
@@ -159,7 +184,13 @@ function SignUp() {
                           placeholder="Enter last name"
                           value={formData.lastName}
                           onChange={handleChange}
+                          required
                         />
+                        {formErrors.lastName && (
+                          <p className="text-red-600 text-sm">
+                            {formErrors.lastName}
+                          </p>
+                        )}
                       </div>
                     </div>
                     <div>
@@ -168,13 +199,19 @@ function SignUp() {
                       </label>
                       <input
                         name="contactNumber"
-                        type="number"
+                        type="text"
                         className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-[#B08D57]"
                         placeholder="Enter Contact Number *"
                         value={formData.contactNumber}
                         onChange={handleChange}
-                        maxLength={12}
+                        maxLength={10}
+                        required
                       />
+                      {formErrors.contactNumber && (
+                        <p className="text-red-600 text-sm">
+                          {formErrors.contactNumber}
+                        </p>
+                      )}
                     </div>
                     <div>
                       <label className="text-gray-800 text-sm mb-2 block tracking-wide poppins-font">
@@ -187,7 +224,13 @@ function SignUp() {
                         placeholder="Enter Email Address *"
                         value={formData.emailAddress}
                         onChange={handleChange}
+                        required
                       />
+                      {formErrors.emailAddress && (
+                        <p className="text-red-600 text-sm">
+                          {formErrors.emailAddress}
+                        </p>
+                      )}
                     </div>
                     <div>
                       <label className="text-gray-800 text-sm mb-2 block tracking-wide poppins-font">
@@ -200,6 +243,7 @@ function SignUp() {
                         placeholder="Enter Linkedin Profile"
                         value={formData.linkedinProfile}
                         onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="!mt-12">

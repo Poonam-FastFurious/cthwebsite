@@ -49,7 +49,7 @@ function DiscoverTheWord() {
             </div>
           </div>
           <div className="grid gap-[30px] grid-cols-3 md:grid-cols-6 lg:grid-cols-12 mt-10 md:mt-[70px]">
-            {members.map((member, index) => (
+            {members.slice(0, 4).map((member, index) => (
               <div
                 key={index}
                 className="col-span-3 border border-buisness-red bg-white rounded-lg"
@@ -63,7 +63,9 @@ function DiscoverTheWord() {
                 </div>
                 <h1 className="text-18  font-semibold text-black mt-6 white_card_title px-3 poppins-font mb-3">
                   <Link to="associatedMembers " className="tracking-wide">
-                    {member.user.firstName + "       " + member.user.lastName}
+                    {member.user
+                      ? `${member.user.firstName} ${member.user.lastName}`
+                      : "Anonymous"}{" "}
                   </Link>
                 </h1>
 

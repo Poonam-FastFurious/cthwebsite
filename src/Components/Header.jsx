@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
-
+import clsx from "clsx";
 import logo from "../assets/logo-no-background.png";
 import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
@@ -50,7 +50,7 @@ function Header() {
     setToken(null);
     window.location.href = "/Login"; // Redirect to login page
   };
-
+  const isActive = (path) => location.pathname === path;
   return (
     <div>
       <div className="xl:flex w-full justify-center h-24 bg-white fixed top-0 z-20 hidden  shadow-md poppins-font">
@@ -64,37 +64,67 @@ function Header() {
             <ul className="flex gap-10 text-main-black text-base leading-5 font-medium font-inter h-fit items-center">
               <li className="group">
                 <Link
-                  className=" leading-5 relative  w-fit before:h-[20px] flex items-center gap-2  delay-150"
+                  className={clsx(
+                    "leading-5   w-fit before:h-[20px] flex items-center gap-2  delay-150 relative",
+                    {
+                      "text-[#CA9352]": isActive("/"),
+                    }
+                  )}
                   to="/"
                 >
                   Home
                 </Link>
               </li>
               <li>
-                <Link className=" relative " to="/AboutUs">
+                <Link
+                  className={clsx("relative", {
+                    "text-[#CA9352]": isActive("/AboutUs"),
+                  })}
+                  to="/AboutUs"
+                >
                   About us
                 </Link>
               </li>
               <li>
-                <Link to="associatedMembers" className=" relative ">
+                <Link
+                  to="associatedMembers"
+                  className={clsx("relative", {
+                    "text-[#CA9352]": isActive("/associatedMembers"),
+                  })}
+                >
                   Associates
                 </Link>
               </li>
               <li>
-                <Link className=" relative " to="bloglist">
+                <Link
+                  className={clsx("relative", {
+                    "text-[#CA9352]": isActive("/bloglist"),
+                  })}
+                  to="/bloglist"
+                >
                   Blogs
                 </Link>
               </li>
               <li className="group relative">
                 <Link
                   to="/gallery"
-                  className=" relative  flex items-center gap-2  delay-150"
+                  className={clsx(
+                    "relative flex items-center gap-2  delay-150",
+                    {
+                      "text-[#CA9352]": isActive("/gallery"),
+                    }
+                  )}
                 >
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link className=" relative" to="contact">
+                <Link
+                  className={clsx("relative", {
+                    "text-[#CA9352]": isActive("/contact"),
+                  })}
+                  to="contact"
+                >
                   Contact
                 </Link>
               </li>
@@ -157,8 +187,11 @@ function Header() {
 
               <div className="home-two-btn-white-rev rounded-md home-two-btn-white-rev-sm border-[#101828]/10 bg-[#89580A] cursor-pointer">
                 <span className="text-base text-main-black text-white hover:text-[#B08D57] transition-all duration-300 font-semibold font-inter relative z-10">
-                  <Link to={`https://townhall.brandbell.in`} target="_blank">
-                    Get Started
+                  <Link
+                    to={`https://towlhall.dev-testing-team.tech`}
+                    target="_blank"
+                  >
+                    Sign In
                   </Link>
                 </span>
               </div>
@@ -203,11 +236,6 @@ function Header() {
             </div>
             <div className="transition-all duration-300">
               <div
-                className={`w-full h-screen fixed z-40 transition-all duration-300 ${
-                  isOpen ? "left-0" : "-left-full"
-                }`}
-              ></div>
-              <div
                 className={`fixed h-screen overflow-y-scroll w-full top-16 transition-all duration-300 ${
                   isOpen ? "left-0" : "-left-full"
                 }`}
@@ -216,36 +244,30 @@ function Header() {
                   <ul className="flex gap-5 flex-col text-paragraph text-base leading-5 font-medium font-inter">
                     <li>
                       <div>
-                        <Link
-                          to="/"
-                          className="text-main-black"
-                          onClick={toggleDrawer}
-                        >
+                        <Link to="/" className="text-main-black">
                           Home
                         </Link>
                       </div>
                     </li>
                     <li>
-                      <Link
-                        to="/associatedMembers"
-                        className=" relative  w-fit"
-                      >
-                        Associated Members
-                      </Link>
+                      <Link to="/associatedMembers">Associated Members</Link>
                     </li>
                     <li>
-                      <Link className=" relative  w-fit" to="/">
-                        Blogs
+                      <Link className=" relative  w-fit" to="/bloglist">
+                        Blog
                       </Link>
                     </li>
 
-                    <li className="">
-                      <Link to="#" className=" relative  w-fit m-nav-dropdown">
+                    <li className="group relative">
+                      <Link
+                        to="/gallery"
+                        className="relative flex items-center gap-2 delay-150"
+                      >
                         Gallery
                       </Link>
                     </li>
                     <li>
-                      <Link className=" relative  w-fit" to="contact">
+                      <Link className=" relative  w-fit" to="/contact">
                         Contact
                       </Link>
                     </li>

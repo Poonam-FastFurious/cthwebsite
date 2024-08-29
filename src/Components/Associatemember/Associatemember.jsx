@@ -98,31 +98,35 @@ function Associatemember() {
               >
                 <div className="flex justify-center items-center relative group/main overflow-hidden">
                   <img
-                    src="https://quomodothemes.website/html/quland-html/assets/images/home-three/teams/1.webp"
+                    src={member.image}
                     alt=""
                     className="w-full object-cover rounded-lg overflow-hidden"
                   />
                 </div>
                 <h1 className="text-18  font-semibold text-black mt-6 white_card_title px-3 poppins-font mb-3">
-                  <Link to="associatedMembers " className="tracking-wide">
-                    {member.user.firstName + "       " + member.user.lastName}
+                  <Link to="associatedMembers" className="tracking-wide">
+                    {member.user
+                      ? member.user.firstName + " " + member.user.lastName
+                      : "No Name Available"}
                   </Link>
                 </h1>
 
-                <div className=" flex ml-[12px] items-center gap-[12px] mb-3">
-                  <MdOutlineWorkHistory className=" text-xl" />
-                  <span className=" mt-1 tracking-wide text-[14px] poppins-font ">
-                    {member.designation}
+                <div className="flex ml-[12px] items-center gap-[12px] mb-3">
+                  <MdOutlineWorkHistory className="text-xl" />
+                  <span className="mt-1 tracking-wide text-[14px] poppins-font">
+                    {member.designation || "No Designation Available"}
                   </span>
                 </div>
 
-                <div className=" flex ml-[12px] items-center gap-[12px] mb-3">
-                  <MdOutlineWorkHistory className=" text-xl" />
-                  <span className=" mt-1 tracking-wide text-[14px] poppins-font ">
+                <div className="flex ml-[12px] items-center gap-[12px] mb-3">
+                  <MdOutlineWorkHistory className="text-xl" />
+                  <span className="mt-1 tracking-wide text-[14px] poppins-font">
                     Experience
                   </span>
-                  <span className=" mt-1 tracking-wide ml-4 text-[14px] poppins-font">
-                    {member.experience} years
+                  <span className="mt-1 tracking-wide ml-4 text-[14px] poppins-font">
+                    {member.experience
+                      ? `${member.experience} years`
+                      : "No Experience Data"}
                   </span>
                 </div>
               </div>
@@ -240,7 +244,7 @@ function Associatemember() {
               </div>
             </div>
           </div>
-          <Link to="#">
+          {/* <Link to="#">
             <div className="home-two-btn-bg group bg-buisness-red border-buisness-red py-[15px] w-fit  mx-auto">
               <span className="text-base   group-hover:text-buisness-red text-white transition-all duration-300 font-semibold font-inter relative z-10">
                 Learn more
@@ -263,7 +267,7 @@ function Associatemember() {
                 ></path>
               </svg>
             </div>
-          </Link>
+          </Link> */}
         </div>
       </section>
     </>

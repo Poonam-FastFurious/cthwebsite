@@ -50,7 +50,7 @@ function HomeBlogs() {
                     key={index}
                     className="col-span-4  pb-10 border  rounded-md bg-[#A3896B] text-white  "
                   >
-                    <div className="card" style={{ width: "18rem;" }}>
+                    <div className="card">
                       <img
                         src={blog.image}
                         className="card-img-top p-4  "

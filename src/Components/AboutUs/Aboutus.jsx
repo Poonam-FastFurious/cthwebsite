@@ -482,12 +482,11 @@ function Aboutus() {
                         </svg>
                       </div>
                       <div
+                        dangerouslySetInnerHTML={{ __html: faq.answer }}
                         className={`faq-answer mt-5 text-[#89580A] poppins-font ${
                           openIndex === index ? "open" : "closed"
                         }`}
-                      >
-                        {faq.answer}
-                      </div>
+                      ></div>
                     </div>
                   ))}
                 </div>

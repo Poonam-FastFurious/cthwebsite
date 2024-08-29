@@ -70,7 +70,7 @@ const BannerItem = ({ backgroundImage, title, subtitle, description }) => (
               </defs>
             </svg>
             <span className="font-semibold text-18 sm:text-20 text-white poppins-font">
-              Complice Town hall
+              Compliance TownHall
             </span>
           </div>
           <h1
@@ -135,7 +135,6 @@ function HomeBanner() {
 
     fetchBanners();
   }, []);
-  console.log(banners);
 
   const responsive = {
     0: { items: 1 },
