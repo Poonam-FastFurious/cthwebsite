@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import { Autoplay, Navigation, Pagination, Keyboard } from "swiper/modules";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
 function TestiMonial() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -52,184 +51,210 @@ function TestiMonial() {
                 }}
               >
                 <SwiperSlide className=" pr-3">
-                  <div className="pb-[192px] pr-[30px] w-full  relative">
-                    <img
-                      src="https://quomodothemes.website/html/quland-html/assets/images/home-five/story/1.webp"
-                      alt=""
-                      className="w-full max-w-[380px]"
-                    />
-                    <div className="group  border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%]  bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
+                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
+                    <div className="flex items-center">
                       <img
-                        src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about-card-shape.webp"
-                        alt=""
-                        className="absolute right-2 top-bottom-moving"
+                        src="https://readymadeui.com/profile_2.webp"
+                        className="w-10 h-10 rounded-full"
                       />
+                      <div className="ml-4">
+                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
+                          Farah Khan
+                        </h4>
+                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
+                          FarahKhan@gmail.com
+                        </p>
+                      </div>
+                    </div>
 
-                      <div className="flex flex-wrap items-center gap-3">
-                        <p className="text-xs text-black group-hover:text-white">
-                          Farah Khan
-                        </p>
-                        <p className="text-xs text-black group-hover:text-white">
-                          Farah Khan
-                        </p>
-                        <p className="text-xs text-black group-hover:text-white">
-                          12:2024
-                        </p>
-                      </div>
+                    <div className="mt-6">
+                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
+                        Best Consulting Services Provider Agency
+                      </p>
+                    </div>
 
-                      <h2 className="text-20 font-semibold mt-3 max-w-[230px] group-hover:text-white">
-                        Best Consulting Services Provider Agency Best Consulting
-                        Services Provider Agency
-                      </h2>
-                      <Link to="#">
-                        <div className="flex items-center gap-2 group mt-4  invisible">
-                          <span className="font-medium text-white leading-5 font-inter border-b border-transparent before:inline-block before:border-white before:border-b before:absolute before:bottom-0 before:transition-all before:duration-300 before:w-0 hover:before:w-full before:overflow-hidden before:h-5 relative">
-                            Read More
-                          </span>
-                          <svg
-                            width="7"
-                            height="11"
-                            viewBox="0 0 7 11"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M1.5 10L5.29289 6.20711C5.62623 5.87377 5.79289 5.70711 5.79289 5.5C5.79289 5.29289 5.62623 5.12623 5.29289 4.79289L1.5 1"
-                              stroke="#ffff"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            ></path>
-                          </svg>
-                        </div>
-                      </Link>
+                    <div className="flex space-x-1 mt-4 group-hover:text-white">
+                      {" "}
+                      12:2024
                     </div>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className=" pr-3">
-                  <div className="pb-[192px] pr-[30px] w-full  relative">
-                    <img
-                      src="https://quomodothemes.website/html/quland-html/assets/images/home-five/story/1.webp"
-                      alt=""
-                      className="w-full max-w-[380px]"
-                    />
-                    <div className="group border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%]  bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
+                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
+                    <div className="flex items-center">
                       <img
-                        src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about-card-shape.webp"
-                        alt=""
-                        className="absolute right-2 top-bottom-moving"
+                        src="https://readymadeui.com/profile_2.webp"
+                        className="w-10 h-10 rounded-full"
                       />
-                      <div className="flex flex-wrap items-center gap-3">
-                        <p className="text-xs text-black group-hover:text-white">
+                      <div className="ml-4">
+                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
                           Farah Khan
-                        </p>
-                        <p className="text-xs text-black group-hover:text-white">
-                          Farah Khan
-                        </p>
-                        <p className="text-xs text-black group-hover:text-white">
-                          12:2024
+                        </h4>
+                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
+                          FarahKhan@gmail.com
                         </p>
                       </div>
-                      <h2 className="text-20 font-semibold mt-3 max-w-[230px] group-hover:text-white">
+                    </div>
+
+                    <div className="mt-6">
+                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
                         Best Consulting Services Provider Agency
-                      </h2>
+                      </p>
+                    </div>
+
+                    <div className="flex space-x-1 mt-4 group-hover:text-white">
+                      {" "}
+                      12:2024
                     </div>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className=" pr-3">
-                  <div className="pb-[192px] pr-[30px] w-full  relative">
-                    <img
-                      src="https://quomodothemes.website/html/quland-html/assets/images/home-five/story/1.webp"
-                      alt=""
-                      className="w-full max-w-[380px]"
-                    />
-                    <div className="group border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%]  bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
+                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
+                    <div className="flex items-center">
                       <img
-                        src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about-card-shape.webp"
-                        alt=""
-                        className="absolute right-2 top-bottom-moving"
+                        src="https://readymadeui.com/profile_2.webp"
+                        className="w-10 h-10 rounded-full"
                       />
-                      <div className="flex flex-wrap items-center gap-3">
-                        <p className="text-xs text-black group-hover:text-white">
+                      <div className="ml-4">
+                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
                           Farah Khan
-                        </p>
-                        <p className="text-xs text-black group-hover:text-white">
-                          Farah Khan
-                        </p>
-                        <p className="text-xs text-black group-hover:text-white">
-                          12:2024
+                        </h4>
+                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
+                          FarahKhan@gmail.com
                         </p>
                       </div>
-                      <h2 className="text-20 font-semibold mt-3 max-w-[230px] group-hover:text-white">
+                    </div>
+
+                    <div className="mt-6">
+                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
                         Best Consulting Services Provider Agency
-                      </h2>
+                      </p>
+                    </div>
+
+                    <div className="flex space-x-1 mt-4 group-hover:text-white">
+                      {" "}
+                      12:2024
                     </div>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className=" pr-3">
-                  <div className="pb-[192px] pr-[30px] w-full  relative">
-                    <img
-                      src="https://quomodothemes.website/html/quland-html/assets/images/home-five/story/1.webp"
-                      alt=""
-                      className="w-full max-w-[380px]"
-                    />
-                    <div className="group border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%]  bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
+                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
+                    <div className="flex items-center">
                       <img
-                        src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about-card-shape.webp"
-                        alt=""
-                        className="absolute right-2 top-bottom-moving"
+                        src="https://readymadeui.com/profile_2.webp"
+                        className="w-10 h-10 rounded-full"
                       />
-                      <div className="flex flex-wrap items-center gap-3">
-                        <p className="text-xs text-black group-hover:text-white">
+                      <div className="ml-4">
+                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
                           Farah Khan
-                        </p>
-                        <p className="text-xs text-black group-hover:text-white">
-                          Farah Khan
-                        </p>
-                        <p className="text-xs text-black group-hover:text-white">
-                          12:2024
+                        </h4>
+                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
+                          FarahKhan@gmail.com
                         </p>
                       </div>
-                      <h2 className="text-20 font-semibold mt-3 max-w-[230px] group-hover:text-white">
+                    </div>
+
+                    <div className="mt-6">
+                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
                         Best Consulting Services Provider Agency
-                      </h2>
+                      </p>
+                    </div>
+
+                    <div className="flex space-x-1 mt-4 group-hover:text-white">
+                      {" "}
+                      12:2024
                     </div>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className=" pr-3">
-                  <div className="pb-[192px] pr-[30px] w-full  relative">
-                    <img
-                      src="https://quomodothemes.website/html/quland-html/assets/images/home-five/story/1.webp"
-                      alt=""
-                      className="w-full max-w-[380px]"
-                    />
-                    <div className="group border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16 py-[30px] rounded-2xl absolute top-[40%] md:top-[50%]  bg-white -right-0 h-[185px] hover:h-[205px] transition-all duration-300 hover:bg-buisness-red overflow-hidden ">
+                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
+                    <div className="flex items-center">
                       <img
-                        src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about-card-shape.webp"
-                        alt=""
-                        className="absolute right-2 top-bottom-moving"
+                        src="https://readymadeui.com/profile_2.webp"
+                        className="w-10 h-10 rounded-full"
                       />
-                      <div className="flex flex-wrap items-center gap-3">
-                        <p className="text-xs text-black group-hover:text-white">
+                      <div className="ml-4">
+                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
                           Farah Khan
-                        </p>
-                        <p className="text-xs text-black group-hover:text-white">
-                          Farah Khan
-                        </p>
-                        <p className="text-xs text-black group-hover:text-white">
-                          12:2024
+                        </h4>
+                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
+                          FarahKhan@gmail.com
                         </p>
                       </div>
-                      <h2 className="text-20 font-semibold mt-3 max-w-[230px] group-hover:text-white">
+                    </div>
+
+                    <div className="mt-6">
+                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
                         Best Consulting Services Provider Agency
-                      </h2>
+                      </p>
+                    </div>
+
+                    <div className="flex space-x-1 mt-4 group-hover:text-white">
+                      12:2024
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className=" pr-3">
+                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
+                    <div className="flex items-center">
+                      <img
+                        src="https://readymadeui.com/profile_2.webp"
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <div className="ml-4">
+                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
+                          Farah Khan
+                        </h4>
+                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
+                          FarahKhan@gmail.com
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-6">
+                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
+                        Best Consulting Services Provider Agency
+                      </p>
+                    </div>
+
+                    <div className="flex space-x-1 mt-4 group-hover:text-white">
+                      {" "}
+                      12:2024
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className=" pr-3">
+                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
+                    <div className="flex items-center">
+                      <img
+                        src="https://readymadeui.com/profile_2.webp"
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <div className="ml-4">
+                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
+                          Farah Khan
+                        </h4>
+                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
+                          FarahKhan@gmail.com
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-6">
+                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
+                        Best Consulting Services Provider Agency
+                      </p>
+                    </div>
+
+                    <div className="flex space-x-1 mt-4 group-hover:text-white">
+                      12:2024
                     </div>
                   </div>
                 </SwiperSlide>
               </Swiper>
             </div>
             <div className="relative w-fit mx-auto flex items-center">
-              <div className="flex justify-between absolute w-full">
+              <div className="flex justify-between absolute w-full top-12">
                 <button
                   className="group h5-story-prev w-[30px] h-[30px] rounded-full flex items-center justify-center bg-buisness-red border-buisness-red overflow-hidden before:inline-block before:w-11 before:h-11 before:border-[1.5px] before:border-buisness-red before:bg-buisness-red relative before:absolute  before:-right-12 hover:before:right-0 before:transition-all before:duration-300"
                   ref={prevRef}

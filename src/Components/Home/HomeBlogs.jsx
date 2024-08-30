@@ -35,14 +35,14 @@ function HomeBlogs() {
         <div className="theme-container w-full mx-auto ">
           <div className="grid grid-cols-8 lg:grid-cols-12 gap-[30px]">
             <div data-aos="fade-up" className="col-span-8">
-              <h1 className="font-semibold text-[30px] leading-[42px] text-main-black tracking-wide poppins-font">
+              <h1 className="font-semibold text-[30px] leading-[42px] text-main-black tracking-wide poppins-font mb-[30px]">
                 Blogs
               </h1>
-              <p className="text-paragraph mt-[30px] mb-10 max-w-[786px] tracking-wide poppins-font">
+              {/* <p className="text-paragraph mt-[30px] mb-10 max-w-[786px] tracking-wide poppins-font">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
                 autem velit laborum doloribus cum perspiciatis incidunt quod,
                 delectus libero esse? Lorem ipsum dolor sit amet consectetur
-              </p>
+              </p> */}
 
               <div className="grid grid-cols-4 md:grid-cols-8 gap-x-[7px] gap-y-[12px]">
                 {blogs.map((blog, index) => (

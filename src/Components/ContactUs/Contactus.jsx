@@ -124,15 +124,18 @@ function Contactus() {
           </div>
         </div>
       </section>
-      <div className="flex flex-col items-center">
+      <div
+        className="flex flex-col items-center pt-12"
+        style={{ backgroundColor: "#FFFBF0" }}
+      >
         <h2 className="sm:text-48 text-[30px] font-bold text-main-black  text-center lg:w-[685px] w-full poppins-font">
           FEEL FREE TO TALK TO US
         </h2>
-        <p className=" max-w-4xl mx-auto text-center mb-[50px] poppins-font">
+        {/* <p className=" max-w-4xl mx-auto text-center mb-[50px] poppins-font">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
           quibusdam, impedit alias sunt animi consequuntur dicta praesentium
           laudantium ipsa! Recusandae dignissimos velit maxime culpa.
-        </p>
+        </p> */}
       </div>
       <InquiryForm />
       <section className="relative    ">

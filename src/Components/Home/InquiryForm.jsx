@@ -1,6 +1,135 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function InquiryForm() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    contactNumber: "",
+    email: "",
+    message: "",
+  });
+
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateField = (name, value) => {
+    let errorMsg = "";
+
+    switch (name) {
+      case "firstName":
+      case "lastName":
+        if (!/^[a-zA-Z]+$/.test(value)) {
+          errorMsg = `${
+            name === "firstName" ? "First" : "Last"
+          } Name must contain only letters`;
+        }
+        break;
+
+      case "email":
+        if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(value)) {
+          errorMsg = "Invalid email address";
+        }
+        break;
+
+      default:
+        break;
+    }
+
+    setFormErrors({
+      ...formErrors,
+      [name]: errorMsg,
+    });
+  };
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+
+    if (name === "contactNumber") {
+      const onlyNums = value.replace(/[^0-9]/g, "");
+      if (onlyNums.length > 10) return; // Prevent entering more than 10 digits
+      setFormData({
+        ...formData,
+        [name]: onlyNums,
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: type === "checkbox" ? checked : value,
+      });
+    }
+
+    // Clear the error for the current field when it's updated
+    setFormErrors({
+      ...formErrors,
+      [name]: "",
+    });
+
+    // Validate the field
+    validateField(name, value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (Object.values(formErrors).some((error) => error !== "")) {
+      alert("Please fix the errors in the form");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const smtpParams = {
+      host: "smtp.elasticemail.com",
+      username: "cthdotcom@gmail.com",
+      password: "0E28D8EEF9BE55FAD22DBBD66C6AE0624800",
+      fromEmail: "cthdotcom@gmail.com",
+      toEmail: "cthdotcom@gmail.com",
+      ccEmail: "rahulkumarofficial36@gmail.com",
+      subject: "New Contact Form Submission",
+      body: `
+        Name: ${formData.firstName} ${formData.lastName}
+        Email: ${formData.email}
+        Phone Number: ${formData.contactNumber}
+        Message: ${formData.message}
+      `,
+    };
+
+    window.Email.send({
+      Host: smtpParams.host,
+      Username: smtpParams.username,
+      Password: smtpParams.password,
+      To: smtpParams.toEmail,
+      From: smtpParams.fromEmail,
+      Subject: smtpParams.subject,
+      Body: smtpParams.body,
+      Cc: smtpParams.ccEmail,
+    }).then(
+      (message) => {
+        console.log("Email send response:", message);
+        toast.success("Email sent successfully", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+
+        e.target.reset();
+        setIsSubmitting(false);
+      },
+      (error) => {
+        console.error("Error sending email:", error);
+        toast.error("Error sending email");
+        setIsSubmitting(false);
+      }
+    );
+  };
+
   return (
     <>
       <section className="xl:py-[90px] " style={{ backgroundColor: "#FFFBF0" }}>
@@ -268,8 +397,10 @@ function InquiryForm() {
                 <h1 className="text-[30px] tracking-normal font-bold text-main-black pb-6 poppins-font">
                   Query Form
                 </h1>
-
-                <form className="mt-8 grid sm:grid-cols-2 gap-6">
+                <form
+                  className="mt-8 grid sm:grid-cols-2 gap-6"
+                  onSubmit={handleSubmit}
+                >
                   <div>
                     <label className="text-gray-800 text-sm block mb-2 poppins-font">
                       First Name
@@ -277,9 +408,17 @@ function InquiryForm() {
                     <input
                       required
                       type="text"
+                      name="firstName"
                       placeholder="Enter Name"
+                      value={formData.firstName}
+                      onChange={handleChange}
                       className="w-full rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-[#007bff]"
                     />
+                    {formErrors.firstName && (
+                      <p className="text-red-600 text-sm">
+                        {formErrors.firstName}
+                      </p>
+                    )}
                   </div>
                   <div>
                     <label className="text-gray-800 text-sm block mb-2 poppins-font">
@@ -288,9 +427,17 @@ function InquiryForm() {
                     <input
                       required
                       type="text"
-                      placeholder="Email"
+                      name="lastName"
+                      placeholder="Enter Name"
+                      value={formData.lastName}
+                      onChange={handleChange}
                       className="w-full rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-[#007bff]"
                     />
+                    {formErrors.lastName && (
+                      <p className="text-red-600 text-sm">
+                        {formErrors.lastName}
+                      </p>
+                    )}
                   </div>
                   <div>
                     <label className="text-gray-800 text-sm block mb-2 poppins-font">
@@ -298,10 +445,18 @@ function InquiryForm() {
                     </label>
                     <input
                       required
-                      type="number"
+                      type="text"
+                      name="contactNumber"
                       placeholder="Phone No."
+                      value={formData.contactNumber}
+                      onChange={handleChange}
                       className="w-full rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-[#007bff]"
                     />
+                    {formErrors.contactNumber && (
+                      <p className="text-red-600 text-sm">
+                        {formErrors.contactNumber}
+                      </p>
+                    )}
                   </div>
                   <div>
                     <label className="text-gray-800 text-sm block mb-2 poppins-font">
@@ -310,18 +465,27 @@ function InquiryForm() {
                     <input
                       required
                       type="email"
+                      name="email"
                       placeholder="Email"
+                      value={formData.email}
+                      onChange={handleChange}
                       className="w-full rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-[#007bff]"
                     />
+                    {formErrors.email && (
+                      <p className="text-red-600 text-sm">{formErrors.email}</p>
+                    )}
                   </div>
 
                   <div className="col-span-full">
                     <label className="text-gray-800 text-sm block mb-2 poppins-font">
-                      Enquiry*
+                      Message*
                     </label>
                     <textarea
                       required
+                      name="message"
                       placeholder="Message"
+                      value={formData.message}
+                      onChange={handleChange}
                       rows="6"
                       className="w-full rounded-md px-4 border border-gray-300 text-sm pt-3 outline-[#007bff]"
                     ></textarea>
@@ -336,7 +500,7 @@ function InquiryForm() {
                       htmlFor="checkbox1"
                       className="text-sm text-gray-500 poppins-font"
                     >
-                      I agree to the{" "}
+                      I agree to the
                       <Link to="#" className="underline">
                         Terms and Conditions
                       </Link>
@@ -348,25 +512,11 @@ function InquiryForm() {
                   </div>
 
                   <button
-                    type="button"
+                    type="submit"
                     className="text-white w-max bg-[#B08D57] hover:bg-buisness-red tracking-wide rounded-md text-sm px-6 py-3 mt-4 poppins-font"
+                    disabled={isSubmitting}
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16px"
-                      height="16px"
-                      fill="#fff"
-                      className="mr-2 inline"
-                      viewBox="0 0 548.244 548.244"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
-                        clipRule="evenodd"
-                        data-original="#000000"
-                      />
-                    </svg>
-                    Submit
+                    {isSubmitting ? "Submitting..." : "Submit"}
                   </button>
                 </form>
               </div>

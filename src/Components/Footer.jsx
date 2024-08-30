@@ -33,7 +33,7 @@ function Footer() {
               </svg>
             </li>
 
-            <li>
+            {/* <li>
               <svg
                 width="22"
                 height="22"
@@ -46,7 +46,7 @@ function Footer() {
                   fill="black"
                 />
               </svg>
-            </li>
+            </li> */}
 
             <li>
               <svg
@@ -97,36 +97,40 @@ function Footer() {
       <hr className="my-6 border-gray-500 container mx-auto" />
       <div className="flex max-md:flex-col gap-4 px-24 container mx-auto ">
         <ul className="flex flex-wrap gap-4">
-          <li className="text-sm">
+          {/* <li className="text-sm">
             <Link to="#" className=" font-semibold hover:underline">
               Find member
             </Link>
-          </li>
+          </li> */}
           <li className="text-sm">
-            <Link to="#" className=" font-semibold hover:underline">
+            <Link to="/Signup" className=" font-semibold hover:underline">
               Become a Member
             </Link>
           </li>
           <li className="text-sm">
-            <Link to="#" className=" font-semibold hover:underline">
+            <Link
+              to="https://towlhall.dev-testing-team.tech"
+              target="_blank"
+              className=" font-semibold hover:underline"
+            >
               Community
             </Link>
           </li>
           <li className="text-sm">
-            <Link to="#" className=" font-semibold hover:underline">
+            <Link to="/bloglist" className=" font-semibold hover:underline">
               Blog
             </Link>
           </li>
         </ul>
         <div className="text-sm  md:ml-auto">
           <ul className="flex flex-wrap gap-4">
-            <li className="text-sm">
+            {/* <li className="text-sm">
               <Link to="#" className=" font-semibold hover:underline">
                 Join CTH
               </Link>
-            </li>
+            </li> */}
             <li className="text-sm">
-              <Link to="#" className=" font-semibold hover:underline">
+              <Link to="/contact" className=" font-semibold hover:underline">
                 Help Center
               </Link>
             </li>
@@ -149,7 +153,7 @@ function Footer() {
         <div className="text-sm  md:ml-auto">
           <ul className="flex flex-wrap gap-4">
             <li className="text-sm">
-              <Link to="#" className=" font-semibold hover:underline">
+              <Link to="/contact" className=" font-semibold hover:underline">
                 Contact us
               </Link>
             </li>

@@ -18,7 +18,7 @@ function DiscoverTheWord() {
           <div className="flex flex-col xl:flex-row justify-between w-full">
             <div className="">
               <h2 className="text-black font-semibold text-[30px] text-center sm:text-48 pt-5  tracking-normal poppins-font">
-                Connect with our associated members
+                Connect with our Distinguish members
               </h2>
             </div>
             <div className="flex flex-col sm:flex-row gap-10 items-center">

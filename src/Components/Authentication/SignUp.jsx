@@ -146,7 +146,7 @@ function SignUp() {
               >
                 <div className="mb-12  container w-[100%] mx-auto flex justify-between">
                   <button className="text-gray-800 text-[20px] font-bold tracking-wide poppins-font">
-                    <Link to="/Signup">Sign up</Link>
+                    <Link to="/membersip">BECOME MEMBER</Link>
                   </button>
                 </div>
 
@@ -233,19 +233,49 @@ function SignUp() {
                       )}
                     </div>
                     <div>
-                      <label className="text-gray-800 text-sm mb-2 block tracking-wide poppins-font">
-                        Linkedin Profile
+                      <label className="text-gray-800 text-sm mb-4 block tracking-wide poppins-font ">
+                        Gender
                       </label>
-                      <input
-                        name="linkedinProfile"
-                        type="text"
-                        className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-[#B08D57]"
-                        placeholder="Enter Linkedin Profile"
-                        value={formData.linkedinProfile}
-                        onChange={handleChange}
-                        required
-                      />
+                      <div className="flex space-x-4   gap-4   pm-2">
+                        <label className="text-gray-800 text-sm">
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="male"
+                            className="mr-2 text-gray-800 "
+                            onChange={handleChange}
+                            checked={formData.gender === "male"}
+                            required
+                          />
+                          Male
+                        </label>
+                        <label className="text-gray-800 text-sm">
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="female"
+                            className="mr-2 text-gray-800 "
+                            onChange={handleChange}
+                            checked={formData.gender === "female"}
+                            required
+                          />
+                          Female
+                        </label>
+                        <label className="text-gray-800 text-sm">
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="other"
+                            className="mr-2 text-gray-800  "
+                            onChange={handleChange}
+                            checked={formData.gender === "other"}
+                            required
+                          />
+                          Other
+                        </label>
+                      </div>
                     </div>
+
                     <div className="!mt-12">
                       <button
                         type="button"
@@ -296,15 +326,16 @@ function SignUp() {
                     </div>
                     <div>
                       <label className="text-gray-800 text-sm mb-2 block tracking-wide poppins-font">
-                        Academic Projects
+                        Linkedin Profile
                       </label>
                       <input
-                        name="academicProjects"
+                        name="linkedinProfile"
                         type="text"
                         className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-[#B08D57]"
-                        placeholder="Enter Academic Projects"
-                        value={formData.academicProjects}
+                        placeholder="Enter Linkedin Profile"
+                        value={formData.linkedinProfile}
                         onChange={handleChange}
+                        required
                       />
                     </div>
                     <div>

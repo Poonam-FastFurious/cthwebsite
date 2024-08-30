@@ -44,7 +44,7 @@ function App() {
             <Route path="/associatedMembers" element={<Associatemember />} />
             <Route path="/AboutUs" element={<Aboutus />} />
             {/* <Route path="/Login" element={<Login />} /> */}
-            <Route path="/Signup" element={<SignUp />} />
+            <Route path="/membersip" element={<SignUp />} />
             <Route path="/gallery" element={<Gallery />} />
           </Routes>
           <Footer />

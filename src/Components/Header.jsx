@@ -5,13 +5,12 @@ import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import clsx from "clsx";
 import logo from "../assets/logo-no-background.png";
-import { jwtDecode } from "jwt-decode";
+
 import { Link } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [token, setToken] = useState(localStorage.getItem("accessToken"));
-  const [isTokenExpired, setIsTokenExpired] = useState(false);
+
   const location = useLocation();
   useEffect(() => {
     // Scroll to top on route change
@@ -20,36 +19,11 @@ function Header() {
       behavior: "smooth",
     });
   }, [location]);
-  useEffect(() => {
-    if (token) {
-      try {
-        const decodedToken = jwtDecode(token);
-        const currentTime = Math.floor(Date.now() / 1000);
-        if (decodedToken.exp < currentTime) {
-          setIsTokenExpired(true);
-          localStorage.removeItem("accessToken");
-          setToken(null);
-        } else {
-          setIsTokenExpired(false);
-        }
-      } catch (error) {
-        setIsTokenExpired(true);
-        localStorage.removeItem("accessToken");
-        setToken(null);
-      }
-    } else {
-      setIsTokenExpired(false); // Ensure expired state is false if no token
-    }
-  }, [token]);
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
   };
-  const handleLogout = () => {
-    localStorage.removeItem("accessToken");
-    setToken(null);
-    window.location.href = "/Login"; // Redirect to login page
-  };
+
   const isActive = (path) => location.pathname === path;
   return (
     <div>
@@ -92,7 +66,7 @@ function Header() {
                     "text-[#CA9352]": isActive("/associatedMembers"),
                   })}
                 >
-                  Associates
+                  Distinguish
                 </Link>
               </li>
               <li>
@@ -130,60 +104,30 @@ function Header() {
               </li>
             </ul>
             <div className="flex gap-7 items-center">
-              {token && !isTokenExpired ? (
-                <Link to="/Login">
-                  <div className="home-two-btn-white-rev   rounded-md home-two-btn-white-rev-sm group bg-[#B08D57] hover:bg-buisness-red border-[#101828]/10">
-                    <span
-                      className="text-base -p-[20px] text-white hover:text-[#B08D57]  transition-all duration-300 font-semibold font-inter relative z-10"
-                      onClick={handleLogout}
-                    >
-                      logout
-                    </span>
-                    <svg
-                      className="relative z-10"
-                      width="7"
-                      height="12"
-                      viewBox="0 0 7 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        className=" stroke-white transition-all duration-300"
-                        d="M1.10254 10.5L4.89543 6.70711C5.22877 6.37377 5.39543 6.20711 5.39543 6C5.39543 5.79289 5.22877 5.62623 4.89543 5.29289L1.10254 1.5"
-                        stroke="black"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                  </div>
-                </Link>
-              ) : (
-                <Link to="/Signup">
-                  <div className="home-two-btn-white-rev   rounded-md home-two-btn-white-rev-sm group bg-[#B08D57] hover:bg-buisness-red border-[#101828]/10">
-                    <span className="text-base -p-[20px] text-white hover:text-[#B08D57]  transition-all duration-300 font-semibold font-inter relative z-10">
-                      Sign Up
-                    </span>
-                    <svg
-                      className="relative z-10"
-                      width="7"
-                      height="12"
-                      viewBox="0 0 7 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        className=" stroke-white transition-all duration-300"
-                        d="M1.10254 10.5L4.89543 6.70711C5.22877 6.37377 5.39543 6.20711 5.39543 6C5.39543 5.79289 5.22877 5.62623 4.89543 5.29289L1.10254 1.5"
-                        stroke="black"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                  </div>
-                </Link>
-              )}
+              <Link to="/membersip">
+                <div className="home-two-btn-white-rev   rounded-md home-two-btn-white-rev-sm group bg-[#B08D57] hover:bg-buisness-red border-[#101828]/10">
+                  <span className="text-base -p-[20px] text-white hover:text-[#B08D57]  transition-all duration-300 font-semibold font-inter relative z-10">
+                    Become Member
+                  </span>
+                  <svg
+                    className="relative z-10"
+                    width="7"
+                    height="12"
+                    viewBox="0 0 7 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      className=" stroke-white transition-all duration-300"
+                      d="M1.10254 10.5L4.89543 6.70711C5.22877 6.37377 5.39543 6.20711 5.39543 6C5.39543 5.79289 5.22877 5.62623 4.89543 5.29289L1.10254 1.5"
+                      stroke="black"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+              </Link>
 
               <div className="home-two-btn-white-rev rounded-md home-two-btn-white-rev-sm border-[#101828]/10 bg-[#89580A] cursor-pointer">
                 <span className="text-base text-main-black text-white hover:text-[#B08D57] transition-all duration-300 font-semibold font-inter relative z-10">
