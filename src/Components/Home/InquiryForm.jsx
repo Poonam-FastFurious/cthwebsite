@@ -119,7 +119,17 @@ function InquiryForm() {
           theme: "light",
         });
 
-        e.target.reset();
+        setFormData({
+          firstName: "",
+          lastName: "",
+          contactNumber: "",
+          email: "",
+          message: "",
+        });
+
+        // Clear form errors
+        setFormErrors({});
+
         setIsSubmitting(false);
       },
       (error) => {

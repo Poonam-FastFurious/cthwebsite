@@ -15,7 +15,7 @@ function SignUp() {
     linkedinProfile: "",
     address: "",
     skills: "",
-    academicProjects: "",
+    gender: "",
     honoursAndCertifications: "",
     agreeTerms: false,
   });
