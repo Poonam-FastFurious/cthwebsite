@@ -193,7 +193,7 @@ function Contactus() {
           </div>
         </div>
       </section>
-      <section className="overflow-hidden mt-10 md:mt-[130px] w-full">
+      <section className="overflow-hidden   w-full">
         <div className=" relative w-full h-[240px] sm:h-[450px] md:h-[540px] lg:h-[700px] xl:h-[700px] mx-auto xl:rounded-lg overflow-hidden ">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d56038.870682226014!2d77.35448446557618!3d28.616889411973446!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5992452d761%3A0xaaa44725147c1507!2sJSS%20Academy%20of%20Technical%20Education!5e0!3m2!1sen!2sin!4v1719557681515!5m2!1sen!2sin"

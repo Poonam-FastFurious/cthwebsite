@@ -1,10 +1,33 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import { Autoplay, Navigation, Pagination, Keyboard } from "swiper/modules";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Baseurl } from "../../Confige";
 function TestiMonial() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await fetch(
+          Baseurl + "/api/v1/testimonial/alltestimonial"
+        ); // Replace with your API endpoint
+        const data = await response.json();
+        setTestimonials(data.data); // Assuming `data` is an array of testimonials
+      } catch (error) {
+        console.error("Error fetching testimonials:", error);
+      }
+    };
+
+    fetchTestimonials();
+  }, []);
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleString(); // Customize the format if needed
+  };
+
   return (
     <div className="bg-[#ECE4D7]">
       <section className="mx-auto max-w-[1600px] w-full xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]   xl:px-[80px] md:px-10 px-0 bg-main-gray bg-[#ECE4D7] ">
@@ -50,207 +73,36 @@ function TestiMonial() {
                   swiper.params.navigation.nextEl = nextRef.current;
                 }}
               >
-                <SwiperSlide className=" pr-3">
-                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
-                    <div className="flex items-center">
-                      <img
-                        src="https://readymadeui.com/profile_2.webp"
-                        className="w-10 h-10 rounded-full"
-                      />
-                      <div className="ml-4">
-                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
-                          Farah Khan
-                        </h4>
-                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
-                          FarahKhan@gmail.com
+                {testimonials.map((testi, index) => (
+                  <SwiperSlide className=" pr-3" key={index}>
+                    <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
+                      <div className="flex items-center">
+                        <img
+                          src="https://readymadeui.com/profile_2.webp"
+                          className="w-10 h-10 rounded-full"
+                        />
+                        <div className="ml-4">
+                          <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
+                            {testi.name}
+                          </h4>
+                          <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
+                            {testi.email}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6">
+                        <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
+                          {testi.message}
                         </p>
                       </div>
-                    </div>
 
-                    <div className="mt-6">
-                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
-                        Best Consulting Services Provider Agency
-                      </p>
-                    </div>
-
-                    <div className="flex space-x-1 mt-4 group-hover:text-white">
-                      {" "}
-                      12:2024
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className=" pr-3">
-                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
-                    <div className="flex items-center">
-                      <img
-                        src="https://readymadeui.com/profile_2.webp"
-                        className="w-10 h-10 rounded-full"
-                      />
-                      <div className="ml-4">
-                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
-                          Farah Khan
-                        </h4>
-                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
-                          FarahKhan@gmail.com
-                        </p>
+                      <div className="flex space-x-1 mt-4 group-hover:text-white">
+                        {formatDate(testi.createdAt)}
                       </div>
                     </div>
-
-                    <div className="mt-6">
-                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
-                        Best Consulting Services Provider Agency
-                      </p>
-                    </div>
-
-                    <div className="flex space-x-1 mt-4 group-hover:text-white">
-                      {" "}
-                      12:2024
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className=" pr-3">
-                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
-                    <div className="flex items-center">
-                      <img
-                        src="https://readymadeui.com/profile_2.webp"
-                        className="w-10 h-10 rounded-full"
-                      />
-                      <div className="ml-4">
-                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
-                          Farah Khan
-                        </h4>
-                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
-                          FarahKhan@gmail.com
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="mt-6">
-                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
-                        Best Consulting Services Provider Agency
-                      </p>
-                    </div>
-
-                    <div className="flex space-x-1 mt-4 group-hover:text-white">
-                      {" "}
-                      12:2024
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className=" pr-3">
-                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
-                    <div className="flex items-center">
-                      <img
-                        src="https://readymadeui.com/profile_2.webp"
-                        className="w-10 h-10 rounded-full"
-                      />
-                      <div className="ml-4">
-                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
-                          Farah Khan
-                        </h4>
-                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
-                          FarahKhan@gmail.com
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="mt-6">
-                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
-                        Best Consulting Services Provider Agency
-                      </p>
-                    </div>
-
-                    <div className="flex space-x-1 mt-4 group-hover:text-white">
-                      {" "}
-                      12:2024
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className=" pr-3">
-                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
-                    <div className="flex items-center">
-                      <img
-                        src="https://readymadeui.com/profile_2.webp"
-                        className="w-10 h-10 rounded-full"
-                      />
-                      <div className="ml-4">
-                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
-                          Farah Khan
-                        </h4>
-                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
-                          FarahKhan@gmail.com
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="mt-6">
-                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
-                        Best Consulting Services Provider Agency
-                      </p>
-                    </div>
-
-                    <div className="flex space-x-1 mt-4 group-hover:text-white">
-                      12:2024
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className=" pr-3">
-                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
-                    <div className="flex items-center">
-                      <img
-                        src="https://readymadeui.com/profile_2.webp"
-                        className="w-10 h-10 rounded-full"
-                      />
-                      <div className="ml-4">
-                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
-                          Farah Khan
-                        </h4>
-                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
-                          FarahKhan@gmail.com
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="mt-6">
-                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
-                        Best Consulting Services Provider Agency
-                      </p>
-                    </div>
-
-                    <div className="flex space-x-1 mt-4 group-hover:text-white">
-                      {" "}
-                      12:2024
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className=" pr-3">
-                  <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
-                    <div className="flex items-center">
-                      <img
-                        src="https://readymadeui.com/profile_2.webp"
-                        className="w-10 h-10 rounded-full"
-                      />
-                      <div className="ml-4">
-                        <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
-                          Farah Khan
-                        </h4>
-                        <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
-                          FarahKhan@gmail.com
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="mt-6">
-                      <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
-                        Best Consulting Services Provider Agency
-                      </p>
-                    </div>
-
-                    <div className="flex space-x-1 mt-4 group-hover:text-white">
-                      12:2024
-                    </div>
-                  </div>
-                </SwiperSlide>
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
             <div className="relative w-fit mx-auto flex items-center">
