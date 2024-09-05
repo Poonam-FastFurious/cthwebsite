@@ -66,7 +66,7 @@ function Header() {
                     "text-[#CA9352]": isActive("/associatedMembers"),
                   })}
                 >
-                  Distinguish
+                  Distinguished
                 </Link>
               </li>
               <li>

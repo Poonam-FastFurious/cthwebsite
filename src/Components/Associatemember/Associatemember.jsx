@@ -46,7 +46,7 @@ function Associatemember() {
             <div className="theme-container mx-auto h-auto w-fit relative z-10">
               <div className="mt-[120px] md:mt-[272px] w-auto mx-auto relative z-10">
                 <h1 className="text-main-black text-34 sm:text-48 font-semibold w-full text-center">
-                  Associated Members
+                  Distinguished Members
                 </h1>
                 <div className="flex gap-5 items-center justify-center mt-4">
                   <Link
@@ -74,7 +74,7 @@ function Associatemember() {
                     href="/Contact"
                     className="home-two-nav-item leading-5 relative text-18 font-inter text-main-black font-bold transition-all duration-300 hover:text-buisness-red"
                   >
-                    Associated Members
+                    Distinguished Members
                   </Link>
                 </div>
               </div>
@@ -84,10 +84,10 @@ function Associatemember() {
         <div className="theme-container w-full mx-auto xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
           <div className="flex flex-col justify-center items-center w-full">
             <h1 className="font-medium text-white border border-buisness-red bg-buisness-red px-5 rounded-[30px] py-1 w-fit tracking-wider poppins-font ">
-              Associated Members
+              Distinguished Members
             </h1>
             <h2 className="text-main-black font-semibold text-16 sm:text-3xl pt-5 poppins-font">
-              Experience Associated Members
+              Experience Distinguished Members
             </h2>
           </div>
           <div className="grid gap-[30px] grid-cols-3 md:grid-cols-6 lg:grid-cols-12 mt-10 md:mt-[70px]">

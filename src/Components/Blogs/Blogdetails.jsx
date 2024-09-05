@@ -62,7 +62,6 @@ function Blogdetails() {
                     alt=""
                     className="w-[30px] aspect-square rounded-full object-cover"
                   />
-                  <p className="text-paragraph poppins-font">Rahul raj</p>
                 </div>
               </div>
             </div>
@@ -113,7 +112,7 @@ function Blogdetails() {
                           className="group overflow-hidden flex justify-center items-center relative text-sm border border-purple/10 rounded-md py-1.5 before:inline-block before:absolute before:z-0 before:w-full before:h-full  before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
                         >
                           <span className="px-[18px] relative  transition-colors ease-in-out duration-300 poppins-font ">
-                            Travel{item}
+                            {item}
                           </span>
                         </Link>
                       ))}

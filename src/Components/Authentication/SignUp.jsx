@@ -92,7 +92,8 @@ function SignUp() {
       });
 
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        const errorData = await response.json(); // Get the error details from the response
+        throw new Error(errorData.message || "Network response was not ok");
       }
 
       const result = await response.json();
@@ -119,7 +120,7 @@ function SignUp() {
         honoursAndCertifications: "",
         agreeTerms: false,
       });
-      navigate("/");
+      navigate("/success");
     } catch (error) {
       console.error("Error registering user:", error);
       toast.warning(error.message, "user aleready exist with this number ");
@@ -288,7 +289,7 @@ function SignUp() {
                     <p className="text-gray-800 text-sm mt-6 text-center tracking-wide poppins-font">
                       Already have an account?
                       <Link
-                        to="/Login"
+                        to="#"
                         className="text-[#B08D57] font-semibold hover:underline ml-1 tracking-wide poppins-font"
                       >
                         SignIn here

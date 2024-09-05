@@ -20,6 +20,7 @@ import Aboutus from "./Components/AboutUs/Aboutus";
 import Footer from "./Components/Footer";
 import Gallery from "./Components/Gallery/Gallery";
 import SignUp from "./Components/Authentication/SignUp";
+import SuccessForm from "./Components/Successform/SuccessForm";
 
 function App() {
   useEffect(() => {
@@ -46,6 +47,7 @@ function App() {
             {/* <Route path="/Login" element={<Login />} /> */}
             <Route path="/membersip" element={<SignUp />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/success" element={<SuccessForm />} />
           </Routes>
           <Footer />
         </BrowserRouter>
