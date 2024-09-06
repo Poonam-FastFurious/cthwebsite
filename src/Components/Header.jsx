@@ -18,6 +18,7 @@ function Header() {
       top: 0,
       behavior: "smooth",
     });
+    setIsOpen(false);
   }, [location]);
 
   const toggleDrawer = () => {
@@ -146,7 +147,7 @@ function Header() {
 
       <header className="flex xl:hidden flex-col relative">
         <div className="h-16 bg-white flex items-center justify-between fixed top-0 left-0 z-50 w-full px-2.5">
-          <Link to="#" aria-label="logo">
+          <Link to="/" aria-label="logo">
             <img src={logo} alt="logo" className=" w-36 h-auto" />
           </Link>
           <button
@@ -188,36 +189,110 @@ function Header() {
                   <ul className="flex gap-5 flex-col text-paragraph text-base leading-5 font-medium font-inter">
                     <li>
                       <div>
-                        <Link to="/" className="text-main-black">
+                        <Link
+                          className={clsx(
+                            "leading-5   w-fit before:h-[20px] flex items-center gap-2  delay-150 relative text-main-black",
+                            {
+                              "text-[#CA9352]": isActive("/"),
+                            }
+                          )}
+                          to="/"
+                        >
                           Home
                         </Link>
                       </div>
                     </li>
                     <li>
-                      <Link to="/associatedMembers">Associated Members</Link>
+                      <Link
+                        to="/associatedMembers"
+                        className={clsx(
+                          "leading-5   w-fit before:h-[20px] flex items-center gap-2  delay-150 relative text-main-black",
+                          {
+                            "text-[#CA9352]": isActive("/associatedMembers"),
+                          }
+                        )}
+                      >
+                        Distinguished
+                      </Link>
                     </li>
                     <li>
-                      <Link className=" relative  w-fit" to="/bloglist">
-                        Blog
+                      <Link
+                        to="/bloglist"
+                        className={clsx(
+                          "leading-5   w-fit before:h-[20px] flex items-center gap-2  delay-150 relative text-main-black",
+                          {
+                            "text-[#CA9352]": isActive("/bloglist"),
+                          }
+                        )}
+                      >
+                        Blogs
                       </Link>
                     </li>
 
                     <li className="group relative">
                       <Link
                         to="/gallery"
-                        className="relative flex items-center gap-2 delay-150"
+                        className={clsx(
+                          "leading-5   w-fit before:h-[20px] flex  items-center gap-2  delay-150 relative text-main-black",
+                          {
+                            "text-[#CA9352]": isActive("/gallery"),
+                          }
+                        )}
                       >
                         Gallery
                       </Link>
                     </li>
                     <li>
-                      <Link className=" relative  w-fit" to="/contact">
+                      <Link
+                        to="/contact"
+                        className={clsx(
+                          "leading-5   w-fit before:h-[20px] flex  items-center gap-2  delay-150 relative text-main-black",
+                          {
+                            "text-[#CA9352]": isActive("/contact"),
+                          }
+                        )}
+                      >
                         Contact
                       </Link>
                     </li>
                     <li>
-                      <Link className=" relative  w-fit" to="/AboutUs">
+                      <Link
+                        to="/AboutUs"
+                        className={clsx(
+                          "leading-5   w-fit before:h-[20px] flex  items-center gap-2  delay-150 relative text-main-black",
+                          {
+                            "text-[#CA9352]": isActive("/AboutUs"),
+                          }
+                        )}
+                      >
                         About us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/membersip"
+                        className={clsx(
+                          "leading-5   w-fit before:h-[20px] flex  items-center gap-2  delay-150 relative text-main-black",
+                          {
+                            "text-[#CA9352]": isActive("/membersip"),
+                          }
+                        )}
+                      >
+                        Become Member
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={`https://towlhall.dev-testing-team.tech`}
+                        target="_blank"
+                        className={clsx(
+                          "leading-5   w-fit before:h-[20px] flex  items-center gap-2  delay-150 relative text-main-black",
+                          {
+                            "text-[#CA9352]": isActive("/"),
+                          }
+                        )}
+                      >
+                        Sign In
                       </Link>
                     </li>
                   </ul>
@@ -249,7 +324,7 @@ function Header() {
                       Call : 000 (123) 456 88
                     </span>
                   </Link>
-                  <Link to="#">
+                  <Link to="/contact">
                     <div className="home-two-btn-bg py-2.5 group bg-buisness-red border-buisness-red w-fit">
                       <span className="text-base text-white group-hover:text-blue-seo transition-all duration-300 font-semibold font-inter relative z-10">
                         Contact US

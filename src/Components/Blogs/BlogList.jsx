@@ -95,7 +95,7 @@ function BlogList() {
               <div className=" mx-auto h-auto w-fit relative z-10">
                 <div className="mt-[120px] md:mt-[272px] w-auto mx-auto relative z-10">
                   <h1 className="text-main-black text-34 sm:text-48 font-semibold w-full text-center">
-                    Blog
+                    Blogs
                   </h1>
                   <div className="flex gap-5 items-center justify-center mt-4">
                     <Link
@@ -123,7 +123,7 @@ function BlogList() {
                       href="/bloglist"
                       className="home-two-nav-item leading-5 relative text-18 font-inter text-main-black  font-bold transition-all duration-300 hover:text-buisness-red"
                     >
-                      Blog
+                      Blogs
                     </Link>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ function BlogList() {
         <div className="max-w-5xl max-lg:max-w-2xl mx-auto xl:py-[90px] sm:py-[90px] md:py-[90px] lg:py-[90px] py-[90px]">
           <div className="flex flex-col w-full justify-center items-center mx-auto">
             <h2 className="text-main-black font-semibold text-3xl pt-5 poppins-font">
-              Our Latest Blog
+              Our Latest Blogs
             </h2>
             <div className="flex gap-2.5 flex-wrap mt-8 justify-center items-center mx-auto">
               {[

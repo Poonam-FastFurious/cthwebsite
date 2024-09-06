@@ -21,8 +21,8 @@ function DiscoverTheWord() {
                 Connect with our Distinguish members
               </h2>
             </div>
-            <div className="flex flex-col sm:flex-row gap-10 items-center">
-              <Link to="/Signup">
+            <div className="flex flex-col sm:flex-row gap-10 items-center pt-8 sm:pt-0 md:pt-0 lg:pt-0 xl:pt-0">
+              <Link to="/membersip">
                 <div className="home-two-btn-bg group bg-buisness-light-black border-white/10 py-[15px]">
                   <span className="text-base group-hover:text-buisness-light-black text-white transition-all duration-300 font-semibold  relative z-10 tracking-normel poppins-font">
                     Join Our Team

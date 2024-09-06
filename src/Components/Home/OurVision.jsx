@@ -738,30 +738,29 @@ function OurVision() {
                         for partnerships and joint ventures
                       </p>
                     </div>
-                    <Link to="/AboutUs">
-                      <div className="flex items-center gap-2 group text-paragraph hover:text-buisness-red tracking-wide poppins-font">
-                        <span className="font-medium leading-5 font-inter border-b border-transparent before:inline-block before:border-purple before:border-b before:absolute before:bottom-0 before:transition-all before:duration-100 before:w-0 hover:before:w-full before:overflow-hidden before:h-5 relative">
-                          Read More
-                        </span>
-                        <svg
-                          width="7"
-                          height="11"
-                          viewBox="0 0 7 11"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.5 10L5.29289 6.20711C5.62623 5.87377 5.79289
+
+                    <div className=" items-center gap-2 group text-paragraph hover:text-buisness-red tracking-wide poppins-font hidden">
+                      <span className="font-medium leading-5 font-inter border-b border-transparent before:inline-block before:border-purple before:border-b before:absolute before:bottom-0 before:transition-all before:duration-100 before:w-0 hover:before:w-full before:overflow-hidden before:h-5 relative">
+                        <Link to="/AboutUs"> Read More</Link>
+                      </span>
+                      <svg
+                        width="7"
+                        height="11"
+                        viewBox="0 0 7 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.5 10L5.29289 6.20711C5.62623 5.87377 5.79289
                         5.70711 5.79289 5.5C5.79289 5.29289 5.62623 5.12623
                         5.29289 4.79289L1.5 1"
-                            stroke="currentColor"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          ></path>
-                        </svg>
-                      </div>
-                    </Link>
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -1307,7 +1306,7 @@ function OurVision() {
                       </p>
                     </div>
                     <Link to="/AboutUs">
-                      <div className="flex items-center gap-2 group text-paragraph hover:text-buisness-red tracking-wide poppins-font">
+                      <div className=" items-center gap-2 group text-paragraph hover:text-buisness-red tracking-wide poppins-font hidden">
                         <span className="font-medium leading-5 font-inter border-b border-transparent before:inline-block before:border-purple before:border-b before:absolute before:bottom-0 before:transition-all before:duration-100 before:w-0 hover:before:w-full before:overflow-hidden before:h-5 relative">
                           Read More
                         </span>
@@ -2397,7 +2396,7 @@ function OurVision() {
                       </p>
                     </div>
                     <Link to="/AboutUs">
-                      <div className="flex items-center gap-2 group text-paragraph hover:text-buisness-red tracking-wide poppins-font">
+                      <div className=" items-center gap-2 group text-paragraph hover:text-buisness-red tracking-wide poppins-font hidden">
                         <span className="font-medium leading-5 font-inter border-b border-transparent before:inline-block before:border-purple before:border-b before:absolute before:bottom-0 before:transition-all before:duration-100 before:w-0 hover:before:w-full before:overflow-hidden before:h-5 relative">
                           Read More
                         </span>
@@ -3487,7 +3486,7 @@ function OurVision() {
                       </p>
                     </div>
                     <Link to="/AboutUs">
-                      <div className="flex items-center gap-2 group text-paragraph hover:text-buisness-red tracking-wide poppins-font">
+                      <div className="flex items-center gap-2 group text-paragraph hover:text-buisness-red tracking-wide poppins-font hidden">
                         <span className="font-medium leading-5 font-inter border-b border-transparent before:inline-block before:border-purple before:border-b before:absolute before:bottom-0 before:transition-all before:duration-100 before:w-0 hover:before:w-full before:overflow-hidden before:h-5 relative">
                           Read More
                         </span>

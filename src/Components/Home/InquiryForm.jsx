@@ -511,11 +511,11 @@ function InquiryForm() {
                       className="text-sm text-gray-500 poppins-font"
                     >
                       I agree to the
-                      <Link to="#" className="underline">
+                      <Link to="#" className="underline ml-2">
                         Terms and Conditions
                       </Link>
-                      and
-                      <Link to="#" className="underline">
+                      <span> and</span>
+                      <Link to="#" className="underline ml-2">
                         Privacy Policy
                       </Link>
                     </label>

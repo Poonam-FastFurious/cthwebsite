@@ -20,7 +20,6 @@ function TestiMonial() {
         console.error("Error fetching testimonials:", error);
       }
     };
-
     fetchTestimonials();
   }, []);
   const formatDate = (dateString) => {
@@ -38,7 +37,7 @@ function TestiMonial() {
           <h2 className="text-12 sm:text-[30px] font-bold text-main-black pt-5 max-w-[844px]  tracking-normal poppins-font">
             What People are Saying
           </h2>
-          <div className="w-full pt-10">
+          <div className="w-full ">
             <div className="swiper h5-story-slider pt-14">
               <Swiper
                 className="swiper-wrapper"
@@ -78,23 +77,24 @@ function TestiMonial() {
                     <div className="p-6 rounded-lg  shadow-md py-12  h-auto group    border-buisness-red border shadow-card-xm pl-5 pr-5 md:pl-10 md:pr-16 lg:pl-5 lg:pr-5 xl:pl-10 xl:pr-16    bg-white -right-0  transition-all duration-300 hover:bg-buisness-red overflow-hidden">
                       <div className="flex items-center">
                         <img
-                          src="https://readymadeui.com/profile_2.webp"
+                          src={testi.photoUrl}
                           className="w-10 h-10 rounded-full"
                         />
                         <div className="ml-4">
                           <h4 className="text-gray-800 text-sm font-extrabold group-hover:text-white">
                             {testi.name}
                           </h4>
-                          <p className="mt-0.5 text-xs text-gray-400 group-hover:text-white">
+                          <p className="mt-0.5 text-xs  text-gray-400 group-hover:text-white">
                             {testi.email}
                           </p>
                         </div>
                       </div>
 
-                      <div className="mt-6">
-                        <p className="text-gray-800 text-sm leading-relaxed group-hover:text-white">
-                          {testi.message}
-                        </p>
+                      <div className="mt-6 ">
+                        <p
+                          className="text-gray-800  text-sm leading-relaxed group-hover:text-white"
+                          dangerouslySetInnerHTML={{ __html: testi.message }}
+                        ></p>
                       </div>
 
                       <div className="flex space-x-1 mt-4 group-hover:text-white">

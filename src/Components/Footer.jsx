@@ -1,12 +1,12 @@
-import { useState } from "react";
+// import { useState } from "react";
 import logo from "../assets/logo-no-background.png";
 import { Link } from "react-router-dom";
 function Footer() {
-  const [isChatOpen, setIsChatOpen] = useState(false);
+  // const [isChatOpen, setIsChatOpen] = useState(false);
 
-  const toggleChat = () => {
-    setIsChatOpen(!isChatOpen);
-  };
+  // const toggleChat = () => {
+  //   setIsChatOpen(!isChatOpen);
+  // };
   return (
     <div className=" bg-gray-200">
       <footer className=" py-6 px-28  tracking-wide container  mx-auto">
@@ -103,7 +103,7 @@ function Footer() {
             </Link>
           </li> */}
           <li className="text-sm">
-            <Link to="/Signup" className=" font-semibold hover:underline">
+            <Link to="/membersip" className=" font-semibold hover:underline">
               Become a Member
             </Link>
           </li>
@@ -171,7 +171,7 @@ function Footer() {
         </div>
       </div>
 
-      <button
+      {/* <button
         className="fixed bottom-4 right-4 inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-buisness-red hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900"
         type="button"
         aria-expanded={isChatOpen ? "true" : "false"}
@@ -300,7 +300,7 @@ function Footer() {
             </form>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

@@ -129,7 +129,13 @@ function HomeBlogs() {
                   </h1>
                 </div>
                 <hr className="bg-gray-50" />
-                <div className="pt-10 flex flex-col px-10 gap-[30px] h-40"></div>
+                <div>
+                  <img
+                    className="pt-0 flex flex-col px-0  h-full w-full"
+                    src="https://img.freepik.com/free-photo/hand-arrange-white-letters-as-crm_1384-116.jpg?t=st=1725627112~exp=1725630712~hmac=c70b1188a65af98b2bb79b7bd2bdd405da67be6fc4df3dca2d88cb4a6065a26d&w=1380"
+                    alt=""
+                  />
+                </div>
               </div>
               <div className="border border-purple/10 rounded-2xl py-[30px] bg-main-gray mt-[30px]">
                 <div className="flex gap-5 items-center px-10 pb-[30px]">
@@ -138,7 +144,13 @@ function HomeBlogs() {
                   </h1>
                 </div>
                 <hr className=" bg-gray-50" />
-                <div className="pt-10 flex flex-col px-10 gap-[30px]  h-80"></div>
+                <div>
+                  <img
+                    className="pt-0 flex flex-col px-0  h-full w-full"
+                    src="https://img.freepik.com/free-vector/flat-design-csr-concept-illustrated_23-2148927211.jpg?t=st=1725627369~exp=1725630969~hmac=33032197c05a21123db978f77a1e06b151833f64f3a67f950dd8eb23babb0e4c&w=826"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>
