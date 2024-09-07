@@ -9,15 +9,15 @@ function Footer() {
   // };
   return (
     <div className=" bg-gray-200">
-      <footer className=" py-6 px-28  tracking-wide container  mx-auto">
-        <div className="flex items-center justify-between max-sm:flex-col gap-5">
+      <footer className=" py-6   tracking-wide container  mx-auto">
+        <div className="flex px-4 justify-between max-sm:flex-col gap-5">
           <div>
             <Link to="">
-              <img src={logo} alt="logo" className="w-40 h-auto " />
+              <img src={logo} alt="logo" className=" h-auto " />
             </Link>
           </div>
 
-          <ul className="flex flex-wrap justify-center gap-x-4 gap-3">
+          <ul className="flex flex-wrap  gap-x-4 gap-3">
             <li>
               <svg
                 width="25"
@@ -94,8 +94,8 @@ function Footer() {
           </ul>
         </div>
       </footer>
-      <hr className="my-6 border-gray-500 container mx-auto" />
-      <div className="flex max-md:flex-col gap-4 px-24 container mx-auto ">
+      <hr className="my-6 border-gray-500  mx-auto" />
+      <div className="flex max-md:flex-col gap-4  px-4 container mx-auto ">
         <ul className="flex flex-wrap gap-4">
           {/* <li className="text-sm">
             <Link to="#" className=" font-semibold hover:underline">
@@ -142,14 +142,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex max-md:flex-col gap-4 container mx-auto px-24 py-8">
-        <p className=" text-sm ">
-          Copyright © 2024
-          <Link to="#" target="_blank" className="hover:underline mx-1">
-            CTH
-          </Link>
-          All Rights Reserved.
-        </p>
+      <div className="flex max-md:flex-col gap-4 container mx-auto  px-4 py-8">
         <div className="text-sm  md:ml-auto">
           <ul className="flex flex-wrap gap-4">
             <li className="text-sm">
@@ -170,7 +163,16 @@ function Footer() {
           </ul>
         </div>
       </div>
-
+      <hr />{" "}
+      <div>
+        <p className=" text-sm  text-center ">
+          Copyright © 2024
+          <Link to="#" target="_blank" className="hover:underline mx-1">
+            CTH
+          </Link>
+          All Rights Reserved.
+        </p>
+      </div>
       {/* <button
         className="fixed bottom-4 right-4 inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-buisness-red hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900"
         type="button"

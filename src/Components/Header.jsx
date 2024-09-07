@@ -108,7 +108,7 @@ function Header() {
               <Link to="/membersip">
                 <div className="home-two-btn-white-rev   rounded-md home-two-btn-white-rev-sm group bg-[#B08D57] hover:bg-buisness-red border-[#101828]/10">
                   <span className="text-base -p-[20px] text-white hover:text-[#B08D57]  transition-all duration-300 font-semibold font-inter relative z-10">
-                    Become Member
+                    Join Us
                   </span>
                   <svg
                     className="relative z-10"
@@ -278,7 +278,7 @@ function Header() {
                           }
                         )}
                       >
-                        Become Member
+                        Join Us
                       </Link>
                     </li>
                     <li>

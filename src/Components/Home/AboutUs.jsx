@@ -33,8 +33,8 @@ function AboutUs() {
                   </li>
                 </ul>
                 <Link to="/AboutUs">
-                  <div className="home-two-btn-bg group bg-buisness-red border-buisness-red py-[15px] w-fit">
-                    <span className="text-base group-hover:text-buisness-dark-black text-white transition-all duration-300 font-semibold font-inter relative  tracking-wide poppins-font">
+                  <div className="home-two-btn-bg  bg-buisness-red  border-buisness-red py-[15px] w-fit">
+                    <span className="text-base  text-white hover:text-[#B08D57]  font-semibold font-inter relative   poppins-font">
                       Explore Service
                     </span>
                     <svg
@@ -46,7 +46,7 @@ function AboutUs() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        className="group-hover:stroke-buisness-dark-black stroke-white transition-all duration-300"
+                        className="group-hover:stroke-buisness-dark-black stroke-white "
                         d="M1.10254 10.5L4.89543 6.70711C5.22877 6.37377 5.39543 6.20711 5.39543 6C5.39543 5.79289 5.22877 5.62623 4.89543 5.29289L1.10254 1.5"
                         stroke="white"
                         strokeWidth="1.5"
