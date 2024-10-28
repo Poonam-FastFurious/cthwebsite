@@ -10,6 +10,7 @@ function SignUp() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
+    displayName:"",
     contactNumber: "",
     emailAddress: "",
     linkedinProfile: "",
@@ -36,6 +37,9 @@ function SignUp() {
     }
     if (!formData.emailAddress.trim()) {
       errors.emailAddress = "Email Address is required";
+    }
+    if (!formData.displayName.trim()) {
+      errors.displayName = "displayName is required";
     }
 
     setFormErrors(errors);
@@ -233,8 +237,93 @@ function SignUp() {
                         </p>
                       )}
                     </div>
+                    {/* <div>
+                      <label className="text-gray-800 text-sm mb-4 block tracking-wide poppins-font  ">
+                        Gender
+                      </label>
+                      <div className="flex space-x-4   gap-4   pm-2">
+                        <label className="text-gray-800 text-sm">
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="male"
+                            className="mr-2 text-gray-800 "
+                            onChange={handleChange}
+                            checked={formData.gender === "male"}
+                            required
+                          />
+                          Male
+                        </label>
+                        <label className="text-gray-800 text-sm">
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="female"
+                            className="mr-2 text-gray-800 "
+                            onChange={handleChange}
+                            checked={formData.gender === "female"}
+                            required
+                          />
+                          Female
+                        </label>
+                        <label className="text-gray-800 text-sm">
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="other"
+                            className="mr-2 text-gray-800  "
+                            onChange={handleChange}
+                            checked={formData.gender === "other"}
+                            required
+                          />
+                          Other
+                        </label>
+                      </div>
+                    </div> */}
                     <div>
-                      <label className="text-gray-800 text-sm mb-4 block tracking-wide poppins-font ">
+                      <label className="text-gray-800 text-sm mb-2 block tracking-wide poppins-font">
+                        Display Name
+                      </label>
+                      <input
+                        name="displayName"
+                        type="text"
+                        className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-[#B08D57]"
+                        placeholder="Enter DisplayName"
+                        value={formData.displayName}
+                        onChange={handleChange}
+                      />
+                      {formErrors.displayName && (
+                        <p className="text-red-600 text-sm">
+                          {formErrors.displayName}
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="!mt-12">
+                      <button
+                        type="button"
+                        onClick={nextStep}
+                        className="w-full py-3 px-4 text-sm  font-semibold rounded-md text-white bg-[#B08D57]  focus:outline-none tracking-wide poppins-font"
+                      >
+                        Next
+                      </button>
+                    </div>
+                    <p className="text-gray-800 text-sm mt-6 text-center tracking-wide poppins-font">
+                      Already have an account?
+                      <Link
+                        to="https://towlhall.dev-testing-team.tech"
+                        target="_blank"
+                        className="text-[#B08D57] font-semibold hover:underline ml-1 tracking-wide poppins-font"
+                      >
+                        SignIn here
+                      </Link>
+                    </p>
+                  </div>
+                )}
+                {step === 2 && (
+                  <div className="space-y-5">
+                    <div>
+                      <label className="text-gray-800 text-sm mb-4 block tracking-wide poppins-font  ">
                         Gender
                       </label>
                       <div className="flex space-x-4   gap-4   pm-2">
@@ -276,31 +365,7 @@ function SignUp() {
                         </label>
                       </div>
                     </div>
-
-                    <div className="!mt-12">
-                      <button
-                        type="button"
-                        onClick={nextStep}
-                        className="w-full py-3 px-4 text-sm  font-semibold rounded-md text-white bg-[#B08D57]  focus:outline-none tracking-wide poppins-font"
-                      >
-                        Next
-                      </button>
-                    </div>
-                    <p className="text-gray-800 text-sm mt-6 text-center tracking-wide poppins-font">
-                      Already have an account?
-                      <Link
-                        to="https://towlhall.dev-testing-team.tech"
-                        target="_blank"
-                        className="text-[#B08D57] font-semibold hover:underline ml-1 tracking-wide poppins-font"
-                      >
-                        SignIn here
-                      </Link>
-                    </p>
-                  </div>
-                )}
-                {step === 2 && (
-                  <div className="space-y-5">
-                    <div>
+                    {/* <div>
                       <label className="text-gray-800 text-sm mb-2 block tracking-wide poppins-font">
                         Address
                       </label>
@@ -312,7 +377,7 @@ function SignUp() {
                         value={formData.address}
                         onChange={handleChange}
                       />
-                    </div>
+                    </div> */}
                     <div>
                       <label className="text-gray-800 text-sm mb-2 block tracking-wide poppins-font">
                         Skills
