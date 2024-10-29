@@ -6,6 +6,7 @@ import { MdOutlineWorkHistory } from "react-icons/md";
 function Associatemember() {
   const [banner, setBanner] = useState([]);
   const [members, setMembers] = useState([]);
+  const [happycustomer, setHappycustomer] = useState([]);
   useEffect(() => {
     fetch(Baseurl + "/api/v1/Banner/allabnner")
       .then((Response) => Response.json())
@@ -21,6 +22,11 @@ function Associatemember() {
     fetch(Baseurl + "/api/v1/associate/all")
       .then((responce) => responce.json())
       .then((data) => setMembers(data.data));
+  }, []);
+  useEffect(() => {
+    fetch(Baseurl + "/api/v1/happycustomer")
+      .then((responce) => responce.json())
+      .then((data) => setHappycustomer(data.data));
   }, []);
   return (
     <>
@@ -144,105 +150,50 @@ function Associatemember() {
           </h2>
 
           <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-[30px] my-[70px]">
-            <div className="col-span-4 p-2.5 rounded-[20px] bg-white group">
-              <div className="rounded-[10px] overflow-hidden relative w-fit h-fit">
-                <img
-                  src="https://www.techsmith.com/blog/wp-content/uploads/2021/02/video-thumbnails-hero-1.png"
-                  alt=""
-                  className="w-full object-cover rounded-[10px] group-hover:scale-110 transition-all duration-300 relative z-0"
-                />
-              </div>
+            {happycustomer.map((happy,index) => (
+              <div
+                key={index}
+                className="col-span-4 p-2.5 rounded-[20px] bg-white group"
+              >
+                <div className="rounded-[10px] overflow-hidden relative w-100 h-fit">
+                  <iframe
+                    width="100"
+                    height="315"
+                    src={`https://www.youtube.com/embed/${new URL(
+                      happy.videoUrl
+                    ).searchParams.get("v")}`}
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    className="w-full object-cover rounded-[10px] group-hover:scale-110 transition-all duration-300 relative z-0"
+                  ></iframe>
+                </div>
 
-              <h3 className="case_card_title text-black text-20 font-semibold pt-1 pb-5 mx-5 border-b border-green-dark/10 poppins-font">
-                <Link to="#" className="font-inter">
-                  Lorem ipsum dolor sit amet consectetur.
-                </Link>
-              </h3>
-              <div className="mx-5 mt-6 mb-3 flex items-center justify-between">
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="flex">
-                    <img
-                      src="https://readymadeui.com/profile_2.webp"
-                      className="w-10 h-10 rounded-full"
-                    />
-                    <div className="ml-4 text-left">
-                      <p className="text-sm font-bold text-gray-800 poppins-font">
-                        John Doe
-                      </p>
-                      <p className="text-xs text-gray-400 mt-0.5 poppins-font">
-                        johndoe23@gmail.com
-                      </p>
+                <h3 className="case_card_title text-black text-20 font-semibold pt-1 pb-5 mx-5 border-b border-green-dark/10 poppins-font">
+                  <Link to="#" className="font-inter">
+                    {happy.heading}
+                  </Link>
+                </h3>
+                <div className="mx-5 mt-6 mb-3 flex items-center justify-between">
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="flex">
+                      <img
+                        src={happy.photoUrl}
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <div className="ml-4 text-left">
+                        <p className="text-sm font-bold text-gray-800 poppins-font">
+                        {happy.Name}
+                        </p>
+                        {/* <p className="text-xs text-gray-400 mt-0.5 poppins-font">
+                          johndoe23@gmail.com
+                        </p> */}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-span-4 p-2.5 rounded-[20px] bg-white group">
-              <div className="rounded-[10px] overflow-hidden relative w-fit h-fit">
-                <img
-                  src="https://www.techsmith.com/blog/wp-content/uploads/2021/02/video-thumbnails-hero-1.png"
-                  alt=""
-                  className="w-full object-cover rounded-[10px] group-hover:scale-110 transition-all duration-300 relative z-0"
-                />
-              </div>
-
-              <h3 className="case_card_title text-black text-20 font-semibold pt-1 pb-5 mx-5 border-b border-green-dark/10  poppins-font">
-                <Link to="#" className="font-inter">
-                  Lorem ipsum dolor sit amet consectetur.
-                </Link>
-              </h3>
-              <div className="mx-5 mt-6 mb-3 flex items-center justify-between">
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="flex">
-                    <img
-                      src="https://readymadeui.com/profile_2.webp"
-                      className="w-10 h-10 rounded-full"
-                    />
-                    <div className="ml-4 text-left">
-                      <p className="text-sm font-bold text-gray-800 poppins-font">
-                        John Doe
-                      </p>
-                      <p className="text-xs text-gray-400 mt-0.5 poppins-font">
-                        johndoe23@gmail.com
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-span-4 p-2.5 rounded-[20px] bg-white group">
-              <div className="rounded-[10px] overflow-hidden relative w-fit h-fit">
-                <img
-                  src="https://www.techsmith.com/blog/wp-content/uploads/2021/02/video-thumbnails-hero-1.png"
-                  alt=""
-                  className="w-full object-cover rounded-[10px] group-hover:scale-110 transition-all duration-300 relative z-0"
-                />
-              </div>
-
-              <h3 className="case_card_title text-black text-20 font-semibold pt-1 pb-5 mx-5 border-b border-green-dark/10 poppins-font">
-                <Link to="#" className="font-inter">
-                  Lorem ipsum dolor sit amet consectetur.
-                </Link>
-              </h3>
-              <div className="mx-5 mt-6 mb-3 flex items-center justify-between ">
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="flex">
-                    <img
-                      src="https://readymadeui.com/profile_2.webp"
-                      className="w-10 h-10 rounded-full"
-                    />
-                    <div className="ml-4 text-left">
-                      <p className="text-sm font-bold text-gray-800 poppins-font">
-                        John Doe
-                      </p>
-                      <p className="text-xs text-gray-400 mt-0.5 poppins-font">
-                        johndoe23@gmail.com
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
           {/* <Link to="#">
             <div className="home-two-btn-bg group bg-buisness-red border-buisness-red py-[15px] w-fit  mx-auto">

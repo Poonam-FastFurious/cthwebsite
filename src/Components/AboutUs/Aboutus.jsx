@@ -6,6 +6,7 @@ import image from "../../assets/galleryimgswsl.jpeg";
 import backimage from "../../assets/banner.png";
 function Aboutus() {
   const [banner, setBanner] = useState([]);
+  const [story, setStory] = useState([]);
   const [openIndex, setOpenIndex] = useState(null);
   const [faqData, setFaqData] = useState([]);
   useEffect(() => {
@@ -18,10 +19,16 @@ function Aboutus() {
         setBanner(aboutusBanners);
       });
   }, []);
+
   useEffect(() => {
     fetch(Baseurl + "/api/v1/faq/all")
       .then((Response) => Response.json())
       .then((data) => setFaqData(data.data));
+  }, []);
+  useEffect(() => {
+    fetch(Baseurl+"/api/v1/videotestimonial")
+      .then((Response) => Response.json())
+      .then((data) => setStory(data.data));
   }, []);
 
   const toggleFAQ = (index) => {
@@ -350,93 +357,40 @@ function Aboutus() {
           </h2>
 
           <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-[30px] my-[70px]">
-            <div className="col-span-4 p-2.5 rounded-[20px] bg-white group">
-              <div className="rounded-[10px] overflow-hidden relative w-100 h-fit">
-                <iframe
-                  width="100"
-                  height="315"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                  className="w-full object-cover rounded-[10px] group-hover:scale-110 transition-all duration-300 relative z-0"
-                ></iframe>
-              </div>
+            {story.map((item, index) => (
+              <div
+                key={index}
+                className="col-span-4 p-2.5 rounded-[20px] bg-white group"
+              >
+                <div className="rounded-[10px] overflow-hidden relative w-100 h-fit">
+                  <iframe
+                    width="100"
+                    height="315"
+                    src={`https://www.youtube.com/embed/${new URL(
+                      item.videoUrl
+                    ).searchParams.get("v")}`}
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    className="w-full object-cover rounded-[10px] group-hover:scale-110 transition-all duration-300 relative z-0"
+                  ></iframe>
+                </div>
 
-              <h3 className="case_card_title text-black text-20 font-semibold pt-1 pb-5 mx-5 border-b border-green-dark/10   poppins-font tracking-normal">
-                <Link to="#" className="font-inter">
-                  Lorem ipsum dolor sit amet consectetur.
-                </Link>
-              </h3>
-              <div className="mx-5 mt-6 mb-3 flex items-center justify-between   poppins-font tracking-normal ">
-                <div>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laborum libero fugit maxime cupiditate consequatur,
-                    distinctio accusantium. Deleniti, distinctio accusamus
-                    possimus tenetur quidem dolorum modi ut?
-                  </p>
+                <h3 className="case_card_title text-black text-20 font-semibold pt-1 pb-5 mx-5 border-b border-green-dark/10   poppins-font tracking-normal">
+                  <Link to="#" className="font-inter">
+                   {item.heading}
+                  </Link>
+                </h3>
+                <div className="mx-5 mt-6 mb-3 flex items-center justify-between   poppins-font tracking-normal ">
+                  <div>
+                    <p>
+                     {item.details}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-span-4 p-2.5 rounded-[20px] bg-white group">
-              <div className="rounded-[10px] overflow-hidden relative w-100 h-fit">
-                <iframe
-                  width="100"
-                  height="315"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                  className="w-full object-cover rounded-[10px] group-hover:scale-110 transition-all duration-300 relative z-0"
-                ></iframe>
-              </div>
-
-              <h3 className="case_card_title text-black text-20 font-semibold pt-1 pb-5 mx-5 border-b border-green-dark/10 poppins-font tracking-normal">
-                <Link to="#" className="font-inter">
-                  Lorem ipsum dolor sit amet consectetur.
-                </Link>
-              </h3>
-              <div className="mx-5 mt-6 mb-3 flex items-center justify-between   poppins-font tracking-wide">
-                <div>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laborum libero fugit maxime cupiditate consequatur,
-                    distinctio accusantium. Deleniti, distinctio accusamus
-                    possimus tenetur quidem dolorum modi ut?
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-span-4 p-2.5 rounded-[20px] bg-white group">
-              <div className="rounded-[10px] overflow-hidden relative w-100 h-fit">
-                <iframe
-                  width="100"
-                  height="315"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                  className="w-full object-cover rounded-[10px] group-hover:scale-110 transition-all duration-300 relative z-0"
-                ></iframe>
-              </div>
-
-              <h3 className="case_card_title text-black text-20 font-semibold pt-1 pb-5 mx-5 border-b border-green-dark/10 poppins-font tracking-normal">
-                <Link to="#" className="font-inter">
-                  Lorem ipsum dolor sit amet consectetur.
-                </Link>
-              </h3>
-              <div className="mx-5 mt-6 mb-3 flex items-center justify-between   poppins-font tracking-wide">
-                <div>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laborum libero fugit maxime cupiditate consequatur,
-                    distinctio accusantium. Deleniti, distinctio accusamus
-                    possimus tenetur quidem dolorum modi ut?
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
+            
           </div>
         </div>
       </section>
