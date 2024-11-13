@@ -15,7 +15,7 @@ function TestiMonial() {
           Baseurl + "/api/v1/testimonial/alltestimonial"
         ); // Replace with your API endpoint
         const data = await response.json();
-        setTestimonials(data.data); // Assuming `data` is an array of testimonials
+        setTestimonials(data.data || []); // Assuming `data` is an array of testimonials
       } catch (error) {
         console.error("Error fetching testimonials:", error);
       }

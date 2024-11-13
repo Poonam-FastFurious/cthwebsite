@@ -23,10 +23,10 @@ function Aboutus() {
   useEffect(() => {
     fetch(Baseurl + "/api/v1/faq/all")
       .then((Response) => Response.json())
-      .then((data) => setFaqData(data.data));
+      .then((data) => setFaqData(data.data || []));
   }, []);
   useEffect(() => {
-    fetch(Baseurl+"/api/v1/videotestimonial")
+    fetch(Baseurl + "/api/v1/videotestimonial")
       .then((Response) => Response.json())
       .then((data) => setStory(data.data));
   }, []);
@@ -378,19 +378,16 @@ function Aboutus() {
 
                 <h3 className="case_card_title text-black text-20 font-semibold pt-1 pb-5 mx-5 border-b border-green-dark/10   poppins-font tracking-normal">
                   <Link to="#" className="font-inter">
-                   {item.heading}
+                    {item.heading}
                   </Link>
                 </h3>
                 <div className="mx-5 mt-6 mb-3 flex items-center justify-between   poppins-font tracking-normal ">
                   <div>
-                    <p>
-                     {item.details}
-                    </p>
+                    <p>{item.details}</p>
                   </div>
                 </div>
               </div>
             ))}
-            
           </div>
         </div>
       </section>

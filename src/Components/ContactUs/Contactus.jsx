@@ -22,7 +22,7 @@ function Contactus() {
   useEffect(() => {
     fetch(Baseurl + "/api/v1/faq/all")
       .then((Response) => Response.json())
-      .then((data) => setFaqData(data.data));
+      .then((data) => setFaqData(data.data || []));
   }, []);
 
   const toggleFAQ = (index) => {

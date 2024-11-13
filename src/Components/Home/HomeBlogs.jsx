@@ -9,7 +9,7 @@ function HomeBlogs() {
   useEffect(() => {
     fetch(Baseurl + "/api/v1/blog/allblogs")
       .then((Response) => Response.json())
-      .then((data) => setBlogs(data.data));
+      .then((data) => setBlogs(data.data || []));
   }, []);
   const handleReadMoreClick = (blogId) => {
     fetch(`${Baseurl}/api/v1/blog/read`, {
@@ -71,9 +71,9 @@ function HomeBlogs() {
                                 <p className="text-sm font-bold  tracking-wide poppins-font">
                                   By {blog.author}
                                 </p>
-                                <p className="text-xs  mt-0.5 tracking-wide poppins-font">
+                                {/* <p className="text-xs  mt-0.5 tracking-wide poppins-font">
                                   johndoe23@gmail.com
-                                </p>
+                                </p> */}
                               </div>
                             </div>
                           </div>

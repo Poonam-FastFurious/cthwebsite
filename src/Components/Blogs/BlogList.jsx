@@ -29,7 +29,7 @@ function BlogList() {
   useEffect(() => {
     fetch(Baseurl + "/api/v1/blog/allblogs")
       .then((responce) => responce.json())
-      .then((data) => setBlogs(data.data));
+      .then((data) => setBlogs(data.data || []));
   }, []);
   const formatDate = (dateString) => {
     const options = { day: "2-digit", month: "long", year: "numeric" };
