@@ -283,7 +283,7 @@ function Header() {
                     </li>
                     <li>
                       <Link
-                        to={`https://towlhall.dev-testing-team.tech`}
+                        to={`https://chat.compliancetownhall.com`}
                         target="_blank"
                         className={clsx(
                           "leading-5   w-fit before:h-[20px] flex  items-center gap-2  delay-150 relative text-main-black",

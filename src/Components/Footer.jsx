@@ -109,7 +109,7 @@ function Footer() {
           </li>
           <li className="text-sm">
             <Link
-              to="https://towlhall.dev-testing-team.tech"
+              to="https://chat.compliancetownhall.com"
               target="_blank"
               className=" font-semibold hover:underline"
             >

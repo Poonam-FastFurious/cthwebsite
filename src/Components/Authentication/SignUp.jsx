@@ -311,7 +311,7 @@ function SignUp() {
                     <p className="text-gray-800 text-sm mt-6 text-center tracking-wide poppins-font">
                       Already have an account?
                       <Link
-                        to="https://towlhall.dev-testing-team.tech"
+                        to="https://chat.compliancetownhall.com"
                         target="_blank"
                         className="text-[#B08D57] font-semibold hover:underline ml-1 tracking-wide poppins-font"
                       >
