@@ -18,14 +18,14 @@ function DiscoverTheWord() {
           <div className="flex flex-col xl:flex-row justify-between w-full">
             <div className="">
               <h2 className="text-black font-semibold text-[30px] text-center sm:text-48 pt-5  tracking-normal poppins-font">
-                Connect with our Distinguish members
+                KEY MEMBERS
               </h2>
             </div>
             <div className="flex flex-col sm:flex-row gap-10 items-center pt-8 sm:pt-0 md:pt-0 lg:pt-0 xl:pt-0">
               <Link to="/membersip">
                 <div className="home-two-btn-bg group bg-buisness-light-black border-white/10 py-[15px]">
                   <span className="text-base group-hover:text-buisness-light-black text-white transition-all duration-300 font-semibold  relative z-10 tracking-normel poppins-font">
-                    Join Our Team
+                    Become a Member
                   </span>
                   <svg
                     className="relative z-10"

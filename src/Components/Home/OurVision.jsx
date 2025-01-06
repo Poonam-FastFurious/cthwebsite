@@ -29,11 +29,12 @@ function OurVision() {
                     </div>
                     <div className="mt-12 mb-4">
                       <p className="text-20 font-semibold text-center text-main-black mb-4 tracking-wide poppins-font">
-                        Collaboration
+                        Information
                       </p>
                       <p className="text-center text-paragraph tracking-wide poppins-font">
-                        Facilitate collaboration by defining legal frameworks
-                        for partnerships and joint ventures
+                        Unlimited information in the domain from all
+                        stakeholders, accumulated over years’ of experience and
+                        expertise. <br /> <br />
                       </p>
                     </div>
 
@@ -72,13 +73,14 @@ function OurVision() {
                         <img src={Information} alt="" />
                       </span>
                     </div>
-                    <div className="mt-12 mb-4">
-                      <p className="text-20 font-semibold text-center text-main-black mb-4 tracking-wide poppins-font">
-                        Information
+                    <div className="mt-12 mb-0">
+                      <p className="text-20 font-semibold text-center text-main-black mb-2 tracking-wide poppins-font">
+                        Interaction
                       </p>
                       <p className="text-center text-paragraph tracking-wide poppins-font">
-                        Ensure transparency and accountability through stringent
-                        information disclosure requirements
+                        The platform is designed for seamless interaction
+                        between member stakeholder in the site under a secure
+                        media space, exclusively created for open exchange.
                       </p>
                     </div>
                     <Link to="/AboutUs">
@@ -121,8 +123,9 @@ function OurVision() {
                         Integration
                       </p>
                       <p className="text-center text-paragraph tracking-wide poppins-font">
-                        Govern mergers and acquisitions, ensuring seamless
-                        integration of businesses
+                        Meeting of minds under a democratically engineered
+                        process where the individual ideas and opinions are
+                        welcome for collective convergence.
                       </p>
                     </div>
                     <Link to="/AboutUs">
@@ -164,11 +167,12 @@ function OurVision() {
                     </div>
                     <div className="mt-12 mb-4">
                       <p className="text-20 font-semibold text-center text-main-black mb-4 tracking-wide poppins-font">
-                        Interaction
+                        Collaboration
                       </p>
                       <p className="text-center text-paragraph poppins-font">
-                        Regulate interactions between companies and
-                        stakeholders, promoting fair practices and compliance
+                        Achieving business needs of Corporate Compliance through
+                        due diligence, cooperation and independent selection
+                        under a FREE and Fair environment
                       </p>
                     </div>
                     <Link to="/AboutUs">

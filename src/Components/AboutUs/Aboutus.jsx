@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import { Baseurl } from "../../Confige";
 import image from "../../assets/galleryimgswsl.jpeg";
 import backimage from "../../assets/banner.png";
+import About1 from "../../assets/about1.webp";
+import About2 from "../../assets/about2.webp";
+import About3 from "../../assets/about-card-shape.webp";
 function Aboutus() {
   const [banner, setBanner] = useState([]);
   const [story, setStory] = useState([]);
@@ -142,20 +145,20 @@ function Aboutus() {
                 </svg>
                 <img
                   data-aos="fade-left"
-                  src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about1.webp"
+                  src={About1}
                   alt=""
                   className="relative z-10 hidden sm:block"
                 />
                 <img
                   data-aos="fade-left"
                   data-aos-delay="100"
-                  src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about2.webp"
+                  src={About2}
                   alt=""
                   className="relative z-10"
                 />
                 <div className="bg-buisness-red p-[30px] rounded-2xl absolute z-10 bottom-8 w-[295px]">
                   <img
-                    src="https://quomodothemes.website/html/quland-html/assets/images/home-five/hero/about-card-shape.webp"
+                    src={About3}
                     alt=""
                     className="absolute right-2 top-bottom-moving"
                   />
@@ -175,11 +178,14 @@ function Aboutus() {
                         strokeLinejoin="round"
                       ></path>
                     </svg>
-                    <span className="text-sm text-white leading-8   poppins-font tracking-wide">
-                      We have
+                    <span className="text-sm text-white leading-normal   tracking-normal poppins-font">
+                      A never before seen ecosystem to manage corporate
+                      compliance through collaboration instead of competition
+                      though unending resource of subject matter experts in this
+                      platform
                     </span>
                   </div>
-                  <h1
+                  {/* <h1
                     className="text-[27px] leading-[35px] text-white font-semibold   poppins-font  max-w-[170px] "
                     data-scroll-qs="scroll"
                     data-count-qs="25"
@@ -187,7 +193,7 @@ function Aboutus() {
                     data-speed-qs="1000"
                   >
                     25+ Years of Experience
-                  </h1>
+                  </h1> */}
                 </div>
               </div>
             </div>
