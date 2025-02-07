@@ -10,7 +10,7 @@ function SignUp() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
-    displayName:"",
+    displayName: "",
     contactNumber: "",
     emailAddress: "",
     linkedinProfile: "",
@@ -402,7 +402,6 @@ function SignUp() {
                         placeholder="Enter Linkedin Profile"
                         value={formData.linkedinProfile}
                         onChange={handleChange}
-                        required
                       />
                     </div>
                     <div>
