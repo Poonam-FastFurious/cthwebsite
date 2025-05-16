@@ -21,6 +21,8 @@ import Footer from "./Components/Footer";
 import Gallery from "./Components/Gallery/Gallery";
 import SignUp from "./Components/Authentication/SignUp";
 import SuccessForm from "./Components/Successform/SuccessForm";
+import TermsCondition from "./Components/Pages/TermsCondition";
+import PrivacyPolicy from "./Components/Pages/PrivacyPolicy";
 
 function App() {
   useEffect(() => {
@@ -48,6 +50,8 @@ function App() {
             <Route path="/membersip" element={<SignUp />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/success" element={<SuccessForm />} />
+            <Route path="/termsandconditions" element={<TermsCondition />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
           <Footer />
         </BrowserRouter>

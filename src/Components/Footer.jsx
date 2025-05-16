@@ -2,11 +2,7 @@
 import logo from "../assets/logo-no-background.png";
 import { Link } from "react-router-dom";
 function Footer() {
-  // const [isChatOpen, setIsChatOpen] = useState(false);
-
-  // const toggleChat = () => {
-  //   setIsChatOpen(!isChatOpen);
-  // };
+  
   return (
     <div className=" bg-gray-200">
       <footer className=" py-6   tracking-wide container  mx-auto">
@@ -33,21 +29,7 @@ function Footer() {
               </svg>
             </li>
 
-            {/* <li>
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 22 22"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.946 6.00255C7.84058 6.00255 5.33569 8.37751 5.33569 11.3219C5.33569 14.2663 7.84058 16.6412 10.946 16.6412C14.0515 16.6412 16.5564 14.2663 16.5564 11.3219C16.5564 8.37751 14.0515 6.00255 10.946 6.00255ZM10.946 14.7802C8.93921 14.7802 7.29858 13.2293 7.29858 11.3219C7.29858 9.41453 8.93433 7.86363 10.946 7.86363C12.9578 7.86363 14.5935 9.41453 14.5935 11.3219C14.5935 13.2293 12.9529 14.7802 10.946 14.7802ZM18.0945 5.78496C18.0945 6.47476 17.5085 7.02568 16.7859 7.02568C16.0584 7.02568 15.4773 6.47013 15.4773 5.78496C15.4773 5.09979 16.0632 4.54424 16.7859 4.54424C17.5085 4.54424 18.0945 5.09979 18.0945 5.78496ZM21.8103 7.0442C21.7273 5.38219 21.3269 3.91 20.0427 2.69705C18.7634 1.48411 17.2107 1.10449 15.4578 1.02116C13.6511 0.923937 8.23608 0.923937 6.42944 1.02116C4.6814 1.09986 3.12866 1.47948 1.84448 2.69242C0.560303 3.90537 0.164795 5.37756 0.0769043 7.03957C-0.0256348 8.7525 -0.0256348 13.8867 0.0769043 15.5996C0.159912 17.2616 0.560303 18.7338 1.84448 19.9467C3.12866 21.1597 4.67651 21.5393 6.42944 21.6226C8.23608 21.7199 13.6511 21.7199 15.4578 21.6226C17.2107 21.5439 18.7634 21.1643 20.0427 19.9467C21.322 18.7338 21.7224 17.2616 21.8103 15.5996C21.9128 13.8867 21.9128 8.75713 21.8103 7.0442ZM19.4763 17.4375C19.0955 18.3449 18.3582 19.044 17.3962 19.4097C15.9558 19.9514 12.5378 19.8264 10.946 19.8264C9.35425 19.8264 5.9314 19.9467 4.49585 19.4097C3.53882 19.0486 2.80151 18.3496 2.41577 17.4375C1.84448 16.0718 1.97632 12.8311 1.97632 11.3219C1.97632 9.81267 1.84937 6.56736 2.41577 5.20627C2.79663 4.29888 3.53394 3.59982 4.49585 3.23408C5.93628 2.69242 9.35425 2.81742 10.946 2.81742C12.5378 2.81742 15.9607 2.69705 17.3962 3.23408C18.3533 3.59519 19.0906 4.29425 19.4763 5.20627C20.0476 6.57198 19.9158 9.81267 19.9158 11.3219C19.9158 12.8311 20.0476 16.0764 19.4763 17.4375Z"
-                  fill="black"
-                />
-              </svg>
-            </li> */}
-
+            
             <li>
               <svg
                 width="22"
@@ -97,11 +79,7 @@ function Footer() {
       <hr className="my-6 border-gray-500  mx-auto" />
       <div className="flex max-md:flex-col gap-4  px-4 container mx-auto ">
         <ul className="flex flex-wrap gap-4">
-          {/* <li className="text-sm">
-            <Link to="#" className=" font-semibold hover:underline">
-              Find member
-            </Link>
-          </li> */}
+          
           <li className="text-sm">
             <Link to="/membersip" className=" font-semibold hover:underline">
               Become a Member
@@ -124,18 +102,14 @@ function Footer() {
         </ul>
         <div className="text-sm  md:ml-auto">
           <ul className="flex flex-wrap gap-4">
-            {/* <li className="text-sm">
-              <Link to="#" className=" font-semibold hover:underline">
-                Join CTH
-              </Link>
-            </li> */}
+            
             <li className="text-sm">
               <Link to="/contact" className=" font-semibold hover:underline">
                 Help Center
               </Link>
             </li>
             <li className="text-sm">
-              <Link to="#" className=" font-semibold hover:underline">
+              <Link to="/contact" className=" font-semibold hover:underline">
                 Partnerships
               </Link>
             </li>
@@ -151,19 +125,19 @@ function Footer() {
               </Link>
             </li>
             <li className="text-sm">
-              <Link to="#" className=" font-semibold hover:underline">
+              <Link to="/privacy-policy" className=" font-semibold hover:underline">
                 Privacy Policy
               </Link>
             </li>
             <li className="text-sm">
-              <Link to="#" className=" font-semibold hover:underline">
+              <Link to="/termsandconditions" className=" font-semibold hover:underline">
                 Term of use
               </Link>
             </li>
           </ul>
         </div>
       </div>
-      <hr />{" "}
+      <hr />
       <div>
         <p className=" text-sm  text-center ">
           Copyright © 2024
@@ -173,136 +147,7 @@ function Footer() {
           All Rights Reserved.
         </p>
       </div>
-      {/* <button
-        className="fixed bottom-4 right-4 inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-buisness-red hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900"
-        type="button"
-        aria-expanded={isChatOpen ? "true" : "false"}
-        data-state={isChatOpen ? "open" : "closed"}
-        onClick={toggleChat}
-      >
-        <svg
-          xmlns=" http://www.w3.org/2000/svg"
-          width="30"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="text-white block border-gray-200 align-middle"
-        >
-          <path
-            d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"
-            className="border-gray-200"
-          ></path>
-        </svg>
-      </button>
-      {isChatOpen && (
-        <div className=" z-50 fixed   bottom-20  overflow-y-scroll right-0 mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[440px] h-auto">
-          <div className="flex flex-col space-y-1.5 pb-6">
-            <h2 className="font-semibold text-lg tracking-tight">Chatbot</h2>
-            <p className="text-sm text-[#6b7280] leading-3">
-              Powered by complaincetownhall
-            </p>
-          </div>
-
-          <div
-            className="pr-4 h-[474px]"
-            style={{ "min-width": "100%", display: "table" }}
-          >
-            <div className="flex gap-3 my-4 text-gray-600 text-sm flex-1">
-              <span className="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
-                <div className="rounded-full bg-gray-100 border p-1">
-                  <svg
-                    stroke="none"
-                    fill="black"
-                    strokeWidth="1.5"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    height="20"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"
-                    ></path>
-                  </svg>
-                </div>
-              </span>
-              <p className="leading-relaxed">
-                <span className="block font-bold text-gray-700">AI </span>Hi,
-                how can I help you today?
-              </p>
-            </div>
-
-            <div className="flex gap-3 my-4 text-gray-600 text-sm flex-1">
-              <span className="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
-                <div className="rounded-full bg-gray-100 border p-1">
-                  <svg
-                    stroke="none"
-                    fill="black"
-                    strokeWidth="0"
-                    viewBox="0 0 16 16"
-                    height="20"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"></path>
-                  </svg>
-                </div>
-              </span>
-              <p className="leading-relaxed">
-                <span className="block font-bold text-gray-700">You </span>
-                fewafef
-              </p>
-            </div>
-
-            <div className="flex gap-3 my-4 text-gray-600 text-sm flex-1">
-              <span className="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
-                <div className="rounded-full bg-gray-100 border p-1">
-                  <svg
-                    stroke="none"
-                    fill="black"
-                    strokeWidth="1.5"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    height="20"
-                    width="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"
-                    ></path>
-                  </svg>
-                </div>
-              </span>
-              <p className="leading-relaxed">
-                <span className="block font-bold text-gray-700">AI </span>Sorry,
-                I couldn find any information in the documentation about that.
-                Expect answer to be less accurateI could not find the answer to
-                this in the verified sources.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center pt-0">
-            <form className="flex items-center justify-center w-full space-x-2">
-              <input
-                className="flex h-10 w-full rounded-md border border-[#e5e7eb] px-3 py-2 text-sm placeholder-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#9ca3af] disabled:cursor-not-allowed disabled:opacity-50 text-[#030712] focus-visible:ring-offset-2"
-                placeholder="Type your message"
-              />
-              <button className="inline-flex items-center justify-center rounded-md text-sm font-medium text-[#f9fafb] disabled:pointer-events-none disabled:opacity-50 bg-buisness-red hover:bg-buisness-red h-10 px-4 py-2">
-                Send
-              </button>
-            </form>
-          </div>
-        </div>
-      )} */}
+     
     </div>
   );
 }

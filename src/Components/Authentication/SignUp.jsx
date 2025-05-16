@@ -282,7 +282,7 @@ function SignUp() {
                     </div> */}
                     <div>
                       <label className="text-gray-800 text-sm mb-2 block tracking-wide poppins-font">
-                        Display Name
+                        Display Name *
                       </label>
                       <input
                         name="displayName"
@@ -433,7 +433,7 @@ function SignUp() {
                       >
                         Are you agree to CTH
                         <Link
-                          to="#"
+                          to="/termsandconditions"
                           className="text-[#B08D57] font-semibold hover:underline ml-1 tracking-wide poppins-font"
                         >
                           Terms of Condition and Privacy Policy.
