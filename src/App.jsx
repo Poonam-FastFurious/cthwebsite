@@ -46,7 +46,7 @@ function App() {
             <Route path="/contact" element={<Contactus />} />
             <Route path="/associatedMembers" element={<Associatemember />} />
             <Route path="/AboutUs" element={<Aboutus />} />
-            {/* <Route path="/Login" element={<Login />} /> */}
+          
             <Route path="/membersip" element={<SignUp />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/success" element={<SuccessForm />} />
